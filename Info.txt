@@ -1,0 +1,60 @@
+27 de Febrero de 2017
+*********************
+
+Tipos de Array:
+-Longitud fija:		NSArray
+-Longitud dinamica:	NSMutableArray
+
+
+Ejemplo Array de longitud dinamica
+
+NSMutableArray *listaNombres;
+listaNombres = [[NSMutableArray alloc]init];
+[listaNombres addObject: @“valor”];
+
+Recorrer un Array
+
+int indice = 0;
+while (indice < [listaNombres count])
+	NSLog (@“%@”, [listaNombres objectAtIndex:indice]);
+	indice ++;
+}
+
+
+Ejercicio Calculadora
+
+Fase 1
+	op1 operacion Op2 = resultado
+
+Fase 2
+	operaciones anidadas (3 + 7 * 9)
+
+Fase 3
+	Mas de un digito
+
+Fase 4
+	Prioridad operaciones
+
+
+* Convertir a String
+
+[NSString stringWithFormat: @“%d”, entero];
+[NSString stringWithFormat: @“%lf”, decimal];
+
+* Convertir de String a Entero
+
+int op1 = [obtenido stringValue];
+
+
+* Crear funciones
+
+
+declarar metodo:
+- (void) mostrarResultado {
+...
+}
+
+Llamar al metodo:
+[self mostrarResultado];
+
+
