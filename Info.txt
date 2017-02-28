@@ -57,4 +57,79 @@ declarar metodo:
 Llamar al metodo:
 [self mostrarResultado];
 
+https://developer.apple.com/reference/foundation/nsmutablearray?language=objc
+
+28 de Febrero de 2017
+*********************
+
+Variables globales
+
+AppDelegate.h 
+ Añadir:
+ @property (nonatomic, retain) NSMutableArray *listaCiudades;
+
+
+AppDelegate.m
+
+En esta función habra que inicializar el Array y añadir sus valores
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    
+    self.listaCiudades = [[NSMutableArray alloc] init];
+    [self.listaCiudades addObject:@"Madrid"];
+    [self.listaCiudades addObject:@"Barcelona"];
+    [self.listaCiudades addObject:@"Valencia"];
+    [self.listaCiudades addObject:@"Cadiz"];
+    
+    return YES;
+}
+
+TablasTableViewController.m (La hemos creado)
+
+Importar la clase
+#import "AppDelegate.h"
+
+En la funcion, inicializamos la variable global
+
+
+AppDelegate *appDelegate;
+
+- (void)viewDidLoad {
+appDelegate= ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+...
+
+
+//El tamaño de nuestra lista
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //appDelegate= ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+
+    return [appDelegate.listaCiudades count];
+}
+
+
+//Recorremos cada lista de la tabla, para introducirle los valores deseados a los label de cada lista
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCelda" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    UILabel *nombre = (UILabel *)[cell viewWithTag:1001];
+    UILabel *pais = (UILabel *)[cell viewWithTag:1002];
+
+    
+    nombre.text = [appDelegate.listaCiudades objectAtIndex:indexPath.row ];
+    
+    pais.text = @"España";
+    
+    NSLog(@"TablasTableViewController..." );
+    
+    //indexPath.row
+    
+    return cell;
+}
+
+
+Edit >> Embed In >> Navegation Controller
+
+
 

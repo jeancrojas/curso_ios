@@ -21,6 +21,9 @@ int resultado=0;
 Boolean valor1Agregado= false;
 Boolean valor2Agregado = false;
 Boolean valorSignoAgregado = false;
+NSMutableArray *listaNumeros;
+NSMutableArray *listaSignos;
+NSString *cadenaOperacion;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,6 +50,9 @@ Boolean valorSignoAgregado = false;
     [self.buttonResultado setTitle: @"=" forState: UIControlStateNormal];
     [self.buttonReset setTitle: @"Reset" forState: UIControlStateNormal];
     
+    listaNumeros = [[NSMutableArray alloc]init];
+    listaSignos = [[NSMutableArray alloc]init];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,29 +71,8 @@ Boolean valorSignoAgregado = false;
 */
 
 - (IBAction)button1:(id)sender {
-    
-    if(!valor1Agregado ){
-        op1 = 1;
-        self.labelMostrarResultado.text = @"1";
-        valor1Agregado = true;
-        
-    } else if (valor1Agregado && !valorSignoAgregado){
-        NSString* obtenido =  [NSString stringWithFormat:@"%@1",self.labelMostrarResultado.text];
-        
-        self.labelMostrarResultado.text = obtenido;
-        op1 = [obtenido intValue];
-        
-    } else if (valorSignoAgregado && !valor2Agregado){
-        op2 = 1;
-        self.labelMostrarResultado.text = @"1";
-        valor2Agregado = true;
-    }else if (valor2Agregado && valorSignoAgregado){
-        NSString* obtenido =  [NSString stringWithFormat:@"%@1",self.labelMostrarResultado.text];
-        
-        self.labelMostrarResultado.text = obtenido;
-        op2 = [obtenido intValue];
-    }
-    
+    [listaNumeros addObject: @"1" ];
+    [self mostrarResultado];
 }
 - (IBAction)button2:(id)sender {
     if(!valor1Agregado){
@@ -276,22 +261,14 @@ Boolean valorSignoAgregado = false;
     }
 }
 - (IBAction)buttonSignoMas:(id)sender {
-    if (!valorSignoAgregado) {
-        signo = @"+";
-        valorSignoAgregado = true;
-    }else{
-        [self mostrarResultado];
-        signo = @"+";
-    }
-    
+    [listaSignos addObject: @"+"];
+    [self mostrarResultado];
 }
 - (IBAction)buttonSignoMenos:(id)sender {
     if (!valorSignoAgregado) {
         signo = @"-";
         valorSignoAgregado = true;
-    } else {
-        [self mostrarResultado];
-        signo = @"-";
+        [listaSignos addObject: @"-"];
     }
 }
 - (IBAction)buttonSignoMultiplicacion:(id)sender {
@@ -299,9 +276,7 @@ Boolean valorSignoAgregado = false;
     if (!valorSignoAgregado) {
         signo = @"*";
         valorSignoAgregado = true;
-    } else{
-        [self mostrarResultado];
-        signo = @"*";
+        [listaSignos addObject: @"*"];
     }
     
 }
@@ -309,6 +284,7 @@ Boolean valorSignoAgregado = false;
     if (!valorSignoAgregado) {
         signo = @"/";
         valorSignoAgregado = true;
+        [listaSignos addObject: @"/"];
     } else {
         [self mostrarResultado];
         signo = @"/";
@@ -343,22 +319,16 @@ Boolean valorSignoAgregado = false;
 }
 
 - (void) mostrarResultado {
-    
-    if ([signo isEqualToString:@"+"])
-        resultado = op1+op2;
-    
-    if ([signo isEqualToString:@"-"])
-        resultado = op1-op2;
-    
-    if ([signo isEqualToString:@"*"])
-        resultado = op1*op2;
-    
-    if ([signo isEqualToString:@"/"])
-        resultado = op1/op2;
-    
-    self.labelMostrarResultado.text = [NSString stringWithFormat: @"%d",resultado];
-    valor2Agregado = false;
-    op1 = resultado;
+    NSString *resultado;
+    for (int i = 0; i < [listaNumeros count] ; i++) {
+        resultado = [NSString stringWithFormat: @"%@",listaNumeros[i]];
+        
+        for (int j = 0; j < [listaSignos count]; j++) {
+            resultado = [NSString stringWithFormat: @"%@",listaSignos[i]];
+        }
+        
+    }
+    self.labelMostrarResultado.text = resultado;
 }
 
 @end
