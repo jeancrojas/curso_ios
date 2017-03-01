@@ -65,6 +65,7 @@ https://developer.apple.com/reference/foundation/nsmutablearray?language=objc
 Variables globales
 
 AppDelegate.h 
+
  Añadir:
  @property (nonatomic, retain) NSMutableArray *listaCiudades;
 
@@ -130,6 +131,58 @@ appDelegate= ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
 
 
 Edit >> Embed In >> Navegation Controller
+
+
+
+
+1 de Marzo de 2017
+******************
+
+
+Acceder a otra Ventana desde código
+
+Importar la otra el .h de la ViewController generada
+#import "AccedoViewController.h"
+
+En el button 
+
+- (IBAction)buttonAcceder:(id)sender {
+    AccedoViewController *vistaVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idAccedoViewController"];
+    [self showViewController:vistaVC sender: nil ];
+    
+    
+}
+@end
+
+
+
+- Crear alerta
+
+
+
+UIAlertController *alert;
+UIAlertAction *yesButton, *noButton;
+
+
+
+alert = [UIAlertController alertControllerWithTitle: @"Autenticación" message: @"autenticandose..." preferredStyle: UIAlertControllerStyleAlert ];
+    
+    yesButton = [UIAlertAction actionWithTitle:@"Yes, please" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSLog(@"YES...");
+    }];
+    
+    noButton = [UIAlertAction actionWithTitle:@"No, thanks. Usuario o Contraseña incorrecta" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSLog(@"NO...");
+    }];
+
+
+
+En la accion del button ponemos:
+
+    if (!autenticacion){
+        [alert addAction:noButton];
+        [self presentViewController:alert animated:YES completion:nil];
+     }
 
 
 
