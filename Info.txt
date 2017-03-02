@@ -88,7 +88,7 @@ En esta función habra que inicializar el Array y añadir sus valores
 
 TablasTableViewController.m (La hemos creado)
 
-Importar la clase
+-Importar la clase
 #import "AppDelegate.h"
 
 En la funcion, inicializamos la variable global
@@ -139,7 +139,7 @@ Edit >> Embed In >> Navegation Controller
 ******************
 
 
-Acceder a otra Ventana desde código
+-Acceder a otra Ventana desde código
 
 Importar la otra el .h de la ViewController generada
 #import "AccedoViewController.h"
@@ -157,7 +157,6 @@ En el button
 
 
 - Crear alerta
-
 
 
 UIAlertController *alert;
@@ -184,5 +183,62 @@ En la accion del button ponemos:
         [self presentViewController:alert animated:YES completion:nil];
      }
 
+
+2 de Marzo de 2017
+******************
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idListaImagenes" forIndexPath:indexPath];
+    
+    
+    UIImageView *imagen = (UIImageView *) [cell viewWithTag:1001];
+    UILabel *titulo = (UILabel *) [cell viewWithTag:1002];
+    
+    NSString *nombreImagen = [appDelegate.listaImagenes objectAtIndex: indexPath.row];
+    NSString *tituloImagen = [appDelegate.listaTitulosImagenes objectAtIndex: indexPath.row];
+    
+    imagen.image = [UIImage imageNamed: nombreImagen];
+    titulo.text = tituloImagen;
+    
+    return cell;
+}
+
+
+//Este no lo genera habrá que crearlo, se utilizar para seleccionar un 
+//item de la lista
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Ha seleccionado la fila: %ld", (long)indexPath.row);
+    
+    
+}
+
+
+-Pasar información de una ventana a otra
+
+En la ventana1.m ir al metodo prepareForSegue
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"segueCategoriaAProductos"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ProductosTableViewController *vistaProductosTVC = segue.destinationViewController;
+        vistaProductosTVC.productos = [NSString stringWithFormat:@"Fila %ld", (long)indexPath.row];
+    }
+}
+
+
+En la ventana2.h añadir lo siguiente:
+
+
+//Para tipos primitivos utilizar no utilizar (nonatomic, retain); int, Integer, double, etc
+
+@property (nonatomic, retain) NSString *productos;
+
+En la ventana2.m le tenemos que llamar de la siguiente manera
+self.productos;
 
 

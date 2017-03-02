@@ -21,16 +21,16 @@
     self.listaImagenes = [[NSMutableArray alloc] init];
     self.listaTitulosImagenes = [[NSMutableArray alloc] init];
     
-    [self.listaImagenes addObject:@"listaImange1.png"];
-    [self.listaImagenes addObject:@"listaImange2.png"];
-    [self.listaImagenes addObject:@"listaImange3.png"];
-    [self.listaImagenes addObject:@"listaImange4.png"];
-    [self.listaImagenes addObject:@"listaImange5.png"];
-    [self.listaImagenes addObject:@"listaImange6.png"];
-    [self.listaImagenes addObject:@"listaImange7.png"];
-    [self.listaImagenes addObject:@"listaImange8.png"];
-    [self.listaImagenes addObject:@"listaImange9.png"];
-    [self.listaImagenes addObject:@"listaImange10.png"];
+    [self.listaImagenes addObject:@"listaImagen1.png"];
+    [self.listaImagenes addObject:@"listaImagen2.png"];
+    [self.listaImagenes addObject:@"listaImagen3.png"];
+    [self.listaImagenes addObject:@"listaImagen4.png"];
+    [self.listaImagenes addObject:@"listaImagen5.png"];
+    [self.listaImagenes addObject:@"listaImagen6.png"];
+    [self.listaImagenes addObject:@"listaImagen7.png"];
+    [self.listaImagenes addObject:@"listaImagen8.png"];
+    [self.listaImagenes addObject:@"listaImagen9.png"];
+    [self.listaImagenes addObject:@"listaImagen10.png"];
     
     [self.listaTitulosImagenes addObject: @"Imagen 1"];
     [self.listaTitulosImagenes addObject: @"Imagen 2"];

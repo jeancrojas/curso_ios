@@ -24,6 +24,7 @@
 		090870781E66F8DF00393D81 /* listaImagen8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0908706E1E66F8DF00393D81 /* listaImagen8.png */; };
 		090870791E66F8DF00393D81 /* listaImagen9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0908706F1E66F8DF00393D81 /* listaImagen9.png */; };
 		0908707A1E66F8DF00393D81 /* listaImagen10.png in Resources */ = {isa = PBXBuildFile; fileRef = 090870701E66F8DF00393D81 /* listaImagen10.png */; };
+		09C5E1F01E6814D5007D5B49 /* DetallesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5E1EF1E6814D5007D5B49 /* DetallesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		0908706E1E66F8DF00393D81 /* listaImagen8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listaImagen8.png; sourceTree = "<group>"; };
 		0908706F1E66F8DF00393D81 /* listaImagen9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listaImagen9.png; sourceTree = "<group>"; };
 		090870701E66F8DF00393D81 /* listaImagen10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listaImagen10.png; sourceTree = "<group>"; };
+		09C5E1EE1E6814D5007D5B49 /* DetallesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetallesViewController.h; sourceTree = "<group>"; };
+		09C5E1EF1E6814D5007D5B49 /* DetallesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetallesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				090870531E66F47500393D81 /* ViewController.h */,
 				090870541E66F47500393D81 /* ViewController.m */,
 				090870561E66F47500393D81 /* Main.storyboard */,
+				09C5E1EE1E6814D5007D5B49 /* DetallesViewController.h */,
+				09C5E1EF1E6814D5007D5B49 /* DetallesViewController.m */,
 				090870641E66F4ED00393D81 /* ListaImagenesTableViewController.h */,
 				090870651E66F4ED00393D81 /* ListaImagenesTableViewController.m */,
 				090870591E66F47500393D81 /* Assets.xcassets */,
@@ -197,6 +202,7 @@
 			files = (
 				090870551E66F47500393D81 /* ViewController.m in Sources */,
 				090870521E66F47500393D81 /* AppDelegate.m in Sources */,
+				09C5E1F01E6814D5007D5B49 /* DetallesViewController.m in Sources */,
 				090870661E66F4ED00393D81 /* ListaImagenesTableViewController.m in Sources */,
 				0908704F1E66F47500393D81 /* main.m in Sources */,
 			);
@@ -355,6 +361,7 @@
 				090870631E66F47500393D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

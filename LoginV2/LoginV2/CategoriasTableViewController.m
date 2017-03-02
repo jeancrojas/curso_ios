@@ -1,22 +1,22 @@
 //
-//  ListaImagenesTableViewController.m
-//  ListViewImagen
+//  CategoriasTableViewController.m
+//  LoginV2
 //
-//  Created by cice on 1/3/17.
+//  Created by cice on 2/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ListaImagenesTableViewController.h"
+#import "CategoriasTableViewController.h"
 #import "AppDelegate.h"
-#import "DetallesViewController.h"
+#import "ProductosTableViewController.h"
 
-@interface ListaImagenesTableViewController ()
+@interface CategoriasTableViewController ()
 
 @end
 
-@implementation ListaImagenesTableViewController
+@implementation CategoriasTableViewController
 
-AppDelegate *appDelegate;
+AppDelegate *appDelegateCategoriasTV;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +27,7 @@ AppDelegate *appDelegate;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    appDelegate = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+    appDelegateCategoriasTV = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,34 +42,23 @@ AppDelegate *appDelegate;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [appDelegate.listaImagenes count];
+    return [appDelegateCategoriasTV.listaCategorias count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idListaImagenes" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaCategoria" forIndexPath:indexPath];
     
+    // Configure the cell...
     
-    UIImageView *imagen = (UIImageView *) [cell viewWithTag:1001];
-    UILabel *titulo = (UILabel *) [cell viewWithTag:1002];
+    UILabel *labelNombreCategoriaTV = (UILabel *) [cell viewWithTag: 1001 ];
+    NSString *nombreCategoria = [appDelegateCategoriasTV.listaCategorias objectAtIndex:indexPath.row];
     
-    NSString *nombreImagen = [appDelegate.listaImagenes objectAtIndex: indexPath.row];
-    NSString *tituloImagen = [appDelegate.listaTitulosImagenes objectAtIndex: indexPath.row];
+    labelNombreCategoriaTV.text = nombreCategoria;
     
-    imagen.image = [UIImage imageNamed: nombreImagen];
-    titulo.text = tituloImagen;
     
     return cell;
 }
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Ha seleccionado la fila: %ld", (long)indexPath.row);
-    DetallesViewController *vistaVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idDetallesViewController"];
-    [self showViewController:vistaVC sender: nil];
-    
-}
-
 
 
 /*
@@ -106,14 +95,21 @@ AppDelegate *appDelegate;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"segueCategoriaAProductos"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ProductosTableViewController *vistaProductosTVC = segue.destinationViewController;
+        vistaProductosTVC.productos = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+        //vistaProductosTVC.productos = [NSString stringWithFormat:@"Fila %ld", (long)indexPath.row];
+    }
 }
-*/
+
 
 @end

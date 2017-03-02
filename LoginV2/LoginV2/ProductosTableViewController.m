@@ -1,22 +1,24 @@
 //
-//  ListaImagenesTableViewController.m
-//  ListViewImagen
+//  ProductosTableViewController.m
+//  LoginV2
 //
-//  Created by cice on 1/3/17.
+//  Created by cice on 2/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ListaImagenesTableViewController.h"
+#import "ProductosTableViewController.h"
 #import "AppDelegate.h"
-#import "DetallesViewController.h"
+#import "DetalleProductoViewController.h"
 
-@interface ListaImagenesTableViewController ()
+@interface ProductosTableViewController ()
 
 @end
 
-@implementation ListaImagenesTableViewController
+@implementation ProductosTableViewController
 
-AppDelegate *appDelegate;
+AppDelegate *appDelegateProductosTVC;
+NSString *TAG= @"ProductosTableViewController";
+int numFila;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,8 +28,9 @@ AppDelegate *appDelegate;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    appDelegate = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+    NSLog(@"Se ha recibido lo siguiente: %@",self.productos);
+    appDelegateProductosTVC = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+    numFila = [self.productos intValue];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,34 +45,60 @@ AppDelegate *appDelegate;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [appDelegate.listaImagenes count];
+    //return [appDelegateProductosTVC.listaProductosHD count];
+    
+    
+    
+    NSLog(@"%@ tableView()... Numero de filas cargadas %d", TAG, numFila );
+    
+    switch (numFila) {
+        case 0:
+            return [appDelegateProductosTVC.listaProductosCPU count];
+            break;
+            
+        case 1:
+            return [appDelegateProductosTVC.listaProductosHD count];
+            break;
+        
+        default:
+            break;
+    }
+    
+    return 2;
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idListaImagenes" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaProducto" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    UILabel *labelProductoProductosTVC = (UILabel *) [cell viewWithTag:2001];
+    NSString *nombreProducto;
     
     
-    UIImageView *imagen = (UIImageView *) [cell viewWithTag:1001];
-    UILabel *titulo = (UILabel *) [cell viewWithTag:1002];
+    switch (numFila) {
+        case 0:
+            nombreProducto = [appDelegateProductosTVC.listaProductosCPU objectAtIndex:indexPath.row];
+            labelProductoProductosTVC.text = nombreProducto;
+            break;
+            
+        case 1:
+            nombreProducto = [appDelegateProductosTVC.listaProductosHD objectAtIndex:indexPath.row];
+            labelProductoProductosTVC.text = nombreProducto;
+            break;
+            
+        default:
+            break;
+    }
     
-    NSString *nombreImagen = [appDelegate.listaImagenes objectAtIndex: indexPath.row];
-    NSString *tituloImagen = [appDelegate.listaTitulosImagenes objectAtIndex: indexPath.row];
     
-    imagen.image = [UIImage imageNamed: nombreImagen];
-    titulo.text = tituloImagen;
+    
+    
     
     return cell;
 }
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Ha seleccionado la fila: %ld", (long)indexPath.row);
-    DetallesViewController *vistaVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idDetallesViewController"];
-    [self showViewController:vistaVC sender: nil];
-    
-}
-
 
 
 /*
@@ -106,14 +135,19 @@ AppDelegate *appDelegate;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"segueProductosADetalleP"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetalleProductoViewController *vistaDetalleProductoVC = segue.destinationViewController;
+        vistaDetalleProductoVC.detalleDelProducto = [NSString stringWithFormat:@""];
+    }
 }
-*/
+
 
 @end
