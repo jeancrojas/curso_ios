@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DetalleProductoViewController : UIViewController
-@property  int detalleDelProducto;
+@property NSInteger detalleDelProducto;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewProductoDetalleProductoVC;
 @property (weak, nonatomic) IBOutlet UILabel *labelDetalleDetalleProductoVC;
 @property (weak, nonatomic) IBOutlet UIButton *buttonComprarDetalleProductoVC;

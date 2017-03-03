@@ -241,4 +241,21 @@ En la ventana2.h añadir lo siguiente:
 En la ventana2.m le tenemos que llamar de la siguiente manera
 self.productos;
 
+3 de Marzo de 2017
+******************
 
+- Cerrar la ventana desde el buton de su ventana
+
+- (IBAction)buttonCambiarVentana3VC:(id)sender {
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-Ir al principio de la ventana
+[self.navigationController popToRootViewControllerAnimated:YES]
+
+-Ir a la ventana anterior
+[self.navigationController popViewControllerAnimated:YES]
+
+-Mostrar una barra en el titulo
+self.navigationItem.title = @“Ventana 1”;

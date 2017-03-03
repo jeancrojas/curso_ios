@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldLoginVCContrasenya;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLoginVBAceptar;
 - (IBAction)buttonLoginVCAceptar:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItemAdministracionLoginVC;
+- (IBAction)barButtonItemAdministracionLoginVC:(id)sender;
 
 @end

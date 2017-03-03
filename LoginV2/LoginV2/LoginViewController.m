@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "CategoriasTableViewController.h"
 #import "AppDelegate.h"
+#import "AdminViewController.h"
 
 @interface LoginViewController ()
 
@@ -27,6 +28,8 @@ AppDelegate *appDelegateLoginVC;
     [self.buttonLoginVBAceptar setTitle:@"Aceptar" forState: UIControlStateNormal];
     
     appDelegateLoginVC = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+    
+    [self.barButtonItemAdministracionLoginVC setTitle:@"Administracion"];
     
 }
 
@@ -49,18 +52,9 @@ AppDelegate *appDelegateLoginVC;
     
     NSString *user = self.textFieldLoginVCUsuario.text;
     NSString *password= self.textFieldLoginVCUsuario.text;
-    Boolean autenticacion = false;
+    Boolean autenticacion = [self autenticacion: user End:password];
     
-    for (int i=0; i < [appDelegateLoginVC.listaUsuarios count]; i++) {
-        NSString *usuarioAlmacenado = [appDelegateLoginVC.listaUsuarios objectAtIndex:i ];
-        
-        NSString *contrasenyaAlmacenado = [appDelegateLoginVC.listaContrasenyaUsuarios objectAtIndex:i ];
-        
-        if ( [user isEqualToString:usuarioAlmacenado] && [password isEqualToString:contrasenyaAlmacenado] ) {
-            autenticacion = true;
-            break;
-        }
-    }
+    
     
     if (autenticacion) {
         CategoriasTableViewController  *vistaVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idCategoriasTableVC"];
@@ -69,4 +63,47 @@ AppDelegate *appDelegateLoginVC;
     }
     
 }
+- (IBAction)barButtonItemAdministracionLoginVC:(id)sender {
+    Boolean esAdministrador=false;
+    NSString *user = self.textFieldLoginVCUsuario.text;
+    NSString *password= self.textFieldLoginVCUsuario.text;
+    
+    if ([self autenticacion: user End:password]) {
+        if ([[user substringToIndex:5 ]isEqualToString:@"admin"] ) {
+            esAdministrador=true;
+            NSLog(@"%@", user);
+        }
+        
+        if (esAdministrador) {
+            NSLog(@"Eres administrador");
+            AdminViewController *vistaAdminVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idAdminVC"];
+            [self showViewController:vistaAdminVC sender:nil];
+        }
+    }
+    
+}
+
+- (Boolean) autenticacion:(NSString *)user End:(NSString *)password {
+    
+    
+    Boolean seAutentico = false;
+    
+    for (int i=0; i < [appDelegateLoginVC.listaUsuarios count]; i++) {
+        NSString *usuarioAlmacenado = [appDelegateLoginVC.listaUsuarios objectAtIndex:i ];
+        
+        NSString *contrasenyaAlmacenado = [appDelegateLoginVC.listaContrasenyaUsuarios objectAtIndex:i ];
+        
+        if ( [user isEqualToString:usuarioAlmacenado] && [password isEqualToString:contrasenyaAlmacenado] ) {
+            seAutentico = true;
+            break;
+        }
+    }
+    
+    if (seAutentico) {
+        return true;
+    }
+    
+    return false;
+}
+
 @end

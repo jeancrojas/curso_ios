@@ -7,6 +7,7 @@
 //
 
 #import "DetalleProductoViewController.h"
+#import "AppDelegate.h"
 
 @interface DetalleProductoViewController ()
 
@@ -14,14 +15,22 @@
 
 @implementation DetalleProductoViewController
 
-
+AppDelegate *appDelegateDetalleProductoVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     
-    self.labelDetalleDetalleProductoVC.text = @"Detalles del producto....";
+    appDelegateDetalleProductoVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    NSString *productoTratado = [appDelegateDetalleProductoVC.listaProductosCPU objectAtIndex:(int)self.detalleDelProducto];
+    
+    
+    NSLog(@"Se ha seleccionado el producto: %@",productoTratado);
+    self.labelDetalleDetalleProductoVC.text =[NSString stringWithFormat: @"Detalles del producto....%@",productoTratado];
+    
     [self.buttonComprarDetalleProductoVC setTitle:@"Comprar" forState: UIControlStateNormal];
     
 }

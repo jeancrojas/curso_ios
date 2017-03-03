@@ -1,24 +1,21 @@
 //
-//  ProductosTableViewController.m
+//  GestionUsuariosTableViewController.m
 //  LoginV2
 //
-//  Created by cice on 2/3/17.
+//  Created by cice on 3/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ProductosTableViewController.h"
+#import "GestionUsuariosTableViewController.h"
 #import "AppDelegate.h"
-#import "DetalleProductoViewController.h"
 
-@interface ProductosTableViewController ()
+@interface GestionUsuariosTableViewController ()
 
 @end
 
-@implementation ProductosTableViewController
+@implementation GestionUsuariosTableViewController
 
-AppDelegate *appDelegateProductosTVC;
-NSString *TAG= @"ProductosTableViewController";
-int numFila;
+//AppDelegate *appDelegateGestionUsuarosTVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +25,15 @@ int numFila;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSLog(@"Se ha recibido lo siguiente: %@",self.productos);
-    appDelegateProductosTVC = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
-    numFila = [self.productos intValue];
+    
+    //appDelegateGestionUsuarosTVC = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
+    
+    UIBarButtonItem *boton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(accion_agregar:)];
+    
+    self.navigationItem.rightBarButtonItem = boton;
+    
+    NSLog(@"Cargo...GestionUsuariosTableViewController");
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,58 +48,21 @@ int numFila;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return [appDelegateProductosTVC.listaProductosHD count];
-    
-    
-    
-    NSLog(@"%@ tableView()... Numero de filas cargadas %d", TAG, numFila );
-    
-    switch (numFila) {
-        case 0:
-            return [appDelegateProductosTVC.listaProductosCPU count];
-            break;
-            
-        case 1:
-            return [appDelegateProductosTVC.listaProductosHD count];
-            break;
-        
-        default:
-            break;
-    }
-    
     return 2;
-    
+    //[appDelegateGestionUsuarosTVC.listaUsuarios count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaProducto" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaUsuarios" forIndexPath:indexPath];
     
     // Configure the cell...
+    /*
+    UILabel *labelUsuariosGestionUsuariosTVC = (UILabel *) [cell viewWithTag:1001];
     
-    UILabel *labelProductoProductosTVC = (UILabel *) [cell viewWithTag:2001];
-    NSString *nombreProducto;
+    labelUsuariosGestionUsuariosTVC.text = [appDelegateGestionUsuarosTVC.listaUsuarios objectAtIndex:indexPath.row];
     
-    
-    switch (numFila) {
-        case 0:
-            nombreProducto = [appDelegateProductosTVC.listaProductosCPU objectAtIndex:indexPath.row];
-            labelProductoProductosTVC.text = nombreProducto;
-            break;
-            
-        case 1:
-            nombreProducto = [appDelegateProductosTVC.listaProductosHD objectAtIndex:indexPath.row];
-            labelProductoProductosTVC.text = nombreProducto;
-            break;
-            
-        default:
-            break;
-    }
-    
-    
-    
-    
-    
+    */
     return cell;
 }
 
@@ -135,20 +101,19 @@ int numFila;
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"segueProductosADetalleP"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetalleProductoViewController *vistaDetalleProductoVC = segue.destinationViewController;
-        //vistaDetalleProductoVC.detalleDelProducto = (long)indexPath.row;
-        vistaDetalleProductoVC.detalleDelProducto = indexPath.row;
-    }
 }
+*/
 
-
+-(IBAction)accion_agregar:(id)sender
+{
+    
+    
+}
 @end

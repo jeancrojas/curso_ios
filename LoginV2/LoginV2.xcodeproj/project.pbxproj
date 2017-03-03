@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0933E1951E6979C100A7BEDA /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933E1941E6979C100A7BEDA /* AdminViewController.m */; };
+		0933E1981E697AE800A7BEDA /* GestionUsuariosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933E1971E697AE800A7BEDA /* GestionUsuariosTableViewController.m */; };
+		0933E19B1E697B0300A7BEDA /* GestionProductosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933E19A1E697B0300A7BEDA /* GestionProductosTableViewController.m */; };
 		09C5E1FF1E6816B5007D5B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5E1FE1E6816B5007D5B49 /* main.m */; };
 		09C5E2021E6816B5007D5B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5E2011E6816B5007D5B49 /* AppDelegate.m */; };
 		09C5E2051E6816B5007D5B49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5E2041E6816B5007D5B49 /* ViewController.m */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0933E1931E6979C100A7BEDA /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
+		0933E1941E6979C100A7BEDA /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
+		0933E1961E697AE800A7BEDA /* GestionUsuariosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestionUsuariosTableViewController.h; sourceTree = "<group>"; };
+		0933E1971E697AE800A7BEDA /* GestionUsuariosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestionUsuariosTableViewController.m; sourceTree = "<group>"; };
+		0933E1991E697B0300A7BEDA /* GestionProductosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestionProductosTableViewController.h; sourceTree = "<group>"; };
+		0933E19A1E697B0300A7BEDA /* GestionProductosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestionProductosTableViewController.m; sourceTree = "<group>"; };
 		09C5E1FA1E6816B5007D5B49 /* LoginV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C5E1FE1E6816B5007D5B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09C5E2001E6816B5007D5B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +95,12 @@
 				09C5E2031E6816B5007D5B49 /* ViewController.h */,
 				09C5E2041E6816B5007D5B49 /* ViewController.m */,
 				09C5E2061E6816B5007D5B49 /* Main.storyboard */,
+				0933E1991E697B0300A7BEDA /* GestionProductosTableViewController.h */,
+				0933E19A1E697B0300A7BEDA /* GestionProductosTableViewController.m */,
+				0933E1961E697AE800A7BEDA /* GestionUsuariosTableViewController.h */,
+				0933E1971E697AE800A7BEDA /* GestionUsuariosTableViewController.m */,
+				0933E1931E6979C100A7BEDA /* AdminViewController.h */,
+				0933E1941E6979C100A7BEDA /* AdminViewController.m */,
 				09C5E2201E681C0C007D5B49 /* DetalleProductoViewController.h */,
 				09C5E2211E681C0C007D5B49 /* DetalleProductoViewController.m */,
 				09C5E21D1E681BEA007D5B49 /* ProductosTableViewController.h */,
@@ -185,12 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0933E1951E6979C100A7BEDA /* AdminViewController.m in Sources */,
 				09C5E2051E6816B5007D5B49 /* ViewController.m in Sources */,
 				09C5E21C1E681BC8007D5B49 /* CategoriasTableViewController.m in Sources */,
 				09C5E20B1E6816B5007D5B49 /* LoginV2.xcdatamodeld in Sources */,
 				09C5E21F1E681BEA007D5B49 /* ProductosTableViewController.m in Sources */,
 				09C5E2221E681C0C007D5B49 /* DetalleProductoViewController.m in Sources */,
+				0933E1981E697AE800A7BEDA /* GestionUsuariosTableViewController.m in Sources */,
 				09C5E2021E6816B5007D5B49 /* AppDelegate.m in Sources */,
+				0933E19B1E697B0300A7BEDA /* GestionProductosTableViewController.m in Sources */,
 				09C5E1FF1E6816B5007D5B49 /* main.m in Sources */,
 				09C5E2191E6816F4007D5B49 /* LoginViewController.m in Sources */,
 			);

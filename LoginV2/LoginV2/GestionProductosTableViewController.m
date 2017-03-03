@@ -1,24 +1,18 @@
 //
-//  ProductosTableViewController.m
+//  GestionProductosTableViewController.m
 //  LoginV2
 //
-//  Created by cice on 2/3/17.
+//  Created by cice on 3/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ProductosTableViewController.h"
-#import "AppDelegate.h"
-#import "DetalleProductoViewController.h"
+#import "GestionProductosTableViewController.h"
 
-@interface ProductosTableViewController ()
+@interface GestionProductosTableViewController ()
 
 @end
 
-@implementation ProductosTableViewController
-
-AppDelegate *appDelegateProductosTVC;
-NSString *TAG= @"ProductosTableViewController";
-int numFila;
+@implementation GestionProductosTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +22,6 @@ int numFila;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSLog(@"Se ha recibido lo siguiente: %@",self.productos);
-    appDelegateProductosTVC = ((AppDelegate *) [[UIApplication sharedApplication]delegate]);
-    numFila = [self.productos intValue];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,61 +36,18 @@ int numFila;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return [appDelegateProductosTVC.listaProductosHD count];
-    
-    
-    
-    NSLog(@"%@ tableView()... Numero de filas cargadas %d", TAG, numFila );
-    
-    switch (numFila) {
-        case 0:
-            return [appDelegateProductosTVC.listaProductosCPU count];
-            break;
-            
-        case 1:
-            return [appDelegateProductosTVC.listaProductosHD count];
-            break;
-        
-        default:
-            break;
-    }
-    
-    return 2;
-    
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaProducto" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     
-    UILabel *labelProductoProductosTVC = (UILabel *) [cell viewWithTag:2001];
-    NSString *nombreProducto;
-    
-    
-    switch (numFila) {
-        case 0:
-            nombreProducto = [appDelegateProductosTVC.listaProductosCPU objectAtIndex:indexPath.row];
-            labelProductoProductosTVC.text = nombreProducto;
-            break;
-            
-        case 1:
-            nombreProducto = [appDelegateProductosTVC.listaProductosHD objectAtIndex:indexPath.row];
-            labelProductoProductosTVC.text = nombreProducto;
-            break;
-            
-        default:
-            break;
-    }
-    
-    
-    
-    
-    
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -135,20 +83,14 @@ int numFila;
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"segueProductosADetalleP"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetalleProductoViewController *vistaDetalleProductoVC = segue.destinationViewController;
-        //vistaDetalleProductoVC.detalleDelProducto = (long)indexPath.row;
-        vistaDetalleProductoVC.detalleDelProducto = indexPath.row;
-    }
 }
-
+*/
 
 @end
