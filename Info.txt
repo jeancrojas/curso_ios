@@ -259,3 +259,114 @@ self.productos;
 
 -Mostrar una barra en el titulo
 self.navigationItem.title = @“Ventana 1”;
+
+
+6 de Marzo de 2017
+******************
+
+- Tratando con ficheros
+
+@implementation GenerarFicheroViewController
+NSMutableArray *yourArray;
+NSString *youArrayFileName;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    //Se seleciona la ruta exacta
+    youArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"example.dat"];
+    
+    //Ver la ubicacion del archivo
+    NSLog(@"ubicacion %@", youArrayFileName);
+    
+    //Inicializo el Array
+     yourArray = [[NSMutableArray alloc] initWithContentsOfFile:youArrayFileName];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)buttonCreate:(id)sender {
+    //Si es la primera vez que accedo a mi aplicacion, debo crear el Array
+    if (yourArray == nil) {
+        //el Array no existe, con lo que se crear uno nuevo
+        yourArray = [[NSMutableArray alloc] init];
+        
+        NSLog(@"El fichero NO  existe. Se ha creado");
+    } else {
+        NSLog(@"El fichero SI existe");
+    }
+    
+    //Asigno el Array (nuevo o con los datos locales) el Array que voy a utilizar en la aplicacion.
+    NSMutableArray *listaArray = yourArray;
+    
+    [listaArray writeToFile:youArrayFileName atomically:YES];
+    
+}
+- (IBAction)buttonDelete:(id)sender {
+    
+    NSError *error;
+    //Existe el archivo
+    if ([[NSFileManager defaultManager] fileExistsAtPath: youArrayFileName]) {
+        if (![[NSFileManager defaultManager] removeItemAtPath:youArrayFileName error:&error]) {
+            NSLog(@"Delete file error: %@", error);
+        } else {
+            NSLog(@"Se ha eliminado.");
+        }
+    }
+    
+    
+}
+
+- Actualizar la tabla al volver a ella
+
+De la vista diseño hay que arrastrar “Table View” al siguiente archivo
+//ListaAnimalesTableViewController.h
+Creara algo como esto:
+@property (strong, nonatomic) IBOutlet UITableView *tabla;
+
+
+
+//ListaAnimalesTableViewController.m
+
+-(void) viewWillAppear:(BOOL)animated{
+    
+    [self.tabla reloadData];
+    
+}
+
+
+
+
+Diccionario, ideal para almacenar objetos
+
+NSMutableArray *lista = [[NSMutableArray alloc]init];
+
+NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+[dict setValue:@“Jesus” forKey:@“nombre”]
+[dict setValue:@“123456789” forKey:@“telefono”]
+
+[lista addObject:dict];
+
+
+- Para tratar de manera mas comoda los atributos de AppDelegate, tienen que ser del mismo tipo
+
+AppDelegate *appDelegateEditarNombreAnimalesVC;
+
+NSString *nombreArchivoEditarNombreAnimalesVC;
+NSMutableArray *listaAnimalesEditarNombreAnimalesVC;
+
+appDelegateEditarNombreAnimalesVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+listaAnimalesEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.listaAnimales;
+nombreArchivoEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.youArrayFileName;
+
+

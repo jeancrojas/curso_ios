@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KOS-Xo-u2w">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generar Fichero View Controller-->
+        <scene sceneID="DXm-o3-sa7">
+            <objects>
+                <viewController id="KOS-Xo-u2w" customClass="GenerarFicheroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7A-H2-2uU"/>
+                        <viewControllerLayoutGuide type="bottom" id="fCd-WO-URz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hod-tW-Dng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf2-Ma-dS7">
+                                <frame key="frameInset" minX="135" minY="326" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ButtonDelete"/>
+                                <connections>
+                                    <action selector="buttonDelete:" destination="KOS-Xo-u2w" eventType="touchUpInside" id="y7J-7T-4YZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-F2-2IU">
+                                <frame key="frameInset" minX="135" minY="197" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ButtonCreate"/>
+                                <connections>
+                                    <action selector="buttonCreate:" destination="KOS-Xo-u2w" eventType="touchUpInside" id="JMR-Ss-LOO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCreate" destination="TGp-F2-2IU" id="Iye-un-4yt"/>
+                        <outlet property="buttonDelete" destination="gf2-Ma-dS7" id="yj9-L3-tzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MvL-d7-H1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="87.706146926536732"/>
+        </scene>
+    </scenes>
+</document>
