@@ -357,7 +357,7 @@ NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
 [lista addObject:dict];
 
 
-- Para tratar de manera mas comoda los atributos de AppDelegate, tienen que ser del mismo tipo
+- Para tratar de manera mas cómoda los atributos de AppDelegate, tienen que ser del mismo tipo
 
 AppDelegate *appDelegateEditarNombreAnimalesVC;
 
@@ -368,5 +368,38 @@ appDelegateEditarNombreAnimalesVC = (AppDelegate *) [[UIApplication sharedApplic
     
 listaAnimalesEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.listaAnimales;
 nombreArchivoEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.youArrayFileName;
+
+07 de Marzo de 2017
+*******************
+
+- Maps en iOS
+Importar el Framework Map Kit View. Agregamos MapKit.framework
+
+A nuestro View Controller añadimos el objeto “Map Kit View”
+
+“mapaViewController.h”
+
+importamos: #import <MapKit/MapKit.h>
+
+Debe ser un IBOutlet pero weak (no strong). Le ponemos el nombre que queramos, en mi caso “mapa”. Con ese nombre el con el que debemos llamar ahora a nuestro Map Kit View.
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapa;
+
+
+“mapaViewController.h”
+
+debajo de @implementation ponemos:
+@synthesize mapa;
+
+
+-Centramos el mapa y lo mostramos.// añadimos las coordenadas del punto dónde queremos centrar el mapa CLLocationCoordinate2D zoomLocation;zoomLocation.latitude = 38.915359;zoomLocation.longitude= -6.3409557;// añadimos zoom y valores de distancia. MKCoordinateRegion viewRegion =MKCoordinateRegionMakeWithDistance(zoomLocation, 1000, 1000);// mostramos el mapa[mapa setRegion:viewRegion animated:YES];
+
+
+
+-¿Si queremos añadir un punto con información? // añadimos una anotaciónCLLocationCoordinate2D pointLocation; 
+pointLocation.latitude = 38.915636; 
+pointLocation.longitude = -6.338563;MKPointAnnotation *point = [[MKPointAnnotation alloc] init]; 
+point.coordinate = pointLocation;point.title = @"Anfiteatro Romano";point.subtitle = @"Mérida";[mapa addAnnotation:point];
+
 
 
