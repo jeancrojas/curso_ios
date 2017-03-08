@@ -18,6 +18,7 @@
 - (Boolean) anyadirTienda: (NSString *)nombreT tipo:(int)tipoT codPostal:(int) cPT coordX:(double) coordXT coordY:(double) coordYT{
     
     nombre = nombreT;
+    tipo = tipoT;
     cP = cPT;
     coordX = coordXT;
     coordY = coordYT;

@@ -7,12 +7,20 @@
 //
 
 #import "TiendaTableViewController.h"
+#import "AppDelegate.h"
+#import "Tienda.h"
+#import "MapaViewController.h"
 
 @interface TiendaTableViewController ()
 
 @end
 
 @implementation TiendaTableViewController
+
+AppDelegate *appDelegateTiendaTVC;
+//NSMutableArray *listaTiendaTVC;
+MapaViewController *vistaMapaVCTiendaTVC;
+NSMutableArray *listaTiendaTVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +30,27 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    NSLog(@"He recibido el siguiente tipo de tienda: %d",self.tipoTiendaTiendaTVC);
+    
+    appDelegateTiendaTVC = ((AppDelegate *)[[UIApplication sharedApplication]delegate]);
+    listaTiendaTVC = [[NSMutableArray alloc]init];
+    Tienda *t = [[Tienda alloc] init];
+    
+    
+    for (int i=0; i < [appDelegateTiendaTVC.listaTiendas count]; i++) {
+        
+        
+        t = (Tienda *)[appDelegateTiendaTVC.listaTiendas objectAtIndex:i ];
+        
+        if ( t.tipo == self.tipoTiendaTiendaTVC ) {
+            [listaTiendaTVC addObject:t];
+        }
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +65,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [listaTiendaTVC count];
 }
 
 
@@ -44,7 +73,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaTiendaSeleccionada" forIndexPath:indexPath];
     
     // Configure the cell...
+    UITextView *labelDatosTiendaTVC = (UITextView *)[cell viewWithTag:1001];
+    UILabel *labelTest = (UILabel *) [cell viewWithTag:1002];
     
+    Tienda *t = [[Tienda alloc]init];
+    t = [listaTiendaTVC objectAtIndex:indexPath.row];
+    labelDatosTiendaTVC.text = [NSString stringWithFormat:@"Nombre: %@ \nTipo: %d \nCódigo Postal: %d",t.nombre,t.tipo, t.cP];
+    labelTest.text = @"Este es un txt de prueba";
     
     return cell;
 }
@@ -84,14 +119,31 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ( [segue.identifier isEqualToString:@"segueTiendaTVCAMapaVC"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        vistaMapaVCTiendaTVC = segue.destinationViewController;
+        vistaMapaVCTiendaTVC.objectTiendaSeleccionada = [listaTiendaTVC objectAtIndex:indexPath.row];
+        vistaMapaVCTiendaTVC.tiendaSeleccionada = true;
+    }
+    
+    
 }
-*/
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"Usted ha seleccionado: %ld",(long)indexPath.row);
+    
+    
+}
+
 
 @end

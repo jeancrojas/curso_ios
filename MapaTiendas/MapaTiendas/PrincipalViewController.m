@@ -17,6 +17,7 @@
 @implementation PrincipalViewController
 
 int tipoTienda;
+MapaViewController *vistaMapaVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +26,7 @@ int tipoTienda;
     [self.buttonBuscarPrincipalVC setTitle:@"Buscar" forState:UIControlStateNormal];
     
     [self.buttonTodasPrincipalVC setTitle:@"Mostrar Todas" forState:UIControlStateNormal];
-    
+    vistaMapaVC = [[MapaViewController alloc]init];
     
 }
 
@@ -45,6 +46,11 @@ int tipoTienda;
     if ([segue.identifier isEqualToString:@"seguePrincipalVCATiendaTVC"]){
         TiendaTableViewController *vistaTiendaTVC = segue.destinationViewController;
         vistaTiendaTVC.tipoTiendaTiendaTVC = tipoTienda;
+    }
+    
+    if([segue.identifier isEqualToString:@"seguePrincipalVCAMapaVC"]){
+        vistaMapaVC = segue.destinationViewController;
+        vistaMapaVC.tiendaSeleccionada = false;
     }
     
     
@@ -69,16 +75,13 @@ int tipoTienda;
         }
     }
     
-    
-    
-    
 }
 
 - (IBAction)buttonTodasPrincipalVC:(id)sender {
-    
-    MapaViewController *vistaMapaVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idMapaVC" ];
+    /*
+    vistaMapaVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idMapaVC" ];
     
     [self showViewController:vistaMapaVC sender:nil];
-    
+    */
 }
 @end

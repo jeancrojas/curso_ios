@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "Tienda.h"
 
 @interface MapaViewController : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *mapViewMapaMapaVC;
+@property Boolean tiendaSeleccionada;
+@property NSMutableArray *listaTiendaMapaVC;
+@property Tienda *objectTiendaSeleccionada;
 
 @end

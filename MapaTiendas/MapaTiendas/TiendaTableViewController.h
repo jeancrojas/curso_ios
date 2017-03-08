@@ -10,5 +10,6 @@
 
 @interface TiendaTableViewController : UITableViewController
 @property int tipoTiendaTiendaTVC;
+//@property (nonatomic, retain) NSMutableArray *listaTiendaTVC;
 
 @end

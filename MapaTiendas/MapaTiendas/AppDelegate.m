@@ -20,22 +20,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.TIPO_INFORMATICA = 1;
-    self.TIPO_ELECTRONICA = 2;
-    self.TIPO_CENTRO_DE_FORMACION = 3;
+    self.TIPO_INFORMATICA = 0;
+    self.TIPO_ELECTRONICA = 1;
+    self.TIPO_CENTRO_DE_FORMACION = 2;
     
     Tienda *tienda1 = [[Tienda alloc]init];
-    [tienda1 anyadirTienda:@"App Informatica" tipo:1 codPostal: 28003 coordX:40.445886 coordY:-3.703261];
+    [tienda1 anyadirTienda:@"App Informatica" tipo:self.TIPO_INFORMATICA codPostal: 28003 coordX:40.445886 coordY:-3.703261];
     
     Tienda *tienda2 = [[Tienda alloc]init];
     
-    [tienda2 anyadirTienda:@"Worten" tipo:2 codPostal:28015 coordX:40.454203 coordY:-3.703201];
+    [tienda2 anyadirTienda:@"Worten" tipo:self.TIPO_ELECTRONICA codPostal:28015 coordX:40.454203 coordY:-3.703201];
     
     Tienda *tienda3 = [[Tienda alloc]init];
-    [tienda3 anyadirTienda:@"TIC Getafe" tipo:3 codPostal:28905 coordX:40.2939042 coordY:-3.7454621 ];
+    [tienda3 anyadirTienda:@"TIC Getafe" tipo:self.TIPO_CENTRO_DE_FORMACION codPostal:28905 coordX:40.2939042 coordY:-3.7454621 ];
     
     Tienda *tienda4 = [[Tienda alloc]init];
-    [tienda4 anyadirTienda:@"Media Markt" tipo:3 codPostal:28046 coordX:40.462759 coordY:-3.689010 ];
+    [tienda4 anyadirTienda:@"Media Markt" tipo:self.TIPO_ELECTRONICA codPostal:28046 coordX:40.462759 coordY:-3.689010 ];
     
     self.listaTiendas = [NSMutableArray arrayWithObjects:tienda1,tienda2,tienda3,tienda4,nil];
     

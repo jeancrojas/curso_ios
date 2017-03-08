@@ -224,6 +224,7 @@ En la ventana1.m ir al metodo prepareForSegue
     // Pass the selected object to the new view controller.
     
     if ([segue.identifier isEqualToString:@"segueCategoriaAProductos"]) {
+	//Pasarle el numero de item que se a pulsado
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ProductosTableViewController *vistaProductosTVC = segue.destinationViewController;
         vistaProductosTVC.productos = [NSString stringWithFormat:@"Fila %ld", (long)indexPath.row];
@@ -369,6 +370,8 @@ appDelegateEditarNombreAnimalesVC = (AppDelegate *) [[UIApplication sharedApplic
 listaAnimalesEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.listaAnimales;
 nombreArchivoEditarNombreAnimalesVC = appDelegateEditarNombreAnimalesVC.youArrayFileName;
 
+
+
 07 de Marzo de 2017
 *******************
 
@@ -392,7 +395,8 @@ debajo de @implementation ponemos:
 @synthesize mapa;
 
 
--Centramos el mapa y lo mostramos.// añadimos las coordenadas del punto dónde queremos centrar el mapa CLLocationCoordinate2D zoomLocation;zoomLocation.latitude = 38.915359;zoomLocation.longitude= -6.3409557;// añadimos zoom y valores de distancia. MKCoordinateRegion viewRegion =MKCoordinateRegionMakeWithDistance(zoomLocation, 1000, 1000);// mostramos el mapa[mapa setRegion:viewRegion animated:YES];
+-Centramos el mapa y lo mostramos.// añadimos las coordenadas del punto dónde queremos centrar el mapa CLLocationCoordinate2D zoomLocation;zoomLocation.latitude = 38.915359;zoomLocation.longitude= -6.3409557;// añadimos zoom y valores de distancia. 
+MKCoordinateRegion viewRegion =MKCoordinateRegionMakeWithDistance(zoomLocation, 1000, 1000);// mostramos el mapa[mapa setRegion:viewRegion animated:YES];
 
 
 
@@ -400,6 +404,8 @@ debajo de @implementation ponemos:
 pointLocation.latitude = 38.915636; 
 pointLocation.longitude = -6.338563;MKPointAnnotation *point = [[MKPointAnnotation alloc] init]; 
 point.coordinate = pointLocation;point.title = @"Anfiteatro Romano";point.subtitle = @"Mérida";[mapa addAnnotation:point];
+
+
 
 
 
