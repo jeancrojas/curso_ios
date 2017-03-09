@@ -407,5 +407,94 @@ point.coordinate = pointLocation;point.title = @"Anfiteatro Romano";point.subt
 
 
 
+09 de Marzo de 2017
+*******************
+
+Consultar que se habilite el permiso
+
+- Obtener nuestra localización
+
+Importar los siguientes framework
+
+ *CoreLocation.framework
+ *MapKit.framework
+
+Info.plis, añadir los siguiente permisos
+
+ * Privacy - Location When In Use Usage Description, hay que poner un “value”, Por Ej. “Debe tener la localizacion activada.”
+ * Privacy - Location Always Usage Description, hay que poner un “value”, Por Ej. “Debe tener la localizacion activada.”
+
+
+
+en el MapaViewController.h importar lo siguiente: 
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface MapaViewController : UIViewController <CLLocationManagerDelegate>
+....
+
+en el MapaViewController.m realizamos lo siguiente
+
+
+@implementation MapaViewController
+
+CLLocationManager *locationManager;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    
+    locationManager = [[CLLocationManager alloc]init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager requestWhenInUseAuthorization];
+    
+    [locationManager startUpdatingLocation];
+    
+    NSLog(@"Latitud %.8f \nLongitud %.8f",locationManager.location.coordinate.latitude,locationManager.location.coordinate.longitude);
+    
+}
+
+-Otra manera de llamar a una propiedad
+
+* miClase.m 
+@property (weak, nonatomic) IBOutlet MKMapView *mapViewMapa;
+
+* miClase.h
+
+1.- Se le puede llamar de dos maneras
+@synthesize mapViewMapa
+
+y desde todo el codigo le llamamos como mapViewMapa
+
+2.- Se le puede llamar desde todo el código como
+
+self.mapViewMapa
+
+
+
+- Distancia entre dos puntos
+
+CLLocationManager *location1 = [[CLLocationManager alloc]init];
+CLLocationManager *location2 = [[CLLocationManager alloc]init];
+
+CLLocationDistance distance = [location1.location distanceFromLocation: location2.location];
+
+NSLog(@“Distancia %f”, distance);
+
+
+- Si no tiene los permisos de GeoLocalizacion, la aplicacion le da la opcion de habilitarlo
+
+if ([CLLocationManager locationServicesEnabled]) {
+
+	NSLog (“Location Services Enabled”);
+	if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
+		[[UIApplication sharedApplication]openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+	}
+}
+
+
 
 
