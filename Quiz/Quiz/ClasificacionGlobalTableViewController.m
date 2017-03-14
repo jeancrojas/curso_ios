@@ -7,12 +7,17 @@
 //
 
 #import "ClasificacionGlobalTableViewController.h"
+#import "AppDelegate.h"
 
 @interface ClasificacionGlobalTableViewController ()
 
 @end
 
 @implementation ClasificacionGlobalTableViewController
+
+AppDelegate *appDelegateClasificacionGlobalTVC;
+NSMutableArray *listaClasificatoriaClasificacionGlobalTVC;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +27,23 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    appDelegateClasificacionGlobalTVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    listaClasificatoriaClasificacionGlobalTVC = appDelegateClasificacionGlobalTVC.listaClasificatoria;
+    
+    
+    NSLog(@"Ordenando:");
+    NSSortDescriptor *ordenar = [[NSSortDescriptor alloc]init];
+    
+    NSMutableArray *misNumeros = [[NSMutableArray alloc]init];
+    [misNumeros addObject:[NSNumber 1]];
+    [misNumeros addObject:9];
+    [misNumeros addObject:5];
+    [misNumeros addObject:3];
+    
+    
+    ordenar setValue:<#(nullable id)#> forKey:<#(nonnull NSString *)#>
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +54,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return [listaClasificatoriaClasificacionGlobalTVC count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaConcursantes" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    
+    UILabel *labelAliasClasificacionGlobalTVC = (UILabel *) [cell viewWithTag:1001];
+    UILabel *labelPuntuacionClasificacionGlobalTVC = (UILabel *) [cell viewWithTag:1002];
+
+    
+    
+    NSMutableDictionary *dictionaryClasificacion = [listaClasificatoriaClasificacionGlobalTVC objectAtIndex:indexPath.row];
+    labelAliasClasificacionGlobalTVC.text = [dictionaryClasificacion objectForKey:@"alias"];
+    labelPuntuacionClasificacionGlobalTVC.text = [NSString stringWithFormat: @"%@", [dictionaryClasificacion objectForKey:@"puntuacion"]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

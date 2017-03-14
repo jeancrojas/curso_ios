@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0nH-GL-eMx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="dEW-2S-ziN">
+            <objects>
+                <viewController id="LAu-Cw-A7n" customClass="PerroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bzN-L3-Fcu"/>
+                        <viewControllerLayoutGuide type="bottom" id="CLm-2q-2g2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V5b-EW-8QB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-g5-zqm">
+                                <frame key="frameInset" minX="166" minY="71" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="0GB-8f-5qN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgA-zD-i9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="403"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="jLU-Ur-sXF">
+            <objects>
+                <viewController id="3SK-aC-pWJ" customClass="ElefanteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ILI-CH-EpJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="xP1-S1-b0x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aML-KP-8Qh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elefante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-Cu-fzk">
+                                <frame key="frameInset" minX="121" minY="110" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="HwA-xC-OhE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q27-69-K9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.6" y="-251.42428785607197"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kzm-Za-Lyf">
+            <objects>
+                <tabBarController id="0nH-GL-eMx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="P7k-DK-JGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3SK-aC-pWJ" kind="relationship" relationship="viewControllers" id="smc-Xy-SV2"/>
+                        <segue destination="LAu-Cw-A7n" kind="relationship" relationship="viewControllers" id="iNw-6r-dh1"/>
+                        <segue destination="rT9-Di-wBG" kind="relationship" relationship="viewControllers" id="5Ag-a8-edk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTp-gA-exU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="76"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="fCS-J5-zIX">
+            <objects>
+                <viewController id="rT9-Di-wBG" customClass="GatoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EaP-z7-Nxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="s3x-2r-DS9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jSX-FI-8Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3k-UQ-O0m">
+                                <frame key="frameInset" minX="166" minY="101" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZUv-3F-qIf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g92-31-9Yk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="1104"/>
+        </scene>
+    </scenes>
+</document>

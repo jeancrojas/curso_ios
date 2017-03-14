@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Concursante.h"
 
 @interface AppDelegate ()
 
@@ -15,10 +16,21 @@
 @implementation AppDelegate
 @synthesize listaPreguntas;
 @synthesize listaRespuestaCorrectas;
+@synthesize youArrayFileName;
+@synthesize listaClasificatoria;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    
+    //Se seleciona la ruta exacta
+    youArrayFileName = [documentDirectory stringByAppendingPathComponent:@"clasificacionGlobal.dat"];
+    
+    listaClasificatoria = [[NSMutableArray alloc]initWithContentsOfFile:youArrayFileName];
+    
     
     listaPreguntas = [[NSArray alloc]init];
     listaPreguntas = @[
@@ -48,7 +60,54 @@
                        @"d"];
     
     
+    //Si es la primera vez que accedo a mi aplicacion, debo crear el Array
+    if (listaClasificatoria == nil) {
+        listaClasificatoria = [[NSMutableArray alloc]init];
+        NSLog(@"El fichero NO  existe");
+        
+        NSMutableDictionary *listaTest1 = [[NSMutableDictionary alloc]init];
+        [listaTest1 setObject: @"Coli Flor" forKey:@"alias"];
+        [listaTest1 setObject: [NSNumber numberWithInt:7] forKey:@"puntuacion"];
+        
+        NSMutableDictionary *listaTest2 = [[NSMutableDictionary alloc]init];
+        [listaTest2 setObject: @"Alca Chofa" forKey:@"alias"];
+        [listaTest2 setObject: [NSNumber numberWithInt:5] forKey:@"puntuacion"];
+        
+        
+        //[listaClasificatoria addObject:@"Primero"];
+        //[listaClasificatoria addObject:@"Segundo"];
+        
+        [listaClasificatoria addObject:listaTest1];
+        [listaClasificatoria addObject:listaTest2];
+        
+        [listaClasificatoria writeToFile:youArrayFileName atomically: YES];
+        
+    }else{
+        NSLog(@"El fichero SI existe");
+    }
     
+    //Se añaden concursantes al archivo
+    /*
+    Concursante *c1 = [[Concursante alloc] intConsursante:@"Coli Flor" puntuacion: 7];
+    
+    Concursante *c2 = [[Concursante alloc] intConsursante:@"Alca Chofa" puntuacion:5];
+    
+    
+    [listaClasificatoria addObject:c1];
+    [listaClasificatoria addObject:c2];
+     */
+    
+    NSLog(@"Ubicación del archivo: %@",youArrayFileName);
+    /*
+    
+    for (int i=0; i < [listaClasificatoria count]; i++) {
+        
+        NSMutableDictionary *nsMD = [listaClasificatoria objectAtIndex:i];
+        
+        NSLog(@"Alias: %@ , con puntuación: %d", [nsMD objectForKey:@"alias"], [[nsMD objectForKey:@"puntuacion"] intValue] );
+        
+    }
+    */
     
     return YES;
 }

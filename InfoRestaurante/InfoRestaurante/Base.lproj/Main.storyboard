@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rxw-AL-k9p">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mapa View Controller-->
+        <scene sceneID="syt-qi-rH3">
+            <objects>
+                <viewController id="2tN-jA-gAP" customClass="MapaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gSU-Dw-yTx"/>
+                        <viewControllerLayoutGuide type="bottom" id="B81-Bw-XqV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJA-2w-1dE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Mr-Dv-zgw">
+                                <frame key="frameInset" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="siluetaMapa.png" id="Mu3-dc-Q0Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPf-LW-Ori" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909.60000000000002" y="438.53073463268368"/>
+        </scene>
+        <!--Contacto View Controller-->
+        <scene sceneID="gQh-Gf-b6Z">
+            <objects>
+                <viewController id="jAt-1c-GPE" customClass="ContactoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AJP-Bj-PtD"/>
+                        <viewControllerLayoutGuide type="bottom" id="mYA-xe-4eS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NCJ-zs-5YA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="siluetaContacto.png" id="VXo-G3-nFi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cD4-Rg-pI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="1141"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="02Y-cR-AY2">
+            <objects>
+                <tabBarController id="Rxw-AL-k9p" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="911-Wf-BXB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0Wl-hj-4VG" kind="relationship" relationship="viewControllers" id="1w3-9E-kov"/>
+                        <segue destination="2tN-jA-gAP" kind="relationship" relationship="viewControllers" id="lIP-zd-ri4"/>
+                        <segue destination="jAt-1c-GPE" kind="relationship" relationship="viewControllers" id="Jgn-mQ-tGZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAG-fg-omi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="111"/>
+        </scene>
+        <!--Lista Restaurante Collection View Controller-->
+        <scene sceneID="WB3-zn-mQv">
+            <objects>
+                <collectionViewController id="0Wl-hj-4VG" customClass="listaRestauranteCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="u7M-Nm-uiC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.23921568630000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dT0-E5-ljW">
+                            <size key="itemSize" width="182" height="194"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="idListaRestauranteCVC" id="wMh-kS-jaf">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="194"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-wx-b6R">
+                                            <frame key="frameInset" minX="8" minY="14" width="166" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="1002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RH-Df-fgq">
+                                            <frame key="frameInset" minX="8" minY="58" width="166" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0Wl-hj-4VG" id="Cqa-Lb-Aag"/>
+                            <outlet property="delegate" destination="0Wl-hj-4VG" id="8nn-R2-1Mn"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="" image="siluetaRestaurante.png" id="4sG-3l-pB7"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sq9-h2-UF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="-282.00899550224892"/>
+        </scene>
+        <!--Info Restaurante View Controller-->
+        <scene sceneID="C5E-ks-ao1">
+            <objects>
+                <viewController id="Fjc-cE-nUT" customClass="InfoRestauranteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaV-Br-A0a"/>
+                        <viewControllerLayoutGuide type="bottom" id="wWf-Ck-HiB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NPP-gR-7fS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyk-3J-FRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="-282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="siluetaContacto.png" width="30" height="16"/>
+        <image name="siluetaMapa.png" width="30" height="30"/>
+        <image name="siluetaRestaurante.png" width="30" height="30"/>
+    </resources>
+</document>

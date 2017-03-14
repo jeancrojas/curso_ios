@@ -16,6 +16,8 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 @property (nonatomic, retain) NSArray *listaPreguntas;
 @property (nonatomic, retain) NSArray *listaRespuestaCorrectas;
+@property (nonatomic,retain) NSString *youArrayFileName;
+@property (nonatomic, retain) NSMutableArray *listaClasificatoria;
 
 - (void)saveContext;
 

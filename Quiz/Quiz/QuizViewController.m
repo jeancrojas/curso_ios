@@ -8,6 +8,7 @@
 
 #import "QuizViewController.h"
 #import "JugarViewController.h"
+#import "ClasificacionGlobalTableViewController.h"
 
 @interface QuizViewController ()
 
@@ -45,10 +46,11 @@
 */
 
 - (IBAction)buttonClasificacionGlobalQuizVC:(id)sender {
+    ClasificacionGlobalTableViewController *vistaClasificacionGlobalTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idClasificacionGlobalTVC"];
+    [self showViewController:vistaClasificacionGlobalTVC sender:nil];
 }
 - (IBAction)buttonRondaPreguntasQuizVC:(id)sender {
     JugarViewController *vistaJugarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idJugarVC" ];
-    
     [self showViewController:vistaJugarVC sender:nil];
     
 }

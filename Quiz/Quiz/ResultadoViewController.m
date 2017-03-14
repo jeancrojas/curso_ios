@@ -7,6 +7,8 @@
 //
 
 #import "ResultadoViewController.h"
+#import "AppDelegate.h"
+#import "QuizViewController.h"
 
 @interface ResultadoViewController ()
 
@@ -18,6 +20,9 @@
 @synthesize labelPuntuacionResultadoVC;
 @synthesize textFieldIntroducirAliasResultadoVC;
 @synthesize puntuacionResultadoVC;
+NSMutableArray *listaClasificatoriaResultadoVC;
+AppDelegate *appDelegateResultadoVC;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,6 +30,8 @@
     textFieldIntroducirAliasResultadoVC.placeholder = @"Introducir alias";
     labelPuntuacionResultadoVC.text = [NSString stringWithFormat: @"Tu puntuación es: %d",puntuacionResultadoVC ];
     [buttonAceptarResultadoVC setTitle:@"Aceptar" forState: UIControlStateNormal];
+    appDelegateResultadoVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    listaClasificatoriaResultadoVC = appDelegateResultadoVC.listaClasificatoria;
     
 }
 
@@ -43,4 +50,18 @@
 }
 */
 
+- (IBAction)buttonAceptarResultadoVC:(id)sender {
+    
+    NSMutableDictionary *addCandidato = [[NSMutableDictionary alloc]init];
+    [addCandidato setObject: self.textFieldAliasResultadoVC.text forKey:@"alias"];
+    [addCandidato setObject: [NSString stringWithFormat:@"%d", puntuacionResultadoVC] forKey:@"puntuacion"];
+    
+    [listaClasificatoriaResultadoVC addObject:addCandidato];
+    [listaClasificatoriaResultadoVC writeToFile:appDelegateResultadoVC.youArrayFileName atomically:YES];
+    
+    QuizViewController *vistaQuizVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idQuizNavigationController" ];
+    
+    [self showViewController:vistaQuizVC sender:nil];
+    
+}
 @end

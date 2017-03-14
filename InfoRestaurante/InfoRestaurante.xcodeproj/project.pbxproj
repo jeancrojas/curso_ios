@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093A1C721E7808CD00E9E0D0 /* siluetaContacto.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C6F1E7808CD00E9E0D0 /* siluetaContacto.png */; };
+		093A1C731E7808CD00E9E0D0 /* siluetaMapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C701E7808CD00E9E0D0 /* siluetaMapa.png */; };
+		093A1C741E7808CD00E9E0D0 /* siluetaRestaurante.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C711E7808CD00E9E0D0 /* siluetaRestaurante.png */; };
+		093A1CA51E78151000E9E0D0 /* restauranteBrasaleña.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */; };
+		093A1CA61E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */; };
+		093A1CA81E78151000E9E0D0 /* restauranteLaPepica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */; };
+		093A1CA91E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */; };
+		093A1CAA1E78151000E9E0D0 /* restauranteElIntiDeOro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA31E78151000E9E0D0 /* restauranteElIntiDeOro.jpg */; };
+		093A1CAB1E78151000E9E0D0 /* restauranteElFaro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA41E78151000E9E0D0 /* restauranteElFaro.jpg */; };
+		093A1CAD1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */; };
+		093A1CB01E781AA200E9E0D0 /* InfoRestauranteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */; };
+		093A1CB31E781B5400E9E0D0 /* Restaurante.m in Sources */ = {isa = PBXBuildFile; fileRef = 093A1CB21E781B5400E9E0D0 /* Restaurante.m */; };
+		09BA34091E77F9C700F9302B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34081E77F9C700F9302B /* main.m */; };
+		09BA340C1E77F9C700F9302B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA340B1E77F9C700F9302B /* AppDelegate.m */; };
+		09BA340F1E77F9C700F9302B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA340E1E77F9C700F9302B /* ViewController.m */; };
+		09BA34121E77F9C800F9302B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BA34101E77F9C800F9302B /* Main.storyboard */; };
+		09BA34151E77F9C800F9302B /* InfoRestaurante.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34131E77F9C800F9302B /* InfoRestaurante.xcdatamodeld */; };
+		09BA34171E77F9C800F9302B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BA34161E77F9C800F9302B /* Assets.xcassets */; };
+		09BA341A1E77F9C800F9302B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BA34181E77F9C800F9302B /* LaunchScreen.storyboard */; };
+		09BA34231E77FA6900F9302B /* listaRestauranteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34221E77FA6900F9302B /* listaRestauranteCollectionViewController.m */; };
+		09BA34261E77FA9400F9302B /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34251E77FA9400F9302B /* MapaViewController.m */; };
+		09BA34291E77FAB300F9302B /* ContactoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34281E77FAB300F9302B /* ContactoViewController.m */; };
+		09BA34341E78060E00F9302B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BA34331E78060E00F9302B /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		093A1C6F1E7808CD00E9E0D0 /* siluetaContacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaContacto.png; path = ../Imagenes/siluetaContacto.png; sourceTree = "<group>"; };
+		093A1C701E7808CD00E9E0D0 /* siluetaMapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaMapa.png; path = ../Imagenes/siluetaMapa.png; sourceTree = "<group>"; };
+		093A1C711E7808CD00E9E0D0 /* siluetaRestaurante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaRestaurante.png; path = ../Imagenes/siluetaRestaurante.png; sourceTree = "<group>"; };
+		093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "restauranteBrasaleña.jpg"; path = "../Imagenes/restauranteBrasaleña.jpg"; sourceTree = "<group>"; };
+		093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteLaVacaArgentina.jpg; path = ../Imagenes/restauranteLaVacaArgentina.jpg; sourceTree = "<group>"; };
+		093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteLaPepica.jpg; path = ../Imagenes/restauranteLaPepica.jpg; sourceTree = "<group>"; };
+		093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteGastonAcurioMadrid.jpg; path = ../Imagenes/restauranteGastonAcurioMadrid.jpg; sourceTree = "<group>"; };
+		093A1CA31E78151000E9E0D0 /* restauranteElIntiDeOro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteElIntiDeOro.jpg; path = ../Imagenes/restauranteElIntiDeOro.jpg; sourceTree = "<group>"; };
+		093A1CA41E78151000E9E0D0 /* restauranteElFaro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteElFaro.jpg; path = ../Imagenes/restauranteElFaro.jpg; sourceTree = "<group>"; };
+		093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteAsadorDeAranda.jpg; path = ../Imagenes/restauranteAsadorDeAranda.jpg; sourceTree = "<group>"; };
+		093A1CAE1E781AA200E9E0D0 /* InfoRestauranteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoRestauranteViewController.h; sourceTree = "<group>"; };
+		093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoRestauranteViewController.m; sourceTree = "<group>"; };
+		093A1CB11E781B5400E9E0D0 /* Restaurante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurante.h; sourceTree = "<group>"; };
+		093A1CB21E781B5400E9E0D0 /* Restaurante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurante.m; sourceTree = "<group>"; };
+		09BA34041E77F9C700F9302B /* InfoRestaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoRestaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BA34081E77F9C700F9302B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09BA340A1E77F9C700F9302B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09BA340B1E77F9C700F9302B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09BA340D1E77F9C700F9302B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		09BA340E1E77F9C700F9302B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09BA34111E77F9C800F9302B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09BA34141E77F9C800F9302B /* InfoRestaurante.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InfoRestaurante.xcdatamodel; sourceTree = "<group>"; };
+		09BA34161E77F9C800F9302B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09BA34191E77F9C800F9302B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09BA341B1E77F9C800F9302B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09BA34211E77FA6900F9302B /* listaRestauranteCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listaRestauranteCollectionViewController.h; sourceTree = "<group>"; };
+		09BA34221E77FA6900F9302B /* listaRestauranteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listaRestauranteCollectionViewController.m; sourceTree = "<group>"; };
+		09BA34241E77FA9400F9302B /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
+		09BA34251E77FA9400F9302B /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
+		09BA34271E77FAB300F9302B /* ContactoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoViewController.h; sourceTree = "<group>"; };
+		09BA34281E77FAB300F9302B /* ContactoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoViewController.m; sourceTree = "<group>"; };
+		09BA34331E78060E00F9302B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09BA34011E77F9C700F9302B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BA34341E78060E00F9302B /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09BA33FB1E77F9C700F9302B = {
+			isa = PBXGroup;
+			children = (
+				093A1CAE1E781AA200E9E0D0 /* InfoRestauranteViewController.h */,
+				093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */,
+				093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */,
+				093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */,
+				093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */,
+				093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */,
+				093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */,
+				093A1CA31E78151000E9E0D0 /* restauranteElIntiDeOro.jpg */,
+				093A1CA41E78151000E9E0D0 /* restauranteElFaro.jpg */,
+				093A1C6F1E7808CD00E9E0D0 /* siluetaContacto.png */,
+				093A1C701E7808CD00E9E0D0 /* siluetaMapa.png */,
+				093A1C711E7808CD00E9E0D0 /* siluetaRestaurante.png */,
+				09BA34061E77F9C700F9302B /* InfoRestaurante */,
+				09BA34051E77F9C700F9302B /* Products */,
+				09BA34321E78060E00F9302B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09BA34051E77F9C700F9302B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09BA34041E77F9C700F9302B /* InfoRestaurante.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09BA34061E77F9C700F9302B /* InfoRestaurante */ = {
+			isa = PBXGroup;
+			children = (
+				09BA340A1E77F9C700F9302B /* AppDelegate.h */,
+				09BA340B1E77F9C700F9302B /* AppDelegate.m */,
+				09BA340D1E77F9C700F9302B /* ViewController.h */,
+				09BA340E1E77F9C700F9302B /* ViewController.m */,
+				09BA34101E77F9C800F9302B /* Main.storyboard */,
+				093A1CB11E781B5400E9E0D0 /* Restaurante.h */,
+				093A1CB21E781B5400E9E0D0 /* Restaurante.m */,
+				09BA34271E77FAB300F9302B /* ContactoViewController.h */,
+				09BA34281E77FAB300F9302B /* ContactoViewController.m */,
+				09BA34241E77FA9400F9302B /* MapaViewController.h */,
+				09BA34251E77FA9400F9302B /* MapaViewController.m */,
+				09BA34211E77FA6900F9302B /* listaRestauranteCollectionViewController.h */,
+				09BA34221E77FA6900F9302B /* listaRestauranteCollectionViewController.m */,
+				09BA34161E77F9C800F9302B /* Assets.xcassets */,
+				09BA34181E77F9C800F9302B /* LaunchScreen.storyboard */,
+				09BA341B1E77F9C800F9302B /* Info.plist */,
+				09BA34131E77F9C800F9302B /* InfoRestaurante.xcdatamodeld */,
+				09BA34071E77F9C700F9302B /* Supporting Files */,
+			);
+			path = InfoRestaurante;
+			sourceTree = "<group>";
+		};
+		09BA34071E77F9C700F9302B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09BA34081E77F9C700F9302B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09BA34321E78060E00F9302B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09BA34331E78060E00F9302B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09BA34031E77F9C700F9302B /* InfoRestaurante */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09BA341E1E77F9C800F9302B /* Build configuration list for PBXNativeTarget "InfoRestaurante" */;
+			buildPhases = (
+				09BA34001E77F9C700F9302B /* Sources */,
+				09BA34011E77F9C700F9302B /* Frameworks */,
+				09BA34021E77F9C700F9302B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InfoRestaurante;
+			productName = InfoRestaurante;
+			productReference = 09BA34041E77F9C700F9302B /* InfoRestaurante.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09BA33FC1E77F9C700F9302B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = scriptingsystems;
+				TargetAttributes = {
+					09BA34031E77F9C700F9302B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 09BA33FF1E77F9C700F9302B /* Build configuration list for PBXProject "InfoRestaurante" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09BA33FB1E77F9C700F9302B;
+			productRefGroup = 09BA34051E77F9C700F9302B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09BA34031E77F9C700F9302B /* InfoRestaurante */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09BA34021E77F9C700F9302B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093A1CA51E78151000E9E0D0 /* restauranteBrasaleña.jpg in Resources */,
+				093A1CAA1E78151000E9E0D0 /* restauranteElIntiDeOro.jpg in Resources */,
+				093A1C741E7808CD00E9E0D0 /* siluetaRestaurante.png in Resources */,
+				093A1C721E7808CD00E9E0D0 /* siluetaContacto.png in Resources */,
+				09BA341A1E77F9C800F9302B /* LaunchScreen.storyboard in Resources */,
+				093A1CA81E78151000E9E0D0 /* restauranteLaPepica.jpg in Resources */,
+				093A1CA91E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg in Resources */,
+				093A1CA61E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg in Resources */,
+				09BA34171E77F9C800F9302B /* Assets.xcassets in Resources */,
+				093A1C731E7808CD00E9E0D0 /* siluetaMapa.png in Resources */,
+				093A1CAD1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg in Resources */,
+				093A1CAB1E78151000E9E0D0 /* restauranteElFaro.jpg in Resources */,
+				09BA34121E77F9C800F9302B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09BA34001E77F9C700F9302B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BA34231E77FA6900F9302B /* listaRestauranteCollectionViewController.m in Sources */,
+				09BA340F1E77F9C700F9302B /* ViewController.m in Sources */,
+				09BA340C1E77F9C700F9302B /* AppDelegate.m in Sources */,
+				093A1CB01E781AA200E9E0D0 /* InfoRestauranteViewController.m in Sources */,
+				09BA34151E77F9C800F9302B /* InfoRestaurante.xcdatamodeld in Sources */,
+				09BA34091E77F9C700F9302B /* main.m in Sources */,
+				09BA34261E77FA9400F9302B /* MapaViewController.m in Sources */,
+				09BA34291E77FAB300F9302B /* ContactoViewController.m in Sources */,
+				093A1CB31E781B5400E9E0D0 /* Restaurante.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09BA34101E77F9C800F9302B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09BA34111E77F9C800F9302B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09BA34181E77F9C800F9302B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09BA34191E77F9C800F9302B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09BA341C1E77F9C800F9302B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09BA341D1E77F9C800F9302B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09BA341F1E77F9C800F9302B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InfoRestaurante/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.InfoRestaurante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09BA34201E77F9C800F9302B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InfoRestaurante/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.InfoRestaurante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09BA33FF1E77F9C700F9302B /* Build configuration list for PBXProject "InfoRestaurante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09BA341C1E77F9C800F9302B /* Debug */,
+				09BA341D1E77F9C800F9302B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09BA341E1E77F9C800F9302B /* Build configuration list for PBXNativeTarget "InfoRestaurante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09BA341F1E77F9C800F9302B /* Debug */,
+				09BA34201E77F9C800F9302B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09BA34131E77F9C800F9302B /* InfoRestaurante.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09BA34141E77F9C800F9302B /* InfoRestaurante.xcdatamodel */,
+			);
+			currentVersion = 09BA34141E77F9C800F9302B /* InfoRestaurante.xcdatamodel */;
+			path = InfoRestaurante.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 09BA33FC1E77F9C700F9302B /* Project object */;
+}

@@ -20,7 +20,7 @@
 @synthesize textFieldRespuestaJugarVC;
 @synthesize buttonSiguienterPreguntaJugarVC;
 AppDelegate *appDelegateJugarVC;
-int numPregunta=0;
+int numPregunta;
 NSMutableArray *listaRespuestasIntroducidas;
 
 
@@ -35,10 +35,10 @@ bool seEstaPreguntando = true;
     [buttonSiguienterPreguntaJugarVC setTitle:@"Siguiente..." forState: UIControlStateNormal];
     appDelegateJugarVC = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     listaRespuestasIntroducidas = [[NSMutableArray alloc] init];
-    
+    numPregunta=0;
     textViewPreguntaJugarVC.text = [appDelegateJugarVC.listaPreguntas objectAtIndex:numPregunta];
     [self mostrarPregunta];
-    
+    NSLog(@"Lista de preguntas: %ld",[appDelegateJugarVC.listaPreguntas count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,46 +58,50 @@ bool seEstaPreguntando = true;
 
 - (IBAction)buttonSiguienterPreguntaJugarVC:(id)sender {
     
-    if (!seEstaPreguntando) {
-        ResultadoViewController *vistaResultadoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idResultadoViewController"];
-        
-        NSLog(@"Tamaño de respuestas %ld", [listaRespuestasIntroducidas count]);
-        
-        for (int i=0; i < [listaRespuestasIntroducidas count]; i++) {
-                NSLog(@"Resultado: %@", [listaRespuestasIntroducidas objectAtIndex:i] );
-        }
-        
-        vistaResultadoVC.puntuacionResultadoVC = 12;
-        [self showViewController:vistaResultadoVC sender:nil];
-        
-    }
-    
     [self mostrarPregunta];
     
 }
 
 - (void) mostrarPregunta{
     //Respuesta introducida
-    
+    //textViewPreguntaJugarVC.text = [appDelegateJugarVC.listaPreguntas objectAtIndex:numPregunta];
     NSString *respuestaIntroducida = textFieldRespuestaJugarVC.text;
     //Se muestra la pregunta
     
-    
-    if (numPregunta < 10 && [respuestaIntroducida length] !=0){
-        
+    if ( [listaRespuestasIntroducidas count] < 10 && [respuestaIntroducida length] > 0){
         [listaRespuestasIntroducidas addObject:respuestaIntroducida];
         textFieldRespuestaJugarVC.text = @"";
-        ++numPregunta;
-        //textViewPreguntaJugarVC.text = [appDelegateJugarVC.listaPreguntas objectAtIndex:++numPregunta];
-        NSLog(@"valor %d",numPregunta);
-        
+        numPregunta++;
     }
     
+    //Evita que te salgas del numero de indices permitidos del Array listaPreguntas
+    if (numPregunta < 10) {
+        textViewPreguntaJugarVC.text = [appDelegateJugarVC.listaPreguntas objectAtIndex:numPregunta];
+    }
     
-    if (numPregunta == [appDelegateJugarVC.listaPreguntas count]-1) {
+    //En la pregunta 10 ya se cambia el nombre del botón
+    if([listaRespuestasIntroducidas count] == 9){
         [buttonSiguienterPreguntaJugarVC setTitle:@"Finalizar" forState: UIControlStateNormal];
-        seEstaPreguntando = false;
     }
+    
+    if([listaRespuestasIntroducidas count] == 10){
+        ResultadoViewController *vistaResultadoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idResultadoViewController"];
+        //Numero de respuestas acertadas
+        int resputasAcertadas = 0;
+        
+        for (int i=0; i < [listaRespuestasIntroducidas count]; i++) {
+            
+            if( [[listaRespuestasIntroducidas objectAtIndex:i] isEqualToString:  [appDelegateJugarVC.listaRespuestaCorrectas objectAtIndex:i]] ){
+                resputasAcertadas++;
+            }
+        }
+        
+        NSLog(@"Resultado acertardas: %d", resputasAcertadas );
+        vistaResultadoVC.puntuacionResultadoVC = resputasAcertadas;
+        //[self showViewController:vistaResultadoVC sender:nil];
+        [self presentViewController:vistaResultadoVC animated: YES completion:nil];
+    }
+    
 }
 
 

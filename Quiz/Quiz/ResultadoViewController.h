@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonAceptarResultadoVC;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldIntroducirAliasResultadoVC;
 @property int puntuacionResultadoVC;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldAliasResultadoVC;
+- (IBAction)buttonAceptarResultadoVC:(id)sender;
 @end
