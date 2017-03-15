@@ -7,16 +7,41 @@
 //
 
 #import "MapaViewController.h"
+#import "AppDelegate.h"
+#import "Restaurante.h"
 
 @interface MapaViewController ()
 
 @end
 
 @implementation MapaViewController
+@synthesize mapViewMapaVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    AppDelegate *appDelegateMapaVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    NSMutableArray *listaDeRestaurantesMapaVC = appDelegateMapaVC.listaDeRestaurantes;
+    
+    
+    
+    CLLocationCoordinate2D pointLocation;
+    //MKPointAnnotation *point;
+    
+    for (int i=0; i < [listaDeRestaurantesMapaVC count]; i++) {
+        Restaurante *restauranteMapaVC = [listaDeRestaurantesMapaVC objectAtIndex:i];
+        pointLocation.latitude = restauranteMapaVC.coordenadaLatitud;
+        pointLocation.longitude = restauranteMapaVC.coordenadaLongitud;
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = pointLocation;
+        point.title = restauranteMapaVC.nombre;
+        point.subtitle = restauranteMapaVC.descripcion;
+        [mapViewMapaVC addAnnotation:point];
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

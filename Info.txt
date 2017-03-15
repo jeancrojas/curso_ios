@@ -630,3 +630,28 @@ PrincipalViewController.m
 }
 
 
+15 de Marzo de 2017
+*******************
+
+
+Añadir Imagen al Navigation Controller
+
+[self.navigationController.navigationBar setBackgroundImage:image forBarMetrics: UIBarMetricsDefault ];
+
+--Enviar Correo:
+
+
+MFMail​Compose​View​Controller
+
+añadir el framework: MessageUI
+
+añadir lo siguiente en nuestra clase .h
+
+#import <MessageUI/MessageUI.h>
+
+
+
+
+
+
+MFMail​Compose​Result

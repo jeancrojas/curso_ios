@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Restaurante.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,48 @@
 
 @implementation AppDelegate
 
+@synthesize listaDeRestaurantes;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+    
+    
+    
+    Restaurante *restauranteAsadorDeAranda = [[Restaurante alloc]initWithNombre: @"Asador de Aranda" nombreImagenRestaurante:@"restauranteAsadorDeAranda.jpg" web: @"http://www.asadordearanda.net" descripcion: @"El lechazo asado en horno de barro, el cordero como ya nadie lo cocina "
+        "El lechazo asado en horno de barro, es la especialidad. La técnica es sencilla pero inmejorable, "
+    "es por ello por lo que se mantiene desde tiempos inmemorables. Poco más puede acompañar "
+    "a este plato tan natural; los tintos de la ribera, los mariscos de Castilla y por supuesto "
+                               "buen apetito y compañia." coordenadaLatitud:40.443132 coordenadaLongitud:-3.696011];
+    
+    
+    Restaurante *restauranteBrasaylena = [[Restaurante alloc] initWithNombre: @"Brasaylena" nombreImagenRestaurante:@"restauranteBrasaylena.jpg" web:@"http://www.brasaylena.com" descripcion:@"Si eres un amantes de la carne, y disfrutas con la gastronomía de otros lugares, Brasayleña será tu destino favorito."
+    "En cualquiera de nuestros 23 restaurantes vivirás la experiencia de degustar la mejor cocina brasileña, atendida por auténticos churrasqueros de aquel país, y podrás disfrutar de más de 15 cortes distintos de carne de res, ave, cerdo o ternera, asados igual que en Brasil."
+    "Chorizo criollo, jamoncito de pollo marinado, costillas de res, costillas de cerdo, entraña de ternera, picanha brasileña, pechuga de pollo envuelta en bacón, lomo de cerdo marinado, alcatra brasileña, lacón de pollo y un largo etcétera." coordenadaLatitud:40.416143 coordenadaLongitud:-3.708713];
+    
+    
+    
+    Restaurante *restauranteElFaro = [[Restaurante alloc]initWithNombre:@"El Faro" nombreImagenRestaurante:@"restauranteElFaro.jpg" web:@"http://www.elfarodelpardo.com" descripcion:@"El Faro – decimos- combina este doble gusto:"
+      "La calidad de sus platos- entre los que destacan carnes, el cordero, cochinillo, gamo y jabalí, sin olvidar nuestros arroces, con un entorno estimulador de los sentidos. Cincuenta años dando de comer, a gusto, haciendo de cada plato arte de yantar. El Pardo, en fin, es una bendición de la naturaleza. En este monte que se extendió desde los tiempos de Fernando IV y que hoy, dos largos siglos después, sigue siendo el lugar de esparcimiento, disfrute, y –por que no- de degustación, sabor a gloria." coordenadaLatitud:40.514106 coordenadaLongitud:-3.764285];
+    
+    
+    Restaurante *restauranteIntiDeOro = [[Restaurante alloc]initWithNombre:@"El Inti de Oro" nombreImagenRestaurante:@"restauranteElIntiDeOro.jpg" web:@"http://www.intideoro.com" descripcion:@"Nuestro restaurante comienza su andadura el 24 de abril de 1991 de la mano de León Carrillo, con una larga experiencia en la cocina peruana que data de 1976 cuando comenzo en el restaurante “El Inca”, el primer restaurante peruano en España. Desde entonces su mayor preocupación siempre ha sido que los clientes queden completamente satisfechos. Esto lo consigue gracias a un buen equipo de profesionales peruano que, usando los ingredientes de la tierra, logran que los platos salgan igual que en el mismísimo Perú." coordenadaLatitud:40.415607 coordenadaLongitud:-3.699012];
+    
+    
+    Restaurante *restauranteGastonAcurioMadrid = [[Restaurante alloc] initWithNombre:@"Gaston Acurio Madrid" nombreImagenRestaurante:@"restauranteGastonAcurioMadrid.jpg" web:@"https://aygmadrid.com" descripcion:@"A&G es el primer restaurante de alta cocina peruana de Madrid. Desde su apertura en 2007 se ha convertido en un lugar de referencia en el segmento de la alta cocina en la ciudad." coordenadaLatitud: 40.2540080 coordenadaLongitud:-3.414560];
+    
+    Restaurante *restauranteLaPepica = [[Restaurante alloc]initWithNombre:@"La Pepica" nombreImagenRestaurante:@"restauranteLaPepica.jpg" web:@"http://www.lapepica.com" descripcion:@"La cocina valenciana de La Pepica y su sabroso arroz, las vistas al mar mediterráneo, el sol y el buen ambiente son el mejor atractivo de un restaurante que va camino de sus 120 años de historia." coordenadaLatitud:39.463320 coordenadaLongitud:-0.323424];
+    
+
+    Restaurante *restaurateLaVacaArgentina = [[Restaurante alloc]initWithNombre:@"La Vaca Argentina" nombreImagenRestaurante:@"restauranteLaVacaArgentina.jpg" web:@"http://www.lavaca.es" descripcion: @"Descubre la nueva Carta de Hamburguesas LAVACA, by Paco Pérez, cinco estrellas Michelín. Saborea los mejores cortes de nuestra selección de razas nacionales e internacionales de vacuno a la parrilla de carbón de encina y al horno de brasas con aroma de sarmiento. Nuestra filosofía es mejorar cada día para hacer de cada visita a LAVACA una experiencia gastronómica irrepetible." coordenadaLatitud:40.439966 coordenadaLongitud:-3.681023];
+    
+    
+        
+    listaDeRestaurantes = [[NSMutableArray alloc] initWithObjects:restauranteAsadorDeAranda, restauranteBrasaylena,restauranteElFaro, restauranteIntiDeOro, restauranteGastonAcurioMadrid, restauranteLaPepica, restaurateLaVacaArgentina, nil];
+    
     return YES;
 }
 

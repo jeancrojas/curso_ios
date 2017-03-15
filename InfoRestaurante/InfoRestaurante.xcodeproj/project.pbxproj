@@ -10,15 +10,14 @@
 		093A1C721E7808CD00E9E0D0 /* siluetaContacto.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C6F1E7808CD00E9E0D0 /* siluetaContacto.png */; };
 		093A1C731E7808CD00E9E0D0 /* siluetaMapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C701E7808CD00E9E0D0 /* siluetaMapa.png */; };
 		093A1C741E7808CD00E9E0D0 /* siluetaRestaurante.png in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C711E7808CD00E9E0D0 /* siluetaRestaurante.png */; };
-		093A1CA51E78151000E9E0D0 /* restauranteBrasaleña.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */; };
 		093A1CA61E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */; };
 		093A1CA81E78151000E9E0D0 /* restauranteLaPepica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */; };
 		093A1CA91E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */; };
 		093A1CAA1E78151000E9E0D0 /* restauranteElIntiDeOro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA31E78151000E9E0D0 /* restauranteElIntiDeOro.jpg */; };
 		093A1CAB1E78151000E9E0D0 /* restauranteElFaro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CA41E78151000E9E0D0 /* restauranteElFaro.jpg */; };
 		093A1CAD1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */; };
-		093A1CB01E781AA200E9E0D0 /* InfoRestauranteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */; };
 		093A1CB31E781B5400E9E0D0 /* Restaurante.m in Sources */ = {isa = PBXBuildFile; fileRef = 093A1CB21E781B5400E9E0D0 /* Restaurante.m */; };
+		09408EA51E7963AA0087F8C9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09408EA41E7963AA0087F8C9 /* MessageUI.framework */; };
 		09BA34091E77F9C700F9302B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34081E77F9C700F9302B /* main.m */; };
 		09BA340C1E77F9C700F9302B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA340B1E77F9C700F9302B /* AppDelegate.m */; };
 		09BA340F1E77F9C700F9302B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA340E1E77F9C700F9302B /* ViewController.m */; };
@@ -30,23 +29,25 @@
 		09BA34261E77FA9400F9302B /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34251E77FA9400F9302B /* MapaViewController.m */; };
 		09BA34291E77FAB300F9302B /* ContactoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA34281E77FAB300F9302B /* ContactoViewController.m */; };
 		09BA34341E78060E00F9302B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BA34331E78060E00F9302B /* MapKit.framework */; };
+		09BB9BE61E79366B0097AFA2 /* restauranteBrasaylena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09BB9BE51E79366B0097AFA2 /* restauranteBrasaylena.jpg */; };
+		09BB9BEC1E7942BD0097AFA2 /* InfoRestauranteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BB9BEB1E7942BD0097AFA2 /* InfoRestauranteViewController.m */; };
+		09BB9BEE1E79465C0097AFA2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BB9BED1E79465C0097AFA2 /* WebKit.framework */; };
+		09BB9BF11E79488B0097AFA2 /* WebRestauranteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BB9BF01E79488B0097AFA2 /* WebRestauranteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		093A1C6F1E7808CD00E9E0D0 /* siluetaContacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaContacto.png; path = ../Imagenes/siluetaContacto.png; sourceTree = "<group>"; };
 		093A1C701E7808CD00E9E0D0 /* siluetaMapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaMapa.png; path = ../Imagenes/siluetaMapa.png; sourceTree = "<group>"; };
 		093A1C711E7808CD00E9E0D0 /* siluetaRestaurante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = siluetaRestaurante.png; path = ../Imagenes/siluetaRestaurante.png; sourceTree = "<group>"; };
-		093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "restauranteBrasaleña.jpg"; path = "../Imagenes/restauranteBrasaleña.jpg"; sourceTree = "<group>"; };
 		093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteLaVacaArgentina.jpg; path = ../Imagenes/restauranteLaVacaArgentina.jpg; sourceTree = "<group>"; };
 		093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteLaPepica.jpg; path = ../Imagenes/restauranteLaPepica.jpg; sourceTree = "<group>"; };
 		093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteGastonAcurioMadrid.jpg; path = ../Imagenes/restauranteGastonAcurioMadrid.jpg; sourceTree = "<group>"; };
 		093A1CA31E78151000E9E0D0 /* restauranteElIntiDeOro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteElIntiDeOro.jpg; path = ../Imagenes/restauranteElIntiDeOro.jpg; sourceTree = "<group>"; };
 		093A1CA41E78151000E9E0D0 /* restauranteElFaro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteElFaro.jpg; path = ../Imagenes/restauranteElFaro.jpg; sourceTree = "<group>"; };
 		093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteAsadorDeAranda.jpg; path = ../Imagenes/restauranteAsadorDeAranda.jpg; sourceTree = "<group>"; };
-		093A1CAE1E781AA200E9E0D0 /* InfoRestauranteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoRestauranteViewController.h; sourceTree = "<group>"; };
-		093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoRestauranteViewController.m; sourceTree = "<group>"; };
 		093A1CB11E781B5400E9E0D0 /* Restaurante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurante.h; sourceTree = "<group>"; };
 		093A1CB21E781B5400E9E0D0 /* Restaurante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurante.m; sourceTree = "<group>"; };
+		09408EA41E7963AA0087F8C9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		09BA34041E77F9C700F9302B /* InfoRestaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoRestaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BA34081E77F9C700F9302B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09BA340A1E77F9C700F9302B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +66,12 @@
 		09BA34271E77FAB300F9302B /* ContactoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoViewController.h; sourceTree = "<group>"; };
 		09BA34281E77FAB300F9302B /* ContactoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoViewController.m; sourceTree = "<group>"; };
 		09BA34331E78060E00F9302B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09BB9BE51E79366B0097AFA2 /* restauranteBrasaylena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = restauranteBrasaylena.jpg; path = ../Imagenes/restauranteBrasaylena.jpg; sourceTree = "<group>"; };
+		09BB9BEA1E7942BD0097AFA2 /* InfoRestauranteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoRestauranteViewController.h; sourceTree = "<group>"; };
+		09BB9BEB1E7942BD0097AFA2 /* InfoRestauranteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoRestauranteViewController.m; sourceTree = "<group>"; };
+		09BB9BED1E79465C0097AFA2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		09BB9BEF1E79488B0097AFA2 /* WebRestauranteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRestauranteViewController.h; sourceTree = "<group>"; };
+		09BB9BF01E79488B0097AFA2 /* WebRestauranteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRestauranteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09408EA51E7963AA0087F8C9 /* MessageUI.framework in Frameworks */,
+				09BB9BEE1E79465C0097AFA2 /* WebKit.framework in Frameworks */,
 				09BA34341E78060E00F9302B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,10 +91,8 @@
 		09BA33FB1E77F9C700F9302B = {
 			isa = PBXGroup;
 			children = (
-				093A1CAE1E781AA200E9E0D0 /* InfoRestauranteViewController.h */,
-				093A1CAF1E781AA200E9E0D0 /* InfoRestauranteViewController.m */,
 				093A1CAC1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg */,
-				093A1C9E1E78151000E9E0D0 /* restauranteBrasaleña.jpg */,
+				09BB9BE51E79366B0097AFA2 /* restauranteBrasaylena.jpg */,
 				093A1C9F1E78151000E9E0D0 /* restauranteLaVacaArgentina.jpg */,
 				093A1CA11E78151000E9E0D0 /* restauranteLaPepica.jpg */,
 				093A1CA21E78151000E9E0D0 /* restauranteGastonAcurioMadrid.jpg */,
@@ -111,11 +118,15 @@
 		09BA34061E77F9C700F9302B /* InfoRestaurante */ = {
 			isa = PBXGroup;
 			children = (
+				09BB9BEA1E7942BD0097AFA2 /* InfoRestauranteViewController.h */,
+				09BB9BEB1E7942BD0097AFA2 /* InfoRestauranteViewController.m */,
 				09BA340A1E77F9C700F9302B /* AppDelegate.h */,
 				09BA340B1E77F9C700F9302B /* AppDelegate.m */,
 				09BA340D1E77F9C700F9302B /* ViewController.h */,
 				09BA340E1E77F9C700F9302B /* ViewController.m */,
 				09BA34101E77F9C800F9302B /* Main.storyboard */,
+				09BB9BEF1E79488B0097AFA2 /* WebRestauranteViewController.h */,
+				09BB9BF01E79488B0097AFA2 /* WebRestauranteViewController.m */,
 				093A1CB11E781B5400E9E0D0 /* Restaurante.h */,
 				093A1CB21E781B5400E9E0D0 /* Restaurante.m */,
 				09BA34271E77FAB300F9302B /* ContactoViewController.h */,
@@ -144,6 +155,8 @@
 		09BA34321E78060E00F9302B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09408EA41E7963AA0087F8C9 /* MessageUI.framework */,
+				09BB9BED1E79465C0097AFA2 /* WebKit.framework */,
 				09BA34331E78060E00F9302B /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -207,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093A1CA51E78151000E9E0D0 /* restauranteBrasaleña.jpg in Resources */,
 				093A1CAA1E78151000E9E0D0 /* restauranteElIntiDeOro.jpg in Resources */,
 				093A1C741E7808CD00E9E0D0 /* siluetaRestaurante.png in Resources */,
 				093A1C721E7808CD00E9E0D0 /* siluetaContacto.png in Resources */,
@@ -220,6 +232,7 @@
 				093A1CAD1E78198400E9E0D0 /* restauranteAsadorDeAranda.jpg in Resources */,
 				093A1CAB1E78151000E9E0D0 /* restauranteElFaro.jpg in Resources */,
 				09BA34121E77F9C800F9302B /* Main.storyboard in Resources */,
+				09BB9BE61E79366B0097AFA2 /* restauranteBrasaylena.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,10 +245,11 @@
 			files = (
 				09BA34231E77FA6900F9302B /* listaRestauranteCollectionViewController.m in Sources */,
 				09BA340F1E77F9C700F9302B /* ViewController.m in Sources */,
+				09BB9BEC1E7942BD0097AFA2 /* InfoRestauranteViewController.m in Sources */,
 				09BA340C1E77F9C700F9302B /* AppDelegate.m in Sources */,
-				093A1CB01E781AA200E9E0D0 /* InfoRestauranteViewController.m in Sources */,
 				09BA34151E77F9C800F9302B /* InfoRestaurante.xcdatamodeld in Sources */,
 				09BA34091E77F9C700F9302B /* main.m in Sources */,
+				09BB9BF11E79488B0097AFA2 /* WebRestauranteViewController.m in Sources */,
 				09BA34261E77FA9400F9302B /* MapaViewController.m in Sources */,
 				09BA34291E77FAB300F9302B /* ContactoViewController.m in Sources */,
 				093A1CB31E781B5400E9E0D0 /* Restaurante.m in Sources */,

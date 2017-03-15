@@ -7,6 +7,9 @@
 //
 
 #import "listaRestauranteCollectionViewController.h"
+#import "AppDelegate.h"
+#import "Restaurante.h"
+#import "InfoRestauranteViewController.h"
 
 @interface listaRestauranteCollectionViewController ()
 
@@ -14,10 +17,11 @@
 
 @implementation listaRestauranteCollectionViewController
 
-static NSString * const reuseIdentifier = @"idListaRestauranteCVC";
-NSMutableArray *nombreImagenRestaurante;
-NSMutableArray *nombreRestaurante;
 
+
+static NSString * const reuseIdentifier = @"idListaRestauranteCVC";
+AppDelegate *appDelegateListaRestauranteCVC;
+NSMutableArray *listaDeRestaurantesListaRestauranteCVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,24 +33,9 @@ NSMutableArray *nombreRestaurante;
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    nombreImagenRestaurante = [[NSMutableArray alloc]init];
-    [nombreImagenRestaurante addObject:@"restauranteAsadorDeAranda.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteBrasaleña.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteElFaro.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteElIntiDeOro.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteGastonAcurioMadrid.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteLaPepica.jpg"];
-    [nombreImagenRestaurante addObject:@"restauranteLaVacaArgentina.jpg"];
-    
-    nombreRestaurante = [[NSMutableArray alloc]init];
-    [nombreRestaurante addObject:@"Asador De Aranda"];
-    [nombreRestaurante addObject:@"Brasaleña"];
-    [nombreRestaurante addObject:@"El Faro"];
-    [nombreRestaurante addObject:@"El Inti De Oro"];
-    [nombreRestaurante addObject:@"Gaston Acurio Madrid"];
-    [nombreRestaurante addObject:@"La Pepica"];
-    [nombreRestaurante addObject:@"La Vaca Argentina"];
-    
+
+    appDelegateListaRestauranteCVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    listaDeRestaurantesListaRestauranteCVC = appDelegateListaRestauranteCVC.listaDeRestaurantes;
     
 }
 
@@ -73,7 +62,7 @@ NSMutableArray *nombreRestaurante;
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [nombreImagenRestaurante count];
+    return [listaDeRestaurantesListaRestauranteCVC count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,8 +73,12 @@ NSMutableArray *nombreRestaurante;
     UILabel *labelTitulolistaRestauranteCVC = (UILabel *) [cell viewWithTag:1001];
     UIImageView *imagenRestaurante = (UIImageView *) [cell viewWithTag:1002];
     
-    labelTitulolistaRestauranteCVC.text = [nombreRestaurante objectAtIndex:indexPath.row];
-    imagenRestaurante.image = [UIImage imageNamed:[nombreImagenRestaurante objectAtIndex:indexPath.row]];
+    
+    
+    Restaurante *r = [listaDeRestaurantesListaRestauranteCVC objectAtIndex:indexPath.row];
+    
+    labelTitulolistaRestauranteCVC.text = r.nombre;
+    imagenRestaurante.image = [UIImage imageNamed:r.nombreImagenRestaurante];
     
     return cell;
 }
@@ -123,6 +116,9 @@ NSMutableArray *nombreRestaurante;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    InfoRestauranteViewController *vistaInfoRestauranteVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idInfoRestauranteVC"];
+    vistaInfoRestauranteVC.indiceRestaurante = (int)indexPath.row;
+    [self showViewController:vistaInfoRestauranteVC sender: nil];
     
 }
 

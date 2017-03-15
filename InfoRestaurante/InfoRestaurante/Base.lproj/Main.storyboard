@@ -26,6 +26,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="siluetaMapa.png" id="Mu3-dc-Q0Y"/>
+                    <connections>
+                        <outlet property="mapViewMapaVC" destination="3Mr-Dv-zgw" id="6ZS-4W-7bc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPf-LW-Ori" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,13 +45,53 @@
                     <view key="view" contentMode="scaleToFill" id="NCJ-zs-5YA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1BI-gs-W23">
+                                <frame key="frameInset" minX="139" minY="107" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="InK-Id-vDx">
+                                <frame key="frameInset" minX="139" minY="273" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jAt-1c-GPE" id="zM2-rq-pWy"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXU-Io-c2C">
+                                <frame key="frameInset" minX="139" minY="497" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonEnviarContactoVC:" destination="jAt-1c-GPE" eventType="touchUpInside" id="QRl-om-bEy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4o-K1-ZFu">
+                                <frame key="frameInset" minX="139" minY="187" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.23921568630000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="siluetaContacto.png" id="VXo-G3-nFi"/>
+                    <connections>
+                        <outlet property="buttonEnviarContactoVC" destination="ZXU-Io-c2C" id="Wpf-4g-4w1"/>
+                        <outlet property="textFieldCorreoContactoVC" destination="InK-Id-vDx" id="f6a-3W-oKO"/>
+                        <outlet property="textFieldNombreContactoVC" destination="1BI-gs-W23" id="Inv-dV-JFp"/>
+                        <outlet property="textFieldTelefonoContactoVC" destination="X4o-K1-ZFu" id="hL7-ev-oAV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cD4-Rg-pI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="1141"/>
+            <point key="canvasLocation" x="912.79999999999995" y="1140.1799100449775"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="02Y-cR-AY2">
@@ -73,7 +116,7 @@
         <scene sceneID="WB3-zn-mQv">
             <objects>
                 <collectionViewController id="0Wl-hj-4VG" customClass="listaRestauranteCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="u7M-Nm-uiC">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u7M-Nm-uiC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.086274509799999996" green="0.23921568630000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,22 +161,85 @@
             <point key="canvasLocation" x="901.60000000000002" y="-282.00899550224892"/>
         </scene>
         <!--Info Restaurante View Controller-->
-        <scene sceneID="C5E-ks-ao1">
+        <scene sceneID="eiG-0u-o9b">
             <objects>
-                <viewController id="Fjc-cE-nUT" customClass="InfoRestauranteViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idInfoRestauranteVC" id="d0t-x4-74R" customClass="InfoRestauranteViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qaV-Br-A0a"/>
-                        <viewControllerLayoutGuide type="bottom" id="wWf-Ck-HiB"/>
+                        <viewControllerLayoutGuide type="top" id="th3-3G-Zo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="OxS-ro-kpo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NPP-gR-7fS">
+                    <view key="view" contentMode="scaleToFill" id="lVD-5m-b0n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-M9-W9C">
+                                <frame key="frameInset" minX="16" minY="81" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62C-ry-VlL">
+                                <frame key="frameInset" minX="16" minY="149" width="343" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BpE-1e-otm">
+                                <frame key="frameInset" minX="16" minY="385" width="343" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-F3-rXn">
+                                <frame key="frameInset" minX="125" minY="629" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonIrWebInfoRestauranteVC:" destination="d0t-x4-74R" eventType="touchUpInside" id="f7I-eX-2N4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.23921568630000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonIrWebInfoRestauranteVC" destination="H7d-F3-rXn" id="wUA-6q-5aO"/>
+                        <outlet property="imageViewImagenInfoRestauranteVC" destination="62C-ry-VlL" id="OHG-7h-2NV"/>
+                        <outlet property="labelTituloInfoRestauranteVC" destination="eVD-M9-W9C" id="i9i-NT-Rja"/>
+                        <outlet property="textViewDescripcionInfoRestauranteVC" destination="BpE-1e-otm" id="qVc-dF-Fku"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cyk-3J-FRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orD-q6-c4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895" y="-282"/>
+            <point key="canvasLocation" x="1872.8" y="-283.80809595202402"/>
+        </scene>
+        <!--Web Restaurante View Controller-->
+        <scene sceneID="M7o-q3-DfZ">
+            <objects>
+                <viewController storyboardIdentifier="idWebRestauranteVC" id="6YU-rR-uGr" customClass="WebRestauranteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQW-Bw-QYM"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyx-Ae-bIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rSd-O3-23s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRk-62-qwN">
+                                <frame key="frameInset" minX="8" minY="28" width="358" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.23921568630000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="webViewPaginaWebRestauranteVC" destination="RRk-62-qwN" id="fW7-pe-uPN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFB-Ox-KgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="-282.00899550224892"/>
         </scene>
     </scenes>
     <resources>

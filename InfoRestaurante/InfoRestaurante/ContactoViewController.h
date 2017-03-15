@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface ContactoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textFieldNombreContactoVC;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldTelefonoContactoVC;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldCorreoContactoVC;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEnviarContactoVC;
+- (IBAction)buttonEnviarContactoVC:(id)sender;
 
 @end
