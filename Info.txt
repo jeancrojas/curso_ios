@@ -184,6 +184,10 @@ En la accion del button ponemos:
         [self presentViewController:alert animated:YES completion:nil];
      }
 
+Fuente: https://www.devfright.com/mkpointannotation-tutorial/
+
+Hay una alert deprecated mirarlo
+
 
 2 de Marzo de 2017
 ******************
@@ -532,6 +536,7 @@ AbrirWebViewController.h
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTitulo;
 
+AbrirWebViewController.m
     
     NSURL *url = [NSURL URLWithString:@"http://scriptingsystems.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -653,5 +658,59 @@ añadir lo siguiente en nuestra clase .h
 
 
 
-
+Enviar por correo
 MFMail​Compose​Result
+
+
+
+15 de Marzo de 2017
+*******************
+
+- Menu en la Navegation Controller
+
+Meter en el proyecto los archivos:
+	reveal-icon.png
+	SWRevealViewController.h
+	SWRevealViewController.m
+
+
+
+Crear un View Controller y asignarle el archivo SWRevealViewController
+Crear una TableViewController que sea estatica, y crearle su clase correspondiente
+
+La relacion entre la dos anteriores debe ser de tipo: “reveal view controller set controller”
+
+
+Crear un ViewController q tiene que tener en su .m el siguiente codigo
+
+importar: #import "SWRevealViewController.h"
+
+Modificar el siguiente metodo
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    //Agregar el botón
+    UIButton *boton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton setFrame:CGRectMake(5.0, 5.0, 17, 17)];
+    [boton setImage:[UIImage imageNamed:@"reveal-icon.png"] forState:UIControlStateNormal ];
+    
+    UIBarButtonItem *revealBoton = [[UIBarButtonItem alloc]initWithCustomView:boton];
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:revealBoton, nil];
+    
+    //Controlador SWReveal
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController){
+        [boton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+}
+
+Crear un NavigationController de esta clase
+
+La clase SWRevealViewController con  NavigationController(creo anteriormente) deben de estar unidos por un “reveal view controller set controller”
+
+
+La clase TableViewController (creada con anterioridad) cada una de sus rows debe estar relacionado con el NavigationController con un “reveal view controller Push controller”
+
