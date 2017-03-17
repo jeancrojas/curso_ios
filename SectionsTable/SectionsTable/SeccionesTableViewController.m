@@ -1,29 +1,18 @@
 //
-//  MenuTableViewController.m
-//  AppVisitSpain
+//  SeccionesTableViewController.m
+//  SectionsTable
 //
-//  Created by cice on 16/3/17.
+//  Created by cice on 17/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "MenuTableViewController.h"
+#import "SeccionesTableViewController.h"
 
-@interface MenuTableViewController ()
+@interface SeccionesTableViewController ()
 
 @end
 
-@implementation MenuTableViewController
-
-@synthesize imageViewInfoMenuTVC;
-@synthesize imageViewQueVisitarMenuTVC;
-@synthesize imageViewLocalizacionMenuTVC;
-@synthesize labelInfoMenuTVC;
-@synthesize labelQueVisitarMenuTVC;
-@synthesize labelInfoLocalizacionTVC;
-@synthesize imageViewLogoMenuTVC;
-@synthesize imageViewPaginaWebMenuTVC;
-@synthesize labelPaginaWebMenuTCV;
-
+@implementation SeccionesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,18 +23,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    
-    labelInfoLocalizacionTVC.text = @"Info";
-    labelQueVisitarMenuTVC.text = @"Que visitar";
-    labelInfoLocalizacionTVC.text = @"Localizacion";
-    labelPaginaWebMenuTCV.text = @"Página WEB";
-
-    imageViewLogoMenuTVC.image = [UIImage imageNamed:@"spain_tourism_logo.jpg"];
-    imageViewInfoMenuTVC.image = [UIImage imageNamed:@"ic_info_48pt.png"];
-    imageViewQueVisitarMenuTVC.image = [UIImage imageNamed:@"ic_local_see_48pt.png"];
-    imageViewLocalizacionMenuTVC.image = [UIImage imageNamed:@"ic_place_48pt.png"];
-    imageViewPaginaWebMenuTVC.image = [UIImage imageNamed:@"ic_web_48pt.png"];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,11 +33,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    
+    //Numero de secciones
+    //NSLog(@"Numero de sections: %ld", tableView.numberOfSections);
+    
+    NSLog(@"Numero de filas: %ld", [tableView numberOfRowsInSection:section]);
+    
+    switch (section) {
+        case 0:
+            return 4;
+            break;
+            
+        case 1:
+            return 2;
+            break;
+            
+        case 2:
+            return 3;
+            break;
+        default:
+            break;
+    }
+    return 2;
 }
 
 /*

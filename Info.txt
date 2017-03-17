@@ -641,6 +641,28 @@ PrincipalViewController.m
 
 Añadir Imagen al Navigation Controller
 
+CGSize imageSize;
+    
+    imageSize = CGSizeMake(45, 46);
+    
+    UIImage *img = [UIImage imageNamed:@"penguinmario.png" ];
+    
+    UIGraphicsBeginImageContext( imageSize );
+    [img drawInRect:CGRectMake(0,0,imageSize.width,imageSize.height)];
+    UIImage* realfrontImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //[self.navigationController.navigationBar setBackgroundImage: realfrontImage  forBarMetrics:UIBarMetricsDefault];
+    
+    
+    
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:realfrontImage];
+    
+O tambien
+
+//La pega de lo siguiente es que si la imagen es pequeña se repite
+
+
 [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics: UIBarMetricsDefault ];
 
 --Enviar Correo:
@@ -713,4 +735,10 @@ La clase SWRevealViewController con  NavigationController(creo anteriormente) de
 
 
 La clase TableViewController (creada con anterioridad) cada una de sus rows debe estar relacionado con el NavigationController con un “reveal view controller Push controller”
+
+
+- Introducir una tabla en un View Controller
+
+Se ha de crear un “View Controller” dentro de ello, habra que introducir un “Container View”, este container lo relacionamos a traves de un “Embed” al TableViewController
+
 

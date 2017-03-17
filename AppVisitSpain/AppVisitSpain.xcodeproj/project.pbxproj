@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094E25B51E7BD64800FFB711 /* QueVisitarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25B41E7BD64800FFB711 /* QueVisitarViewController.m */; };
+		094E25B71E7BDB1800FFB711 /* ic_web_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 094E25B61E7BDB1800FFB711 /* ic_web_48pt.png */; };
 		09531E3E1E7AAB4600B05087 /* ic_place_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09531E3D1E7AAB4600B05087 /* ic_place_48pt.png */; };
 		09531E401E7AABDD00B05087 /* ic_local_see_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09531E3F1E7AABDD00B05087 /* ic_local_see_48pt.png */; };
 		09531E421E7AAEB200B05087 /* ic_info_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09531E411E7AAEB200B05087 /* ic_info_48pt.png */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		094E25B31E7BD64800FFB711 /* QueVisitarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueVisitarViewController.h; sourceTree = "<group>"; };
+		094E25B41E7BD64800FFB711 /* QueVisitarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueVisitarViewController.m; sourceTree = "<group>"; };
+		094E25B61E7BDB1800FFB711 /* ic_web_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_web_48pt.png; sourceTree = "<group>"; };
 		09531E3D1E7AAB4600B05087 /* ic_place_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_place_48pt.png; sourceTree = "<group>"; };
 		09531E3F1E7AABDD00B05087 /* ic_local_see_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_local_see_48pt.png; sourceTree = "<group>"; };
 		09531E411E7AAEB200B05087 /* ic_info_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_48pt.png; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				09531E531E7ABF0800B05087 /* ic_my_location_48pt.png */,
+				094E25B61E7BDB1800FFB711 /* ic_web_48pt.png */,
 				09531E461E7AB34600B05087 /* spain_tourism_logo.jpg */,
 				09531E3F1E7AABDD00B05087 /* ic_local_see_48pt.png */,
 				09531E3D1E7AAB4600B05087 /* ic_place_48pt.png */,
@@ -116,6 +122,8 @@
 				0963BEB31E7A9F930042F2F5 /* ViewController.h */,
 				0963BEB41E7A9F930042F2F5 /* ViewController.m */,
 				0963BEB61E7A9F930042F2F5 /* Main.storyboard */,
+				094E25B31E7BD64800FFB711 /* QueVisitarViewController.h */,
+				094E25B41E7BD64800FFB711 /* QueVisitarViewController.m */,
 				09531E4E1E7ABA2500B05087 /* WebViewController.h */,
 				09531E4F1E7ABA2500B05087 /* WebViewController.m */,
 				09531E481E7AB79C00B05087 /* LocalizacionViewController.h */,
@@ -207,6 +215,7 @@
 				0963BEBD1E7A9F930042F2F5 /* Assets.xcassets in Resources */,
 				09531E541E7ABF0800B05087 /* ic_my_location_48pt.png in Resources */,
 				0963BEB81E7A9F930042F2F5 /* Main.storyboard in Resources */,
+				094E25B71E7BDB1800FFB711 /* ic_web_48pt.png in Resources */,
 				0963BECA1E7A9FAD0042F2F5 /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0963BEB51E7A9F930042F2F5 /* ViewController.m in Sources */,
+				094E25B51E7BD64800FFB711 /* QueVisitarViewController.m in Sources */,
 				0963BEBB1E7A9F930042F2F5 /* AppVisitSpain.xcdatamodeld in Sources */,
 				0963BECB1E7A9FAD0042F2F5 /* SWRevealViewController.m in Sources */,
 				0963BEB21E7A9F930042F2F5 /* AppDelegate.m in Sources */,

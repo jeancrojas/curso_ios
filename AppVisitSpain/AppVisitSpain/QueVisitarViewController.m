@@ -1,20 +1,19 @@
 //
-//  WebViewController.m
+//  QueVisitarViewController.m
 //  AppVisitSpain
 //
-//  Created by cice on 16/3/17.
+//  Created by cice on 17/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "QueVisitarViewController.h"
 #import "SWRevealViewController.h"
 
-@interface WebViewController ()
+@interface QueVisitarViewController ()
 
 @end
 
-@implementation WebViewController
-@synthesize webViewMostrarWebVC;
+@implementation QueVisitarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,15 +33,6 @@
         [boton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    //Ir a la WEB
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.madrid.org/cs/Satellite?cid=1142322453978&pageid=1142322433572&pagename=PortalJoven/JUVE_Alojamiento_FA/JUVE_alojamiento&rootpageid=1152517028736"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [webViewMostrarWebVC loadRequest:request];
-
-    
 }
 
 - (void)didReceiveMemoryWarning {

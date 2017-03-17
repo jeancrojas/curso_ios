@@ -37,6 +37,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
+    
     //Mapa
     mapViewMapaLocalizacionVC.delegate = self;
     mapViewMapaLocalizacionVC.mapType = MKMapTypeStandard;

@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		094E25C61E7BDC9500FFB711 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25C51E7BDC9500FFB711 /* main.m */; };
+		094E25C91E7BDC9500FFB711 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25C81E7BDC9500FFB711 /* AppDelegate.m */; };
+		094E25CC1E7BDC9500FFB711 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25CB1E7BDC9500FFB711 /* ViewController.m */; };
+		094E25CF1E7BDC9500FFB711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094E25CD1E7BDC9500FFB711 /* Main.storyboard */; };
+		094E25D21E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 094E25D01E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodeld */; };
+		094E25D41E7BDC9500FFB711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094E25D31E7BDC9500FFB711 /* Assets.xcassets */; };
+		094E25D71E7BDC9500FFB711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094E25D51E7BDC9500FFB711 /* LaunchScreen.storyboard */; };
+		094E25E01E7BDCD400FFB711 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25DF1E7BDCD400FFB711 /* TestViewController.m */; };
+		094E25E31E7BDD0400FFB711 /* SegundoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E25E21E7BDD0400FFB711 /* SegundoViewController.m */; };
+		094E25E51E7BDFE900FFB711 /* iconmario32.png in Resources */ = {isa = PBXBuildFile; fileRef = 094E25E41E7BDFE900FFB711 /* iconmario32.png */; };
+		094E25E71E7BE0F600FFB711 /* listaImagen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 094E25E61E7BE0F600FFB711 /* listaImagen1.png */; };
+		094E25EB1E7BFAF500FFB711 /* penguinmario.png in Resources */ = {isa = PBXBuildFile; fileRef = 094E25EA1E7BFAF500FFB711 /* penguinmario.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		094E25C11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavegatorControllerImagenCentro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		094E25C51E7BDC9500FFB711 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		094E25C71E7BDC9500FFB711 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		094E25C81E7BDC9500FFB711 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		094E25CA1E7BDC9500FFB711 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		094E25CB1E7BDC9500FFB711 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		094E25CE1E7BDC9500FFB711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		094E25D11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavegatorControllerImagenCentro.xcdatamodel; sourceTree = "<group>"; };
+		094E25D31E7BDC9500FFB711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		094E25D61E7BDC9500FFB711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		094E25D81E7BDC9500FFB711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		094E25DE1E7BDCD400FFB711 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		094E25DF1E7BDCD400FFB711 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		094E25E11E7BDD0400FFB711 /* SegundoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegundoViewController.h; sourceTree = "<group>"; };
+		094E25E21E7BDD0400FFB711 /* SegundoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegundoViewController.m; sourceTree = "<group>"; };
+		094E25E41E7BDFE900FFB711 /* iconmario32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconmario32.png; sourceTree = "<group>"; };
+		094E25E61E7BE0F600FFB711 /* listaImagen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listaImagen1.png; sourceTree = "<group>"; };
+		094E25EA1E7BFAF500FFB711 /* penguinmario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguinmario.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		094E25BE1E7BDC9500FFB711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094E25B81E7BDC9500FFB711 = {
+			isa = PBXGroup;
+			children = (
+				094E25C31E7BDC9500FFB711 /* NavegatorControllerImagenCentro */,
+				094E25C21E7BDC9500FFB711 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		094E25C21E7BDC9500FFB711 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				094E25C11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		094E25C31E7BDC9500FFB711 /* NavegatorControllerImagenCentro */ = {
+			isa = PBXGroup;
+			children = (
+				094E25E81E7BF44200FFB711 /* Resources */,
+				094E25E61E7BE0F600FFB711 /* listaImagen1.png */,
+				094E25E41E7BDFE900FFB711 /* iconmario32.png */,
+				094E25C71E7BDC9500FFB711 /* AppDelegate.h */,
+				094E25C81E7BDC9500FFB711 /* AppDelegate.m */,
+				094E25CA1E7BDC9500FFB711 /* ViewController.h */,
+				094E25CB1E7BDC9500FFB711 /* ViewController.m */,
+				094E25CD1E7BDC9500FFB711 /* Main.storyboard */,
+				094E25E11E7BDD0400FFB711 /* SegundoViewController.h */,
+				094E25E21E7BDD0400FFB711 /* SegundoViewController.m */,
+				094E25DE1E7BDCD400FFB711 /* TestViewController.h */,
+				094E25DF1E7BDCD400FFB711 /* TestViewController.m */,
+				094E25D31E7BDC9500FFB711 /* Assets.xcassets */,
+				094E25D51E7BDC9500FFB711 /* LaunchScreen.storyboard */,
+				094E25D81E7BDC9500FFB711 /* Info.plist */,
+				094E25D01E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodeld */,
+				094E25C41E7BDC9500FFB711 /* Supporting Files */,
+			);
+			path = NavegatorControllerImagenCentro;
+			sourceTree = "<group>";
+		};
+		094E25C41E7BDC9500FFB711 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				094E25C51E7BDC9500FFB711 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		094E25E81E7BF44200FFB711 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094E25E91E7BF45000FFB711 /* images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		094E25E91E7BF45000FFB711 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				094E25EA1E7BFAF500FFB711 /* penguinmario.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		094E25C01E7BDC9500FFB711 /* NavegatorControllerImagenCentro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 094E25DB1E7BDC9500FFB711 /* Build configuration list for PBXNativeTarget "NavegatorControllerImagenCentro" */;
+			buildPhases = (
+				094E25BD1E7BDC9500FFB711 /* Sources */,
+				094E25BE1E7BDC9500FFB711 /* Frameworks */,
+				094E25BF1E7BDC9500FFB711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavegatorControllerImagenCentro;
+			productName = NavegatorControllerImagenCentro;
+			productReference = 094E25C11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		094E25B91E7BDC9500FFB711 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = scriptingsystems;
+				TargetAttributes = {
+					094E25C01E7BDC9500FFB711 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 094E25BC1E7BDC9500FFB711 /* Build configuration list for PBXProject "NavegatorControllerImagenCentro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 094E25B81E7BDC9500FFB711;
+			productRefGroup = 094E25C21E7BDC9500FFB711 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				094E25C01E7BDC9500FFB711 /* NavegatorControllerImagenCentro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		094E25BF1E7BDC9500FFB711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094E25E51E7BDFE900FFB711 /* iconmario32.png in Resources */,
+				094E25D71E7BDC9500FFB711 /* LaunchScreen.storyboard in Resources */,
+				094E25D41E7BDC9500FFB711 /* Assets.xcassets in Resources */,
+				094E25EB1E7BFAF500FFB711 /* penguinmario.png in Resources */,
+				094E25E71E7BE0F600FFB711 /* listaImagen1.png in Resources */,
+				094E25CF1E7BDC9500FFB711 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		094E25BD1E7BDC9500FFB711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094E25CC1E7BDC9500FFB711 /* ViewController.m in Sources */,
+				094E25C91E7BDC9500FFB711 /* AppDelegate.m in Sources */,
+				094E25C61E7BDC9500FFB711 /* main.m in Sources */,
+				094E25D21E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodeld in Sources */,
+				094E25E31E7BDD0400FFB711 /* SegundoViewController.m in Sources */,
+				094E25E01E7BDCD400FFB711 /* TestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		094E25CD1E7BDC9500FFB711 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				094E25CE1E7BDC9500FFB711 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		094E25D51E7BDC9500FFB711 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				094E25D61E7BDC9500FFB711 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		094E25D91E7BDC9500FFB711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		094E25DA1E7BDC9500FFB711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		094E25DC1E7BDC9500FFB711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NavegatorControllerImagenCentro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.NavegatorControllerImagenCentro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		094E25DD1E7BDC9500FFB711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NavegatorControllerImagenCentro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.NavegatorControllerImagenCentro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		094E25BC1E7BDC9500FFB711 /* Build configuration list for PBXProject "NavegatorControllerImagenCentro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E25D91E7BDC9500FFB711 /* Debug */,
+				094E25DA1E7BDC9500FFB711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		094E25DB1E7BDC9500FFB711 /* Build configuration list for PBXNativeTarget "NavegatorControllerImagenCentro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E25DC1E7BDC9500FFB711 /* Debug */,
+				094E25DD1E7BDC9500FFB711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		094E25D01E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				094E25D11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodel */,
+			);
+			currentVersion = 094E25D11E7BDC9500FFB711 /* NavegatorControllerImagenCentro.xcdatamodel */;
+			path = NavegatorControllerImagenCentro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 094E25B91E7BDC9500FFB711 /* Project object */;
+}
