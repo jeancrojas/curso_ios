@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09945E691E826E7F0030389A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E681E826E7F0030389A /* main.m */; };
+		09945E6C1E826E7F0030389A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E6B1E826E7F0030389A /* AppDelegate.m */; };
+		09945E6F1E826E7F0030389A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E6E1E826E7F0030389A /* ViewController.m */; };
+		09945E721E826E7F0030389A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09945E701E826E7F0030389A /* Main.storyboard */; };
+		09945E751E826E800030389A /* ViajesBBDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09945E731E826E800030389A /* ViajesBBDD.xcdatamodeld */; };
+		09945E771E826E800030389A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09945E761E826E800030389A /* Assets.xcassets */; };
+		09945E7A1E826E800030389A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09945E781E826E800030389A /* LaunchScreen.storyboard */; };
+		09945E831E82702E0030389A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E821E82702E0030389A /* LoginViewController.m */; };
+		09945E861E82705A0030389A /* ViajesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E851E82705A0030389A /* ViajesCollectionViewController.m */; };
+		09945E891E8271930030389A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E881E8271930030389A /* MenuViewController.m */; };
+		09945E8D1E8271EE0030389A /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945E8C1E8271EE0030389A /* reveal-icon.png */; };
+		09945E901E8272000030389A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E8F1E8272000030389A /* SWRevealViewController.m */; };
+		09945E931E8272B80030389A /* RevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E921E8272B80030389A /* RevealViewController.m */; };
+		09945E961E8272F70030389A /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E951E8272F70030389A /* MenuTableViewController.m */; };
+		09945E991E8276310030389A /* PerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E981E8276310030389A /* PerfilViewController.m */; };
+		09945E9D1E827C4C0030389A /* agencias_viajes_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945E9C1E827C4C0030389A /* agencias_viajes_logo.png */; };
+		09945E9F1E8287530030389A /* ic_card_travel.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945E9E1E8287530030389A /* ic_card_travel.png */; };
+		09945EA11E8287C70030389A /* ic_airplanemode_active_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA01E8287C70030389A /* ic_airplanemode_active_48pt.png */; };
+		09945EA31E82882C0030389A /* ic_account_circle_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA21E82882C0030389A /* ic_account_circle_48pt.png */; };
+		09945EA51E82897F0030389A /* agenciaviaje.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA41E82897F0030389A /* agenciaviaje.png */; };
+		09945EAB1E8294CE0030389A /* ViajeCatedralSanBasilioMoscu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA61E8294CE0030389A /* ViajeCatedralSanBasilioMoscu.jpg */; };
+		09945EAC1E8294CE0030389A /* ViajeTorreEiffelFrancia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA71E8294CE0030389A /* ViajeTorreEiffelFrancia.jpg */; };
+		09945EAD1E8294CE0030389A /* ViajePiramidesEgito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA81E8294CE0030389A /* ViajePiramidesEgito.jpg */; };
+		09945EAE1E8294CE0030389A /* ViajeMurallaChina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09945EA91E8294CE0030389A /* ViajeMurallaChina.jpg */; };
+		09945EAF1E8294CE0030389A /* ViajeMachupicchu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09945EAA1E8294CE0030389A /* ViajeMachupicchu.jpg */; };
+		09945EB21E8295F10030389A /* Viaje.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945EB11E8295F10030389A /* Viaje.m */; };
+		09C4110C1E82997400831D28 /* ViajeDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C4110B1E82997400831D28 /* ViajeDAO.m */; };
+		09C411101E82999000831D28 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C4110E1E82999000831D28 /* libsqlite3.0.tbd */; };
+		09C411111E82999000831D28 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C4110F1E82999000831D28 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09945E641E826E7F0030389A /* ViajesBBDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViajesBBDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09945E681E826E7F0030389A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09945E6A1E826E7F0030389A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09945E6B1E826E7F0030389A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09945E6D1E826E7F0030389A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		09945E6E1E826E7F0030389A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09945E711E826E7F0030389A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09945E741E826E800030389A /* ViajesBBDD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViajesBBDD.xcdatamodel; sourceTree = "<group>"; };
+		09945E761E826E800030389A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09945E791E826E800030389A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09945E7B1E826E800030389A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09945E811E82702E0030389A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		09945E821E82702E0030389A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		09945E841E82705A0030389A /* ViajesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViajesCollectionViewController.h; sourceTree = "<group>"; };
+		09945E851E82705A0030389A /* ViajesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViajesCollectionViewController.m; sourceTree = "<group>"; };
+		09945E871E8271930030389A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		09945E881E8271930030389A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		09945E8C1E8271EE0030389A /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		09945E8E1E8272000030389A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		09945E8F1E8272000030389A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		09945E911E8272B80030389A /* RevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealViewController.h; sourceTree = "<group>"; };
+		09945E921E8272B80030389A /* RevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealViewController.m; sourceTree = "<group>"; };
+		09945E941E8272F70030389A /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		09945E951E8272F70030389A /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		09945E971E8276310030389A /* PerfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerfilViewController.h; sourceTree = "<group>"; };
+		09945E981E8276310030389A /* PerfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfilViewController.m; sourceTree = "<group>"; };
+		09945E9C1E827C4C0030389A /* agencias_viajes_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agencias_viajes_logo.png; sourceTree = "<group>"; };
+		09945E9E1E8287530030389A /* ic_card_travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_card_travel.png; sourceTree = "<group>"; };
+		09945EA01E8287C70030389A /* ic_airplanemode_active_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_airplanemode_active_48pt.png; sourceTree = "<group>"; };
+		09945EA21E82882C0030389A /* ic_account_circle_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_account_circle_48pt.png; sourceTree = "<group>"; };
+		09945EA41E82897F0030389A /* agenciaviaje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agenciaviaje.png; sourceTree = "<group>"; };
+		09945EA61E8294CE0030389A /* ViajeCatedralSanBasilioMoscu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViajeCatedralSanBasilioMoscu.jpg; sourceTree = "<group>"; };
+		09945EA71E8294CE0030389A /* ViajeTorreEiffelFrancia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViajeTorreEiffelFrancia.jpg; sourceTree = "<group>"; };
+		09945EA81E8294CE0030389A /* ViajePiramidesEgito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViajePiramidesEgito.jpg; sourceTree = "<group>"; };
+		09945EA91E8294CE0030389A /* ViajeMurallaChina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViajeMurallaChina.jpg; sourceTree = "<group>"; };
+		09945EAA1E8294CE0030389A /* ViajeMachupicchu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViajeMachupicchu.jpg; sourceTree = "<group>"; };
+		09945EB01E8295F10030389A /* Viaje.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Viaje.h; sourceTree = "<group>"; };
+		09945EB11E8295F10030389A /* Viaje.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Viaje.m; sourceTree = "<group>"; };
+		09C4110A1E82997400831D28 /* ViajeDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViajeDAO.h; sourceTree = "<group>"; };
+		09C4110B1E82997400831D28 /* ViajeDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViajeDAO.m; sourceTree = "<group>"; };
+		09C4110E1E82999000831D28 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		09C4110F1E82999000831D28 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09945E611E826E7F0030389A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C411101E82999000831D28 /* libsqlite3.0.tbd in Frameworks */,
+				09C411111E82999000831D28 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09945E5B1E826E7F0030389A = {
+			isa = PBXGroup;
+			children = (
+				09945E661E826E7F0030389A /* ViajesBBDD */,
+				09945E651E826E7F0030389A /* Products */,
+				09C4110D1E82999000831D28 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09945E651E826E7F0030389A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09945E641E826E7F0030389A /* ViajesBBDD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09945E661E826E7F0030389A /* ViajesBBDD */ = {
+			isa = PBXGroup;
+			children = (
+				09945E8E1E8272000030389A /* SWRevealViewController.h */,
+				09945E8F1E8272000030389A /* SWRevealViewController.m */,
+				09945E8A1E8271C50030389A /* Resources */,
+				09945E6A1E826E7F0030389A /* AppDelegate.h */,
+				09945E6B1E826E7F0030389A /* AppDelegate.m */,
+				09945E6D1E826E7F0030389A /* ViewController.h */,
+				09945E6E1E826E7F0030389A /* ViewController.m */,
+				09945E701E826E7F0030389A /* Main.storyboard */,
+				09945EB01E8295F10030389A /* Viaje.h */,
+				09945EB11E8295F10030389A /* Viaje.m */,
+				09C4110A1E82997400831D28 /* ViajeDAO.h */,
+				09C4110B1E82997400831D28 /* ViajeDAO.m */,
+				09945E971E8276310030389A /* PerfilViewController.h */,
+				09945E981E8276310030389A /* PerfilViewController.m */,
+				09945E941E8272F70030389A /* MenuTableViewController.h */,
+				09945E951E8272F70030389A /* MenuTableViewController.m */,
+				09945E911E8272B80030389A /* RevealViewController.h */,
+				09945E921E8272B80030389A /* RevealViewController.m */,
+				09945E871E8271930030389A /* MenuViewController.h */,
+				09945E881E8271930030389A /* MenuViewController.m */,
+				09945E841E82705A0030389A /* ViajesCollectionViewController.h */,
+				09945E851E82705A0030389A /* ViajesCollectionViewController.m */,
+				09945E811E82702E0030389A /* LoginViewController.h */,
+				09945E821E82702E0030389A /* LoginViewController.m */,
+				09945E761E826E800030389A /* Assets.xcassets */,
+				09945E781E826E800030389A /* LaunchScreen.storyboard */,
+				09945E7B1E826E800030389A /* Info.plist */,
+				09945E731E826E800030389A /* ViajesBBDD.xcdatamodeld */,
+				09945E671E826E7F0030389A /* Supporting Files */,
+			);
+			path = ViajesBBDD;
+			sourceTree = "<group>";
+		};
+		09945E671E826E7F0030389A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09945E681E826E7F0030389A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09945E8A1E8271C50030389A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09945E8B1E8271D40030389A /* Image */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		09945E8B1E8271D40030389A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				09945EA61E8294CE0030389A /* ViajeCatedralSanBasilioMoscu.jpg */,
+				09945EA71E8294CE0030389A /* ViajeTorreEiffelFrancia.jpg */,
+				09945EA81E8294CE0030389A /* ViajePiramidesEgito.jpg */,
+				09945EA91E8294CE0030389A /* ViajeMurallaChina.jpg */,
+				09945EAA1E8294CE0030389A /* ViajeMachupicchu.jpg */,
+				09945EA41E82897F0030389A /* agenciaviaje.png */,
+				09945EA21E82882C0030389A /* ic_account_circle_48pt.png */,
+				09945EA01E8287C70030389A /* ic_airplanemode_active_48pt.png */,
+				09945E9E1E8287530030389A /* ic_card_travel.png */,
+				09945E9C1E827C4C0030389A /* agencias_viajes_logo.png */,
+				09945E8C1E8271EE0030389A /* reveal-icon.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		09C4110D1E82999000831D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C4110E1E82999000831D28 /* libsqlite3.0.tbd */,
+				09C4110F1E82999000831D28 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09945E631E826E7F0030389A /* ViajesBBDD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09945E7E1E826E800030389A /* Build configuration list for PBXNativeTarget "ViajesBBDD" */;
+			buildPhases = (
+				09945E601E826E7F0030389A /* Sources */,
+				09945E611E826E7F0030389A /* Frameworks */,
+				09945E621E826E7F0030389A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViajesBBDD;
+			productName = ViajesBBDD;
+			productReference = 09945E641E826E7F0030389A /* ViajesBBDD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09945E5C1E826E7F0030389A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = scriptingsystems;
+				TargetAttributes = {
+					09945E631E826E7F0030389A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 09945E5F1E826E7F0030389A /* Build configuration list for PBXProject "ViajesBBDD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09945E5B1E826E7F0030389A;
+			productRefGroup = 09945E651E826E7F0030389A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09945E631E826E7F0030389A /* ViajesBBDD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09945E621E826E7F0030389A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09945E9D1E827C4C0030389A /* agencias_viajes_logo.png in Resources */,
+				09945EA11E8287C70030389A /* ic_airplanemode_active_48pt.png in Resources */,
+				09945EAB1E8294CE0030389A /* ViajeCatedralSanBasilioMoscu.jpg in Resources */,
+				09945E9F1E8287530030389A /* ic_card_travel.png in Resources */,
+				09945E7A1E826E800030389A /* LaunchScreen.storyboard in Resources */,
+				09945EAC1E8294CE0030389A /* ViajeTorreEiffelFrancia.jpg in Resources */,
+				09945E771E826E800030389A /* Assets.xcassets in Resources */,
+				09945EA31E82882C0030389A /* ic_account_circle_48pt.png in Resources */,
+				09945EAF1E8294CE0030389A /* ViajeMachupicchu.jpg in Resources */,
+				09945E721E826E7F0030389A /* Main.storyboard in Resources */,
+				09945E8D1E8271EE0030389A /* reveal-icon.png in Resources */,
+				09945EAE1E8294CE0030389A /* ViajeMurallaChina.jpg in Resources */,
+				09945EA51E82897F0030389A /* agenciaviaje.png in Resources */,
+				09945EAD1E8294CE0030389A /* ViajePiramidesEgito.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09945E601E826E7F0030389A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09945E991E8276310030389A /* PerfilViewController.m in Sources */,
+				09945E861E82705A0030389A /* ViajesCollectionViewController.m in Sources */,
+				09945E6F1E826E7F0030389A /* ViewController.m in Sources */,
+				09945E751E826E800030389A /* ViajesBBDD.xcdatamodeld in Sources */,
+				09945E901E8272000030389A /* SWRevealViewController.m in Sources */,
+				09945E961E8272F70030389A /* MenuTableViewController.m in Sources */,
+				09C4110C1E82997400831D28 /* ViajeDAO.m in Sources */,
+				09945E931E8272B80030389A /* RevealViewController.m in Sources */,
+				09945E6C1E826E7F0030389A /* AppDelegate.m in Sources */,
+				09945E891E8271930030389A /* MenuViewController.m in Sources */,
+				09945EB21E8295F10030389A /* Viaje.m in Sources */,
+				09945E691E826E7F0030389A /* main.m in Sources */,
+				09945E831E82702E0030389A /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09945E701E826E7F0030389A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09945E711E826E7F0030389A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09945E781E826E800030389A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09945E791E826E800030389A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09945E7C1E826E800030389A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09945E7D1E826E800030389A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09945E7F1E826E800030389A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ViajesBBDD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.ViajesBBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09945E801E826E800030389A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ViajesBBDD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.ViajesBBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09945E5F1E826E7F0030389A /* Build configuration list for PBXProject "ViajesBBDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09945E7C1E826E800030389A /* Debug */,
+				09945E7D1E826E800030389A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09945E7E1E826E800030389A /* Build configuration list for PBXNativeTarget "ViajesBBDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09945E7F1E826E800030389A /* Debug */,
+				09945E801E826E800030389A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09945E731E826E800030389A /* ViajesBBDD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09945E741E826E800030389A /* ViajesBBDD.xcdatamodel */,
+			);
+			currentVersion = 09945E741E826E800030389A /* ViajesBBDD.xcdatamodel */;
+			path = ViajesBBDD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 09945E5C1E826E7F0030389A /* Project object */;
+}

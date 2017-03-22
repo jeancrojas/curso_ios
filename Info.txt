@@ -742,3 +742,49 @@ La clase TableViewController (creada con anterioridad) cada una de sus rows debe
 Se ha de crear un “View Controller” dentro de ello, habra que introducir un “Container View”, este container lo relacionamos a traves de un “Embed” al TableViewController
 
 
+
+21 de Marzo de 2017
+*******************
+
+Importar los frameworks
+	libsqlite3.0.tbd
+	libsqlite3.tbd
+
+
+
+-Insertar en tabla SQLite
+
+-(BOOL) anyadirContactos:(NSString *)nombreA Telefono:(NSString *)telefonoA Direccion:(NSString *)direccionA {
+    
+    
+    const char *sentenciaSQL = [[NSString stringWithFormat: @"INSERT INTO contactos (nombre,telefono,direccion) VALUES ('%@', '%@', '%@')", nombreA, telefonoA, direccionA] UTF8String];
+    NSString *ubicacionDB = [self obtenerRutaDB];
+    NSLog(@"Ubicación de la BBDD: %@ \nLa sentencia es: %s",ubicacionDB, sentenciaSQL);
+    
+    if (!(sqlite3_open([ubicacionDB UTF8String], &bd) == SQLITE_OK)) {
+        NSLog(@"No se puede conectar con la BD");
+        return false;
+    }
+    
+    sqlite3_stmt *sqlStatement;
+    
+    
+    
+    if (!(sqlite3_prepare_v2(bd, sentenciaSQL, -1, &sqlStatement, NULL) == SQLITE_OK)) {
+        NSLog(@"Problema al preparar el statement");
+        return false;
+    }
+    
+    if (SQLITE_DONE != sqlite3_step(sqlStatement)) {
+        
+        //
+    }
+    
+    sqlite3_reset(sqlStatement);
+    sqlite3_finalize(sqlStatement);
+    sqlite3_close(bd);
+    
+    
+    return true;
+}
+
