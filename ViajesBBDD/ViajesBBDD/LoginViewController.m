@@ -7,7 +7,11 @@
 //
 
 #import "LoginViewController.h"
-#import "MenuViewController.h"
+#import "SWRevealViewController.h"
+#import "UsuarioDAO.h"
+#import "Usuario.h"
+#import "AppDelegate.h"
+
 
 @interface LoginViewController ()
 
@@ -18,6 +22,10 @@
 @synthesize textFieldUserLoginVC;
 @synthesize textFieldPassLoginVC;
 @synthesize buttonValidarLoginVC;
+UsuarioDAO *usuarioDAO;
+NSMutableArray *listaUsuario;
+AppDelegate *appDelegateLoginVC;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,11 +42,19 @@
     [buttonValidarLoginVC.layer setShadowOpacity:0.5];
      */
     buttonValidarLoginVC.layer.cornerRadius = 5;
+    appDelegateLoginVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    usuarioDAO = [[UsuarioDAO alloc]init];
+    listaUsuario = [[NSMutableArray alloc]init];
+    listaUsuario = [usuarioDAO obtenerContactos];
 }
 
 /*
@@ -56,9 +72,27 @@
     [buttonValidarLoginVC setBackgroundColor: [UIColor grayColor]];
     [buttonValidarLoginVC setTitleColor:[UIColor blueColor] forState: UIControlStateNormal];
     */
-    MenuViewController *vistaMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idSWRevealVC"];
+    Boolean autenticacion = NO;
     
-    [self showViewController:vistaMenuVC sender:nil];
+    NSString *usuario = textFieldUserLoginVC.text;
+    NSString *contrasenya = textFieldPassLoginVC.text;
+    
+    
+    for (int i=0 ; i < [listaUsuario count]; i++) {
+        
+        Usuario *userTmp = [listaUsuario objectAtIndex:i];
+        if ([userTmp.userAccount isEqualToString:usuario] && [userTmp.passAccount isEqualToString:contrasenya]) {
+            appDelegateLoginVC.idUsuarioAppDelegate = userTmp.idUsuario;
+            autenticacion = YES;
+            break;
+        }
+    }
+    
+    
+    if (autenticacion) {
+        SWRevealViewController *vistaSWRevealVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idSWRevealVC"];
+        [self showViewController:vistaSWRevealVC sender:nil];
+    }
     
 }
 @end

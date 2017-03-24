@@ -7,6 +7,7 @@
 //
 
 #import "PerfilViewController.h"
+#import "SWRevealViewController.h"
 
 @interface PerfilViewController ()
 
@@ -17,6 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Agregar el botón
+    UIButton *boton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton setFrame:CGRectMake(5.0, 5.0, 17, 17)];
+    [boton setImage:[UIImage imageNamed:@"reveal-icon.png"] forState:UIControlStateNormal ];
+    
+    UIBarButtonItem *revealBoton = [[UIBarButtonItem alloc]initWithCustomView:boton];
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:revealBoton, nil];
+    
+    //Controlador SWReveal
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController){
+        [boton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,5 +10,6 @@
 
 @interface ViajesCollectionViewController : UICollectionViewController
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionViewViajesCVC;
+@property (nonatomic, assign) int idUsuarioViajesCVC;
 
 @end

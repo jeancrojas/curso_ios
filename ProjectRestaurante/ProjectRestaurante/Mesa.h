@@ -12,9 +12,11 @@
     int idMesa;
     int numeroComensales;
 }
+
 @property (nonatomic, assign) int idMesa;
 @property (nonatomic, assign) int numeroComensales;
 
--(id) initWithId: (int) idMensaIntroducida NumeroComensales:(int) numeroComensajesIntroducido;
+-(id)initWithId:(int)idMensaIntroducida NumeroComensales:(int)numeroComensalesIntroducido;
+
 
 @end

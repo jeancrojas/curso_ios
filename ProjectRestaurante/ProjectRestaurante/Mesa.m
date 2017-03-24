@@ -12,7 +12,7 @@
     @synthesize idMesa;
     @synthesize numeroComensales;
 
--(id) initWithId: (int) idMensaIntroducida NumeroComensales:(int) numeroComensalesIntroducido {
+-(id)initWithId:(int)idMensaIntroducida NumeroComensales:(int)numeroComensalesIntroducido {
     idMesa = idMensaIntroducida;
     numeroComensales = numeroComensalesIntroducido;
     return self;

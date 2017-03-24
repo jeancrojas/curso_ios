@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MesaCollectionViewController : UICollectionViewController
+- (IBAction)barButtonItemAjustarMesaCVC:(id)sender;
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		097356821E83C524004C3E72 /* ReservaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356811E83C524004C3E72 /* ReservaCollectionViewController.m */; };
+		097356851E83D16E004C3E72 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356841E83D16E004C3E72 /* Usuario.m */; };
+		097356881E83D3B1004C3E72 /* UsuarioDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356871E83D3B1004C3E72 /* UsuarioDAO.m */; };
+		0973568B1E83E693004C3E72 /* DetalleViajeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973568A1E83E693004C3E72 /* DetalleViajeViewController.m */; };
 		09945E691E826E7F0030389A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E681E826E7F0030389A /* main.m */; };
 		09945E6C1E826E7F0030389A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E6B1E826E7F0030389A /* AppDelegate.m */; };
 		09945E6F1E826E7F0030389A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E6E1E826E7F0030389A /* ViewController.m */; };
@@ -16,7 +20,6 @@
 		09945E7A1E826E800030389A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09945E781E826E800030389A /* LaunchScreen.storyboard */; };
 		09945E831E82702E0030389A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E821E82702E0030389A /* LoginViewController.m */; };
 		09945E861E82705A0030389A /* ViajesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E851E82705A0030389A /* ViajesCollectionViewController.m */; };
-		09945E891E8271930030389A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E881E8271930030389A /* MenuViewController.m */; };
 		09945E8D1E8271EE0030389A /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09945E8C1E8271EE0030389A /* reveal-icon.png */; };
 		09945E901E8272000030389A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E8F1E8272000030389A /* SWRevealViewController.m */; };
 		09945E931E8272B80030389A /* RevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09945E921E8272B80030389A /* RevealViewController.m */; };
@@ -39,6 +42,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		097356801E83C524004C3E72 /* ReservaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservaCollectionViewController.h; path = ../ReservaCollectionViewController.h; sourceTree = "<group>"; };
+		097356811E83C524004C3E72 /* ReservaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservaCollectionViewController.m; path = ../ReservaCollectionViewController.m; sourceTree = "<group>"; };
+		097356831E83D16E004C3E72 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
+		097356841E83D16E004C3E72 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		097356861E83D3B1004C3E72 /* UsuarioDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioDAO.h; sourceTree = "<group>"; };
+		097356871E83D3B1004C3E72 /* UsuarioDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioDAO.m; sourceTree = "<group>"; };
+		097356891E83E693004C3E72 /* DetalleViajeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleViajeViewController.h; sourceTree = "<group>"; };
+		0973568A1E83E693004C3E72 /* DetalleViajeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleViajeViewController.m; sourceTree = "<group>"; };
 		09945E641E826E7F0030389A /* ViajesBBDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViajesBBDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09945E681E826E7F0030389A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09945E6A1E826E7F0030389A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,8 +65,6 @@
 		09945E821E82702E0030389A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		09945E841E82705A0030389A /* ViajesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViajesCollectionViewController.h; sourceTree = "<group>"; };
 		09945E851E82705A0030389A /* ViajesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViajesCollectionViewController.m; sourceTree = "<group>"; };
-		09945E871E8271930030389A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		09945E881E8271930030389A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		09945E8C1E8271EE0030389A /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		09945E8E1E8272000030389A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		09945E8F1E8272000030389A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -116,6 +125,8 @@
 		09945E661E826E7F0030389A /* ViajesBBDD */ = {
 			isa = PBXGroup;
 			children = (
+				097356801E83C524004C3E72 /* ReservaCollectionViewController.h */,
+				097356811E83C524004C3E72 /* ReservaCollectionViewController.m */,
 				09945E8E1E8272000030389A /* SWRevealViewController.h */,
 				09945E8F1E8272000030389A /* SWRevealViewController.m */,
 				09945E8A1E8271C50030389A /* Resources */,
@@ -124,18 +135,22 @@
 				09945E6D1E826E7F0030389A /* ViewController.h */,
 				09945E6E1E826E7F0030389A /* ViewController.m */,
 				09945E701E826E7F0030389A /* Main.storyboard */,
+				097356891E83E693004C3E72 /* DetalleViajeViewController.h */,
+				0973568A1E83E693004C3E72 /* DetalleViajeViewController.m */,
 				09945EB01E8295F10030389A /* Viaje.h */,
 				09945EB11E8295F10030389A /* Viaje.m */,
+				097356861E83D3B1004C3E72 /* UsuarioDAO.h */,
+				097356871E83D3B1004C3E72 /* UsuarioDAO.m */,
 				09C4110A1E82997400831D28 /* ViajeDAO.h */,
 				09C4110B1E82997400831D28 /* ViajeDAO.m */,
+				097356831E83D16E004C3E72 /* Usuario.h */,
+				097356841E83D16E004C3E72 /* Usuario.m */,
 				09945E971E8276310030389A /* PerfilViewController.h */,
 				09945E981E8276310030389A /* PerfilViewController.m */,
 				09945E941E8272F70030389A /* MenuTableViewController.h */,
 				09945E951E8272F70030389A /* MenuTableViewController.m */,
 				09945E911E8272B80030389A /* RevealViewController.h */,
 				09945E921E8272B80030389A /* RevealViewController.m */,
-				09945E871E8271930030389A /* MenuViewController.h */,
-				09945E881E8271930030389A /* MenuViewController.m */,
 				09945E841E82705A0030389A /* ViajesCollectionViewController.h */,
 				09945E851E82705A0030389A /* ViajesCollectionViewController.m */,
 				09945E811E82702E0030389A /* LoginViewController.h */,
@@ -274,16 +289,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0973568B1E83E693004C3E72 /* DetalleViajeViewController.m in Sources */,
+				097356881E83D3B1004C3E72 /* UsuarioDAO.m in Sources */,
 				09945E991E8276310030389A /* PerfilViewController.m in Sources */,
+				097356821E83C524004C3E72 /* ReservaCollectionViewController.m in Sources */,
 				09945E861E82705A0030389A /* ViajesCollectionViewController.m in Sources */,
 				09945E6F1E826E7F0030389A /* ViewController.m in Sources */,
 				09945E751E826E800030389A /* ViajesBBDD.xcdatamodeld in Sources */,
 				09945E901E8272000030389A /* SWRevealViewController.m in Sources */,
+				097356851E83D16E004C3E72 /* Usuario.m in Sources */,
 				09945E961E8272F70030389A /* MenuTableViewController.m in Sources */,
 				09C4110C1E82997400831D28 /* ViajeDAO.m in Sources */,
 				09945E931E8272B80030389A /* RevealViewController.m in Sources */,
 				09945E6C1E826E7F0030389A /* AppDelegate.m in Sources */,
-				09945E891E8271930030389A /* MenuViewController.m in Sources */,
 				09945EB21E8295F10030389A /* Viaje.m in Sources */,
 				09945E691E826E7F0030389A /* main.m in Sources */,
 				09945E831E82702E0030389A /* LoginViewController.m in Sources */,
