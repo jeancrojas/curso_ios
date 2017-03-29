@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */; };
 		099345AD1E81528400EBF043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AC1E81528400EBF043 /* main.m */; };
 		099345B01E81528400EBF043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AF1E81528400EBF043 /* AppDelegate.m */; };
 		099345B31E81528400EBF043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345B21E81528400EBF043 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuAjustarTableViewController.h; sourceTree = "<group>"; };
+		096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuAjustarTableViewController.m; sourceTree = "<group>"; };
 		099345A81E81528400EBF043 /* ProjectRestaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRestaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		099345AC1E81528400EBF043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		099345AE1E81528400EBF043 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 		0993459F1E81528400EBF043 = {
 			isa = PBXGroup;
 			children = (
+				096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */,
+				096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */,
 				099345AA1E81528400EBF043 /* ProjectRestaurante */,
 				099345A91E81528400EBF043 /* Products */,
 			);
@@ -220,6 +225,7 @@
 				09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */,
 				09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */,
 				099345B01E81528400EBF043 /* AppDelegate.m in Sources */,
+				096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */,
 				099345AD1E81528400EBF043 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

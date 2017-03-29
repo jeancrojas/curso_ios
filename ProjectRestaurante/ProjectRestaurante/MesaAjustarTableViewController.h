@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface MesaAjustarTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItemEliminarMesaAjustarTVC;
+- (IBAction)barButtonItemEliminarMesaAjustarTVC:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItemAnyadirMesaAjustarTVC;
+- (IBAction)barButtonItemAnyadirMesaAjustarTVC:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButtonItemGuardarMesaAjustarTVC;
+- (IBAction)barButtonItemGuardarMesaAjustarTVC:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *tableViewMesaAjustarTVC;
 
 @end

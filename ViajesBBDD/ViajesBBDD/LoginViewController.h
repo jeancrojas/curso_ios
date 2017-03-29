@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPassLoginVC;
 @property (weak, nonatomic) IBOutlet UIButton *buttonValidarLoginVC;
 - (IBAction)buttonValidarLoginVC:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAdminLoginVC;
+- (IBAction)buttonAdminLoginVC:(id)sender;
 
 @end

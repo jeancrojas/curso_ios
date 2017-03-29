@@ -11,6 +11,7 @@
 #import "UsuarioDAO.h"
 #import "Usuario.h"
 #import "AppDelegate.h"
+#import "AdminViajesCollectionViewController.h"
 
 
 @interface LoginViewController ()
@@ -22,6 +23,7 @@
 @synthesize textFieldUserLoginVC;
 @synthesize textFieldPassLoginVC;
 @synthesize buttonValidarLoginVC;
+@synthesize buttonAdminLoginVC;
 UsuarioDAO *usuarioDAO;
 NSMutableArray *listaUsuario;
 AppDelegate *appDelegateLoginVC;
@@ -33,6 +35,7 @@ AppDelegate *appDelegateLoginVC;
     textFieldUserLoginVC.placeholder = @"usuario...";
     textFieldPassLoginVC.placeholder = @"contraseña...";
     [buttonValidarLoginVC setTitle:@"Iniciar sessión" forState: UIControlStateNormal];
+    [buttonAdminLoginVC setTitle:@"Administrar" forState:UIControlStateNormal];
     [buttonValidarLoginVC.layer setBorderWidth:1];
     [buttonValidarLoginVC.layer setBorderColor: [[UIColor grayColor ]CGColor] ];
     /*
@@ -94,5 +97,30 @@ AppDelegate *appDelegateLoginVC;
         [self showViewController:vistaSWRevealVC sender:nil];
     }
     
+}
+- (IBAction)buttonAdminLoginVC:(id)sender {
+    Boolean autenticacionAdmin = NO;
+    
+    NSString *usuario = textFieldUserLoginVC.text;
+    NSString *contrasenya = textFieldPassLoginVC.text;
+    
+    
+    for (int i=0 ; i < [listaUsuario count]; i++) {
+        
+        Usuario *userTmp = [listaUsuario objectAtIndex:i];
+        if ([userTmp.userAccount isEqualToString:usuario] && [userTmp.passAccount isEqualToString:contrasenya]  && userTmp.esAdmin == 1) {
+            //appDelegateLoginVC.idUsuarioAppDelegate = userTmp.idUsuario;
+            autenticacionAdmin = YES;
+            break;
+        }
+    }
+    
+    
+    if (autenticacionAdmin) {
+        
+        AdminViajesCollectionViewController *vistaAdminViajesCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idAdminViajesCVC"];
+        [self showViewController:vistaAdminViajesCVC sender: nil];
+        
+    }
 }
 @end

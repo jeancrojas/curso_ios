@@ -1,28 +1,23 @@
 //
-//  MesaAjustarTableViewController.m
+//  MenuAjustarTableViewController.m
 //  ProjectRestaurante
 //
-//  Created by cice on 24/3/17.
+//  Created by cice on 27/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
+#import "MenuAjustarTableViewController.h"
 
-#import "AppDelegate.h"
-#import "MesaAjustarTableViewController.h"
-#import "Mesa.h"
-
-@interface MesaAjustarTableViewController ()
+@interface MenuAjustarTableViewController ()
 
 @end
 
-@implementation MesaAjustarTableViewController
+@implementation MenuAjustarTableViewController
 
-@synthesize barButtonItemEliminarMesaAjustarTVC;
-@synthesize barButtonItemAnyadirMesaAjustarTVC;
-@synthesize barButtonItemGuardarMesaAjustarTVC;
-
-NSInteger numMesasTemporalMesaAjustarTVC;
-NSMutableArray *listaMesaAjustarTVC;
+@synthesize labelEntrantesMenuAjustarTVC;
+@synthesize labelPrincipalesMenuAjustarTVC;
+@synthesize labelPostresMenuAjustarTVC;
+@synthesize labelBebidasMenuAjustarTVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +27,11 @@ NSMutableArray *listaMesaAjustarTVC;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    labelEntrantesMenuAjustarTVC.text = @"Entrantes";
+    labelPrincipalesMenuAjustarTVC.text = @"Principales";
+    labelPostresMenuAjustarTVC.text = @"Postres";
+    labelBebidasMenuAjustarTVC.text = @"Bebidas";
     
-    AppDelegate *appDelegateMesaAjustarTVC = (AppDelegate *) [[UIApplication sharedApplication]delegate];
-    numMesasTemporalMesaAjustarTVC = appDelegateMesaAjustarTVC.numMesasTemporal;
-    listaMesaAjustarTVC = appDelegateMesaAjustarTVC.listaMesa;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,24 +46,19 @@ NSMutableArray *listaMesaAjustarTVC;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return numMesasTemporalMesaAjustarTVC;
+    return 4;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listaMesaAjustarTVC" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
-    Mesa *auxMesa = [listaMesaAjustarTVC objectAtIndex:indexPath.row ];
-    UILabel *labelNombreMesaAjustarTVC = (UILabel *)[cell viewWithTag:2001];
-    labelNombreMesaAjustarTVC.text =  [NSString stringWithFormat:@"Mesa %d", auxMesa.idMesa];
     
     return cell;
 }
+*/
 
--(void)viewWillAppear:(BOOL)animated{
-    [self.tableViewMesaAjustarTVC reloadData];
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -112,30 +103,4 @@ NSMutableArray *listaMesaAjustarTVC;
 }
 */
 
-- (IBAction)barButtonItemEliminarMesaAjustarTVC:(id)sender {
-    if (numMesasTemporalMesaAjustarTVC > 0) {
-        numMesasTemporalMesaAjustarTVC--;
-        [listaMesaAjustarTVC removeLastObject];
-        
-    }
-    [self.tableViewMesaAjustarTVC reloadData];
-}
-- (IBAction)barButtonItemAnyadirMesaAjustarTVC:(id)sender {
-    
-    if (numMesasTemporalMesaAjustarTVC < 20) {
-        numMesasTemporalMesaAjustarTVC++;
-        Mesa *mesaAux = [[Mesa alloc]initWithId:(int)numMesasTemporalMesaAjustarTVC NumeroComensales:0];
-        [listaMesaAjustarTVC addObject:mesaAux];
-    }
-    [self.tableViewMesaAjustarTVC reloadData];
-}
-- (IBAction)barButtonItemGuardarMesaAjustarTVC:(id)sender {
-    for (int i=0; i < [listaMesaAjustarTVC count] ; i++) {
-        NSLog(@"%@", [listaMesaAjustarTVC objectAtIndex:i]);
-    }
-    
-    //PENDIENTE GUARDAR EN LA BBDD
-    
-    
-}
 @end

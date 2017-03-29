@@ -788,3 +788,134 @@ Importar los frameworks
     return true;
 }
 
+27 de Marzo de 2017
+*******************
+
+Coger una imagen de la galería
+
+
+.h
+@interface AnyadirViajeViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+.m
+you can use UIImagePickerController delegate to select the image (or url) you want to edit.
+
+you can do this like this:
+--------
+
+UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+imagePickerController.delegate = self;
+[self presentViewController:imagePickerController animated:YES completion:nil];
+
+-----------
+
+in the delegate implementation you can use the path of the image or the image itself:
+
+-----------
+// This method is called when an image has been chosen from the library or taken from the camera.
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+//You can retrieve the actual UIImage
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+//Or you can get the image url from AssetsLibrary
+    NSURL *path = [info valueForKey:UIImagePickerControllerReferenceURL];
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+-----------
+
+
+Añadir el permiso de “Privacy - Photo Library Usage Description”
+
+
+29 de Marzo de 2017
+*******************
+
+
+[buttonEjecutarBBDDVC setTitle:@"Ejecutar" forState: UIControlStateNormal];
+    
+    //Método PHP para obtener la previsión del tiempo en mi BBDD
+    NSMutableArray *diasTabla, *iconosTabla, *maximasTabla, *minimasTabla;
+    diasTabla = [[NSMutableArray alloc]init];
+    iconosTabla = [[NSMutableArray alloc]init];
+    maximasTabla = [[NSMutableArray alloc]init];
+    minimasTabla = [[NSMutableArray alloc]init];
+    
+    NSString *urlAdd = [NSString stringWithFormat:@"http://mobup.es/cice/obtener_tiempo.php"];
+    
+    //Configuración de la sesión
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    //La proporciona la WEB que te provee la API
+    sessionConfiguration.HTTPAdditionalHeaders = @{
+                                                   @"api_key" : @"55e76dc4bbae25b066cb",
+                                                   @"Accept" : @"application/json"};
+    
+    //inicializacion de la sesion
+    NSURLSession *session = [NSURLSession sessionWithConfiguration: sessionConfiguration];
+    
+    //Tarea de gestion de datos
+    NSURL *url = [NSURL URLWithString:urlAdd];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+    
+        //Sondeo de la respuesta HTTP del servidor
+        NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)response;
+        if (HTTPResponse.statusCode == 200){
+            if (!error) {
+                //Conversion de JSON a objeto Foundation(NSArray)
+                NSArray *notes = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error: nil];
+                //Recorremos el Array para obtener todos los resultados
+                int i=0;
+                NSUInteger numeroFilas = [notes count];
+                while(i < numeroFilas){
+                    NSMutableDictionary *arr = [notes objectAtIndex:i];
+                    NSString *dia = [arr valueForKey:@"dia"];
+                    [diasTabla addObject:dia];
+                    
+                    NSString *icono = [arr valueForKey:@"icono"];
+                    [iconosTabla addObject:icono];
+                    
+                    NSString *maxima = [arr valueForKey:@"maxima"];
+                    [maximasTabla addObject:maxima];
+                    
+                    NSString *minima = [arr valueForKey:@"minima"];
+                    [minimasTabla addObject:minima];
+                    
+                    i++;
+                }
+                
+                for ( NSString *dT in diasTabla) {
+                    NSLog(@"Día: %@",dT);
+                }
+                
+                for ( NSString *dT in iconosTabla) {
+                    NSLog(@"Icono: %@",dT);
+                }
+                
+                for ( NSString *dT in maximasTabla) {
+                    NSLog(@"Máxima: %@",dT);
+                }
+                
+                for ( NSString *dT in minimasTabla) {
+                    NSLog(@"Minima: %@",dT);
+                }
+                
+            }else{
+                NSAssert(NO, @"Error al obtener las notas del servidor");
+            }
+        }
+        
+    }];
+    
+    [dataTask resume];
+
+---
+
+Permisos:
+Info.plist
+
+App Transport Security Settings >> Allow Arbitraty Loads
+
+
+

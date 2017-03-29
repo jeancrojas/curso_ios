@@ -1,28 +1,26 @@
 //
-//  ViajesCollectionViewController.m
+//  AdminViajesCollectionViewController.m
 //  ViajesBBDD
 //
-//  Created by cice on 22/3/17.
+//  Created by cice on 27/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ViajesCollectionViewController.h"
+#import "AdminViajesCollectionViewController.h"
 #import "ViajeDAO.h"
 #import "Viaje.h"
-#import "SWRevealViewController.h"
-#import "DetalleViajeViewController.h"
+#import "AnyadirViajeViewController.h"
 
-
-@interface ViajesCollectionViewController ()
+@interface AdminViajesCollectionViewController ()
 
 @end
 
-@implementation ViajesCollectionViewController
+@implementation AdminViajesCollectionViewController
 
-ViajeDAO *dao;
-NSMutableArray *listaViaje;
+ViajeDAO *daoAdminViajesCVC;
+NSMutableArray *listaViajeAdminViajesCVC;
 
-static NSString * const reuseIdentifier = @"idViajesCVC";
+static NSString * const reuseIdentifier = @"idAdminViajesCVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,31 +32,14 @@ static NSString * const reuseIdentifier = @"idViajesCVC";
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    
-    //Agregar el botón
-    UIButton *boton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton setFrame:CGRectMake(5.0, 5.0, 17, 17)];
-    [boton setImage:[UIImage imageNamed:@"reveal-icon.png"] forState:UIControlStateNormal ];
-    
-    UIBarButtonItem *revealBoton = [[UIBarButtonItem alloc]initWithCustomView:boton];
-    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:revealBoton, nil];
-    
-    //Controlador SWReveal
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if (revealViewController){
-        [boton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    }
-    
-    
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    dao = [[ViajeDAO alloc]init];
-    listaViaje = [[NSMutableArray alloc]init];
-    listaViaje = [dao obtenerContactos];
-    //[self.collectionViewViajesCVC reloadData];
+    daoAdminViajesCVC = [[ViajeDAO alloc]init];
+    listaViajeAdminViajesCVC = [[NSMutableArray alloc]init];
+    listaViajeAdminViajesCVC = [daoAdminViajesCVC obtenerContactos];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -83,22 +64,21 @@ static NSString * const reuseIdentifier = @"idViajesCVC";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    //NSLog(@"numero de item: %ld", [listaViaje count]);
-    
-    return [listaViaje count];
+    return [listaViajeAdminViajesCVC count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    // Configure the cell
     
     Viaje *viajeCVC = [[Viaje alloc]init];
-    viajeCVC = (Viaje *) [listaViaje objectAtIndex:indexPath.row];
+    viajeCVC = (Viaje *) [listaViajeAdminViajesCVC objectAtIndex:indexPath.row];
     
     // Configure the cell
-    UILabel *labelTituloViajesCVC = (UILabel *) [cell viewWithTag:1001];
-    UILabel *labelPrecioViajesCVC = (UILabel *) [cell viewWithTag:1002];
-    UIImageView *imageViewImangenViajesCVC = (UIImageView *) [cell viewWithTag:1003];
+    UILabel *labelTituloViajesCVC = (UILabel *) [cell viewWithTag:3001];
+    UILabel *labelPrecioViajesCVC = (UILabel *) [cell viewWithTag:3002];
+    UIImageView *imageViewImangenViajesCVC = (UIImageView *) [cell viewWithTag:3003];
     
     
     labelTituloViajesCVC.text = viajeCVC.lugar;
@@ -109,29 +89,6 @@ static NSString * const reuseIdentifier = @"idViajesCVC";
 }
 
 #pragma mark <UICollectionViewDelegate>
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    //Si instancia un objecto de la Clase Viaje que se haya pulsado
-    Viaje *viajeCVC = [[Viaje alloc]init];
-    viajeCVC = (Viaje *) [listaViaje objectAtIndex:indexPath.row];
-    
-    
-    NSLog(@"Ha seleccionado la celda: %ld", (long)indexPath.row);
-    //DetalleViajeViewController *vistaDetalleViajeVCNC = [self.storyboard instantiateViewControllerWithIdentifier:@"idDetalleViajeVCNC"];
-    DetalleViajeViewController *vistaDetalleViajeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idDetalleViajeVC"];
-    
-    vistaDetalleViajeVC.idViajeDetalleViajeVC = (int)viajeCVC.idViaje;
-    vistaDetalleViajeVC.lugarDetalleViajeVC = viajeCVC.lugar;
-    vistaDetalleViajeVC.descripcionDetalleViajeVC = viajeCVC.descripcion;
-    vistaDetalleViajeVC.plazasDetalleViajeVC = viajeCVC.plazas;
-    vistaDetalleViajeVC.precioDetalleViajeVC = viajeCVC.precio;
-    vistaDetalleViajeVC.nombreImagenDetalleViajeVC = viajeCVC.nombreImagen;
-    
-    
-    [self showViewController:vistaDetalleViajeVC sender:nil];
-    
-}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -162,4 +119,9 @@ static NSString * const reuseIdentifier = @"idViajesCVC";
 }
 */
 
+- (IBAction)barButtonItemAnyadirAdminViajesCVC:(id)sender {
+    AnyadirViajeViewController *vistaAnyadirViajeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idAnyadirViajeVC"];
+    [self showViewController:vistaAnyadirViajeVC sender: nil];
+    
+}
 @end

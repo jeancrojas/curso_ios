@@ -1,32 +1,22 @@
 //
 //  AppDelegate.m
-//  ProjectRestaurante
+//  NSURLSessionTest
 //
-//  Created by cice on 21/3/17.
+//  Created by cice on 29/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "Mesa.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-@synthesize listaMesa;
-@synthesize numMesasTemporal;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    Mesa *m1 = [[Mesa alloc]initWithId:1 NumeroComensales:0];
-    Mesa *m2 = [[Mesa alloc]initWithId:2 NumeroComensales:0];
-    Mesa *m3 = [[Mesa alloc]initWithId:3 NumeroComensales:0];
-    
-    listaMesa = [[NSMutableArray alloc]initWithObjects:m1, m2, m3, nil];
-    numMesasTemporal = [listaMesa count];
-    
     return YES;
 }
 
@@ -68,7 +58,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"ProjectRestaurante"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"NSURLSessionTest"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.

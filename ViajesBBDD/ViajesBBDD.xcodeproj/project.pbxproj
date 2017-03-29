@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096D29C01E89020600FD0C88 /* AdminViajesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D29BF1E89020600FD0C88 /* AdminViajesCollectionViewController.m */; };
+		096D29C31E89089800FD0C88 /* AnyadirViajeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D29C21E89089800FD0C88 /* AnyadirViajeViewController.m */; };
 		097356821E83C524004C3E72 /* ReservaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356811E83C524004C3E72 /* ReservaCollectionViewController.m */; };
 		097356851E83D16E004C3E72 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356841E83D16E004C3E72 /* Usuario.m */; };
 		097356881E83D3B1004C3E72 /* UsuarioDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 097356871E83D3B1004C3E72 /* UsuarioDAO.m */; };
@@ -42,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		096D29BE1E89020600FD0C88 /* AdminViajesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViajesCollectionViewController.h; sourceTree = "<group>"; };
+		096D29BF1E89020600FD0C88 /* AdminViajesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViajesCollectionViewController.m; sourceTree = "<group>"; };
+		096D29C11E89089800FD0C88 /* AnyadirViajeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyadirViajeViewController.h; sourceTree = "<group>"; };
+		096D29C21E89089800FD0C88 /* AnyadirViajeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyadirViajeViewController.m; sourceTree = "<group>"; };
 		097356801E83C524004C3E72 /* ReservaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservaCollectionViewController.h; path = ../ReservaCollectionViewController.h; sourceTree = "<group>"; };
 		097356811E83C524004C3E72 /* ReservaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservaCollectionViewController.m; path = ../ReservaCollectionViewController.m; sourceTree = "<group>"; };
 		097356831E83D16E004C3E72 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
@@ -135,6 +141,10 @@
 				09945E6D1E826E7F0030389A /* ViewController.h */,
 				09945E6E1E826E7F0030389A /* ViewController.m */,
 				09945E701E826E7F0030389A /* Main.storyboard */,
+				096D29C11E89089800FD0C88 /* AnyadirViajeViewController.h */,
+				096D29C21E89089800FD0C88 /* AnyadirViajeViewController.m */,
+				096D29BE1E89020600FD0C88 /* AdminViajesCollectionViewController.h */,
+				096D29BF1E89020600FD0C88 /* AdminViajesCollectionViewController.m */,
 				097356891E83E693004C3E72 /* DetalleViajeViewController.h */,
 				0973568A1E83E693004C3E72 /* DetalleViajeViewController.m */,
 				09945EB01E8295F10030389A /* Viaje.h */,
@@ -292,11 +302,13 @@
 				0973568B1E83E693004C3E72 /* DetalleViajeViewController.m in Sources */,
 				097356881E83D3B1004C3E72 /* UsuarioDAO.m in Sources */,
 				09945E991E8276310030389A /* PerfilViewController.m in Sources */,
+				096D29C31E89089800FD0C88 /* AnyadirViajeViewController.m in Sources */,
 				097356821E83C524004C3E72 /* ReservaCollectionViewController.m in Sources */,
 				09945E861E82705A0030389A /* ViajesCollectionViewController.m in Sources */,
 				09945E6F1E826E7F0030389A /* ViewController.m in Sources */,
 				09945E751E826E800030389A /* ViajesBBDD.xcdatamodeld in Sources */,
 				09945E901E8272000030389A /* SWRevealViewController.m in Sources */,
+				096D29C01E89020600FD0C88 /* AdminViajesCollectionViewController.m in Sources */,
 				097356851E83D16E004C3E72 /* Usuario.m in Sources */,
 				09945E961E8272F70030389A /* MenuTableViewController.m in Sources */,
 				09C4110C1E82997400831D28 /* ViajeDAO.m in Sources */,

@@ -7,12 +7,20 @@
 //
 
 #import "AjustarTableViewController.h"
+#import "MesaAjustarTableViewController.h"
+#import "MenuAjustarTableViewController.h"
 
 @interface AjustarTableViewController ()
 
 @end
 
 @implementation AjustarTableViewController
+
+static const int OPCION_MESA = 1;
+static const int OPCION_MENU = 2;
+static const int OPCION_PLATOSCARTA = 3;
+static const int OPCION_BEBIDAS = 4;
+static const int OPCION_POSTRES = 5;
 
 @synthesize labelMesaAjustarTVC;
 @synthesize labelMenuAjustarTVC;
@@ -52,6 +60,36 @@
     return 6;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MesaAjustarTableViewController *vistaIdNCMesaAjustarTVC;
+    MenuAjustarTableViewController *vistaIDMenuAjustarTVC;
+    
+    switch (indexPath.row) {
+        case OPCION_MESA:
+            vistaIdNCMesaAjustarTVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idNCMesaAjustarTVC"];
+            [self showViewController:vistaIdNCMesaAjustarTVC sender: nil];
+            break;
+            
+        case OPCION_MENU:
+            vistaIDMenuAjustarTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idMenuAjustarTVC"];
+            [self showViewController:vistaIDMenuAjustarTVC sender: nil];
+            break;
+        
+        case OPCION_PLATOSCARTA:
+            break;
+            
+        case OPCION_BEBIDAS:
+            break;
+        case OPCION_POSTRES:
+            break;
+            
+        default:
+            break;
+    }
+
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

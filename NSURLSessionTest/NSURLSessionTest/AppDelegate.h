@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  ProjectRestaurante
+//  NSURLSessionTest
 //
-//  Created by cice on 21/3/17.
+//  Created by cice on 29/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
@@ -14,8 +14,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
-@property (nonatomic, retain) NSMutableArray *listaMesa;
-@property (nonatomic, assign) NSInteger numMesasTemporal;
 
 - (void)saveContext;
 
