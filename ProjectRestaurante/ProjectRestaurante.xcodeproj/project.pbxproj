@@ -18,6 +18,15 @@
 		099345C81E81545A00EBF043 /* table_icon_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 099345C71E81545A00EBF043 /* table_icon_150x150.png */; };
 		099345CB1E81550800EBF043 /* MesaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345CA1E81550800EBF043 /* MesaCollectionViewController.m */; };
 		099345CE1E8155E300EBF043 /* Mesa.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345CD1E8155E300EBF043 /* Mesa.m */; };
+		09B7C5D51E8D14FB00C43DDA /* PedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5D41E8D14FB00C43DDA /* PedidoTableViewController.m */; };
+		09B7C5D81E8D1D7E00C43DDA /* Plato.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5D71E8D1D7E00C43DDA /* Plato.m */; };
+		09B7C5DB1E8D1D8A00C43DDA /* Bebida.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */; };
+		09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */; };
+		09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5E01E8D222900C43DDA /* BebidaDAO.m */; };
+		09B7C5E51E8D228000C43DDA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */; };
+		09B7C5E61E8D228000C43DDA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */; };
+		09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */; };
+		09B7C5EC1E8D299200C43DDA /* ElegirPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5EB1E8D299200C43DDA /* ElegirPedidoCollectionViewController.m */; };
 		09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C020501E853F5C00C7D99F /* AjustarTableViewController.m */; };
 		09C020531E85419D00C7D99F /* AjustesRestaurante.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 09C020521E85419D00C7D99F /* AjustesRestaurante.jpeg */; };
 		09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C020551E85493C00C7D99F /* MesaAjustarTableViewController.m */; };
@@ -46,6 +55,22 @@
 		099345CA1E81550800EBF043 /* MesaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesaCollectionViewController.m; sourceTree = "<group>"; };
 		099345CC1E8155E300EBF043 /* Mesa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesa.h; sourceTree = "<group>"; };
 		099345CD1E8155E300EBF043 /* Mesa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mesa.m; sourceTree = "<group>"; };
+		09B7C5D31E8D14FB00C43DDA /* PedidoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedidoTableViewController.h; sourceTree = "<group>"; };
+		09B7C5D41E8D14FB00C43DDA /* PedidoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedidoTableViewController.m; sourceTree = "<group>"; };
+		09B7C5D61E8D1D7E00C43DDA /* Plato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plato.h; sourceTree = "<group>"; };
+		09B7C5D71E8D1D7E00C43DDA /* Plato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plato.m; sourceTree = "<group>"; };
+		09B7C5D91E8D1D8A00C43DDA /* Bebida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bebida.h; sourceTree = "<group>"; };
+		09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bebida.m; sourceTree = "<group>"; };
+		09B7C5DC1E8D221D00C43DDA /* PlatoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatoDAO.h; sourceTree = "<group>"; };
+		09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatoDAO.m; sourceTree = "<group>"; };
+		09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BebidaDAO.h; sourceTree = "<group>"; };
+		09B7C5E01E8D222900C43DDA /* BebidaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BebidaDAO.m; sourceTree = "<group>"; };
+		09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		09B7C5E71E8D267700C43DDA /* BebidaPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BebidaPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BebidaPedidoCollectionViewController.m; sourceTree = "<group>"; };
+		09B7C5EA1E8D299200C43DDA /* ElegirPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElegirPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		09B7C5EB1E8D299200C43DDA /* ElegirPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElegirPedidoCollectionViewController.m; sourceTree = "<group>"; };
 		09C0204F1E853F5C00C7D99F /* AjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjustarTableViewController.h; sourceTree = "<group>"; };
 		09C020501E853F5C00C7D99F /* AjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjustarTableViewController.m; sourceTree = "<group>"; };
 		09C020521E85419D00C7D99F /* AjustesRestaurante.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AjustesRestaurante.jpeg; sourceTree = "<group>"; };
@@ -62,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B7C5E51E8D228000C43DDA /* libsqlite3.0.tbd in Frameworks */,
+				09B7C5E61E8D228000C43DDA /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +102,7 @@
 				096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */,
 				099345AA1E81528400EBF043 /* ProjectRestaurante */,
 				099345A91E81528400EBF043 /* Products */,
+				09B7C5E21E8D228000C43DDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,10 +119,24 @@
 			children = (
 				099345C51E8152FF00EBF043 /* Resources */,
 				099345AE1E81528400EBF043 /* AppDelegate.h */,
+				09B7C5D61E8D1D7E00C43DDA /* Plato.h */,
+				09B7C5DC1E8D221D00C43DDA /* PlatoDAO.h */,
+				09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */,
+				09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */,
+				09B7C5E01E8D222900C43DDA /* BebidaDAO.m */,
+				09B7C5D71E8D1D7E00C43DDA /* Plato.m */,
+				09B7C5D91E8D1D8A00C43DDA /* Bebida.h */,
+				09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */,
 				099345AF1E81528400EBF043 /* AppDelegate.m */,
 				099345B11E81528400EBF043 /* ViewController.h */,
 				099345B21E81528400EBF043 /* ViewController.m */,
 				099345B41E81528400EBF043 /* Main.storyboard */,
+				09B7C5EA1E8D299200C43DDA /* ElegirPedidoCollectionViewController.h */,
+				09B7C5EB1E8D299200C43DDA /* ElegirPedidoCollectionViewController.m */,
+				09B7C5E71E8D267700C43DDA /* BebidaPedidoCollectionViewController.h */,
+				09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */,
+				09B7C5D31E8D14FB00C43DDA /* PedidoTableViewController.h */,
+				09B7C5D41E8D14FB00C43DDA /* PedidoTableViewController.m */,
 				09C020541E85493C00C7D99F /* MesaAjustarTableViewController.h */,
 				09C020551E85493C00C7D99F /* MesaAjustarTableViewController.m */,
 				09C0204F1E853F5C00C7D99F /* AjustarTableViewController.h */,
@@ -139,6 +181,15 @@
 				099345C71E81545A00EBF043 /* table_icon_150x150.png */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		09B7C5E21E8D228000C43DDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */,
+				09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,12 +270,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				099345B91E81528400EBF043 /* ProjectRestaurante.xcdatamodeld in Sources */,
+				09B7C5D81E8D1D7E00C43DDA /* Plato.m in Sources */,
+				09B7C5DB1E8D1D8A00C43DDA /* Bebida.m in Sources */,
 				099345CB1E81550800EBF043 /* MesaCollectionViewController.m in Sources */,
 				099345B31E81528400EBF043 /* ViewController.m in Sources */,
 				099345CE1E8155E300EBF043 /* Mesa.m in Sources */,
 				09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */,
 				09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */,
+				09B7C5D51E8D14FB00C43DDA /* PedidoTableViewController.m in Sources */,
+				09B7C5EC1E8D299200C43DDA /* ElegirPedidoCollectionViewController.m in Sources */,
 				099345B01E81528400EBF043 /* AppDelegate.m in Sources */,
+				09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */,
+				09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */,
+				09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */,
 				096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */,
 				099345AD1E81528400EBF043 /* main.m in Sources */,
 			);

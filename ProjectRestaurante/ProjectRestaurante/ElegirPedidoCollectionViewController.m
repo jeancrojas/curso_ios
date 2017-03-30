@@ -1,25 +1,20 @@
 //
-//  MesaCollectionViewController.m
+//  ElegirPedidoCollectionViewController.m
 //  ProjectRestaurante
 //
-//  Created by cice on 21/3/17.
+//  Created by cice on 30/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "MesaCollectionViewController.h"
-#import "AppDelegate.h"
-#import "Mesa.h"
-#import "AjustarTableViewController.h"
-#import "PedidoTableViewController.h"
+#import "ElegirPedidoCollectionViewController.h"
 
-@interface MesaCollectionViewController ()
+@interface ElegirPedidoCollectionViewController ()
 
 @end
 
-@implementation MesaCollectionViewController
+@implementation ElegirPedidoCollectionViewController
 
-static NSString * const reuseIdentifier = @"numeroMesaCVC";
-NSMutableArray *numMesa;
+static NSString * const reuseIdentifier = @"listaElegirPedidoCVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,13 +23,9 @@ NSMutableArray *numMesa;
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    AppDelegate *appDelegateMesaCVC = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    numMesa = [[NSMutableArray alloc]init];
-    numMesa = appDelegateMesaCVC.listaMesa;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,18 +51,13 @@ NSMutableArray *numMesa;
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"Numero de mesas: %ld",[numMesa count]);
-    return 10;
+    return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    //Mesa *mesa = [numMesa objectAtIndex:indexPath.row];
-    
-    UILabel *labelNumeroMesaCVC = (UILabel *) [cell viewWithTag:1001];
-    labelNumeroMesaCVC.text =  [NSString stringWithFormat:@"%ld", indexPath.row+1 ];
-    
+    // Configure the cell
     
     return cell;
 }
@@ -107,19 +93,4 @@ NSMutableArray *numMesa;
 }
 */
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    PedidoTableViewController *vistaPedidoTVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idPedidoTVC"];
-    vistaPedidoTVC.numMesa = (int)indexPath.row;
-    
-    [self showViewController:vistaPedidoTVC sender: nil];
-    
-}
-
-- (IBAction)barButtonItemAjustarMesaCVC:(id)sender {
-    AjustarTableViewController *vistaAjustarTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idAjustarTVC"];
-    
-    [self showViewController:vistaAjustarTVC sender:nil];
-    
-}
 @end
