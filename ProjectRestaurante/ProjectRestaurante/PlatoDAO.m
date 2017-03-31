@@ -11,19 +11,19 @@
 
 @implementation PlatoDAO
 
--(NSMutableArray *) obtenerContactos{
+-(NSMutableArray *) obtenerPlatos{
     NSMutableArray *listaPlatos = [[NSMutableArray alloc]init];
     NSString *ubicacionDB = [self obtenerRutaDB];
     NSLog(@"Ubicación de la BBDD: %@",ubicacionDB);
     
-    if (!(sqlite3_open([ubicacionDB UTF8String], &bbddUsuarioDAO) == SQLITE_OK)) {
+    if (!(sqlite3_open([ubicacionDB UTF8String], &bbddPlatoDAO) == SQLITE_OK)) {
         NSLog(@"No se puede conectar con la BD");
     }
     
     const char *sentenciasSQL = "SELECT * FROM Plato";
     sqlite3_stmt *sqlStatement;
     
-    if (!(sqlite3_prepare_v2(bbddUsuarioDAO, sentenciasSQL, -1, &sqlStatement, NULL) == SQLITE_OK)) {
+    if (!(sqlite3_prepare_v2(bbddPlatoDAO, sentenciasSQL, -1, &sqlStatement, NULL) == SQLITE_OK)) {
         NSLog(@"Problema al preparar el statement");
     }
     
@@ -44,8 +44,10 @@
 -(NSString *) obtenerRutaDB{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    NSString *dbPath = [documentsDir stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
-    
+    //NSString *dbPath = [documentsDir stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+    //NSString *dbPath = [[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+    NSString *dbPath = [[[NSBundle mainBundle] resourcePath]stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+
     return dbPath;
 }
 

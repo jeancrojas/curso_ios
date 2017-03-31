@@ -1,20 +1,29 @@
 //
-//  ElegirPedidoCollectionViewController.m
+//  ElegirPlatoPedidoCollectionViewController.m
 //  ProjectRestaurante
 //
-//  Created by cice on 30/3/17.
+//  Created by cice on 31/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ElegirPedidoCollectionViewController.h"
+#import "ElegirPlatoPedidoCollectionViewController.h"
+#import "PlatoDAO.h"
+#import "Plato.h"
 
-@interface ElegirPedidoCollectionViewController ()
+@interface ElegirPlatoPedidoCollectionViewController ()
 
 @end
 
-@implementation ElegirPedidoCollectionViewController
+@implementation ElegirPlatoPedidoCollectionViewController
 
-static NSString * const reuseIdentifier = @"listaElegirPedidoCVC";
+static NSString * const reuseIdentifier = @"listaElegirPlato";
+@synthesize categoriaPlato;
+
+PlatoDAO *platoDAO;
+//Lista total de platos
+NSMutableArray *listaPlato;
+//Lista platos del tipo seleccionado
+NSMutableArray *listaPlatoElegido;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +41,13 @@ static NSString * const reuseIdentifier = @"listaElegirPedidoCVC";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void) viewWillAppear:(BOOL)animated {
+    platoDAO = [[PlatoDAO alloc]init];
+    listaPlato = [[NSMutableArray alloc]init];
+    listaPlato = [platoDAO obtenerPlatos];
+    
+    //[self.tableViewContactoTVC reloadData];
+}
 /*
 #pragma mark - Navigation
 
@@ -51,13 +66,32 @@ static NSString * const reuseIdentifier = @"listaElegirPedidoCVC";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    
+    listaPlatoElegido = [[NSMutableArray alloc]init];
+    
+    for (int i=0; i < [listaPlato count]; i++) {
+        Plato *plato = [listaPlato objectAtIndex:i];
+        if (plato.idTipoPlato == categoriaPlato) {
+            [listaPlatoElegido addObject:plato];
+        }
+    }
+    
+    
+    
+    return [listaPlatoElegido count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    UILabel *labelTituloElegirPlatoPedidoCVC = (UILabel *)[cell viewWithTag:2001];
+    UILabel *labelPrecioElegirPlatoPedidoCVC = (UILabel *)[cell viewWithTag:2002];
+    
+    
+    Plato *platoMostrar = [listaPlatoElegido objectAtIndex:indexPath.row];
+    labelTituloElegirPlatoPedidoCVC.text = platoMostrar.nombre;
+    labelPrecioElegirPlatoPedidoCVC.text= [NSString stringWithFormat:@"%f", platoMostrar.precio];
     
     return cell;
 }

@@ -1,23 +1,18 @@
 //
-//  PedidoTableViewController.m
+//  PostrePedidoTableViewController.m
 //  ProjectRestaurante
 //
-//  Created by cice on 30/3/17.
+//  Created by cice on 31/3/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "PedidoTableViewController.h"
-#import "ElegirPedidoCollectionViewController.h"
+#import "PostrePedidoTableViewController.h"
 
-@interface PedidoTableViewController ()
+@interface PostrePedidoTableViewController ()
 
 @end
 
-@implementation PedidoTableViewController
-static const int SECTION_PLATOS = 0;
-static const int SECTION_BEBIDAS = 1;
-
-@synthesize numMesa;
+@implementation PostrePedidoTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,47 +32,13 @@ static const int SECTION_BEBIDAS = 1;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    switch (section) {
-        case SECTION_PLATOS:
-            return 3;
-            break;
-            
-        case SECTION_BEBIDAS:
-            return 7;
-            break;
-    }
-    
-    return 0;
+    return 1;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    NSLog(@"Se ha seleccionado: %ld - %ld", indexPath.section, indexPath.row);
-    ElegirPedidoCollectionViewController *vistaElegirPedidoCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idElegirPedidoCVC"];
-    
-    
-    
-    switch (indexPath.section) {
-        case SECTION_PLATOS:
-            vistaElegirPedidoCVC.section = (int)indexPath.section;
-            vistaElegirPedidoCVC.category = (int)indexPath.row;
-            break;
-            
-        case SECTION_BEBIDAS:
-            vistaElegirPedidoCVC.section = (int)indexPath.section;
-            vistaElegirPedidoCVC.category = (int)indexPath.row;
-            break;
-    }
-    
-    
-    [self showViewController:vistaElegirPedidoCVC sender: nil];
-    
-}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

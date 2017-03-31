@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import "Mesa.h"
 #import "AjustarTableViewController.h"
-#import "PedidoTableViewController.h"
 
 @interface MesaCollectionViewController ()
 
@@ -109,8 +108,9 @@ NSMutableArray *numMesa;
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    PedidoTableViewController *vistaPedidoTVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idPedidoTVC"];
-    vistaPedidoTVC.numMesa = (int)indexPath.row;
+    
+    UITableViewController *vistaPedidoTVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idSeleccionarPedidoTBC"];
+    //vistaPedidoTVC.numMesa = (int)indexPath.row;
     
     [self showViewController:vistaPedidoTVC sender: nil];
     

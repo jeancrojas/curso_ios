@@ -918,4 +918,11 @@ Info.plist
 App Transport Security Settings >> Allow Arbitraty Loads
 
 
+31 de Marzo de 2017
+*******************
+
+itunesconnect >> 
+
+Testflight >> Hacer una test de tu aplicacion
+
 

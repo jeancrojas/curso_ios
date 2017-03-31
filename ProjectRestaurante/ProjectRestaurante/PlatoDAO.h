@@ -10,10 +10,10 @@
 #import <sqlite3.h>
 
 @interface PlatoDAO : NSObject{
-    sqlite3 *bbddUsuarioDAO;
+    sqlite3 *bbddPlatoDAO;
 }
 
--(NSMutableArray *) obtenerContactos;
+-(NSMutableArray *) obtenerPlatos;
 -(NSString *) obtenerRutaDB;
 
 @end

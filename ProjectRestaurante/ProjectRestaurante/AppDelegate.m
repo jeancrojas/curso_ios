@@ -105,4 +105,32 @@
     }
 }
 
+
+-(void)InsertRecords:(NSMutableString *)txt{
+    
+    NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+    const char *dbpath = [dbPath UTF8String];
+    sqlite3 *contactDB;
+    
+    sqlite3_stmt *statement;
+    
+    NSLog(@"%@",dbPath);
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO myMovies (movieName) VALUES (\"%@\")", txt];
+        
+        const char *insert_stmt = [insertSQL UTF8String];
+        
+        sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            sqlite3_bind_text(statement, 1, [txt UTF8String], -1, SQLITE_TRANSIENT);
+        } else {
+            NSLog(@"error");
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(contactDB);
+    }
+}
+
 @end
