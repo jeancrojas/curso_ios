@@ -7,6 +7,7 @@
 //
 
 #import "BebidaPedidoTableViewController.h"
+#import "ElegirBebidaPedidoCollectionViewController.h"
 
 @interface BebidaPedidoTableViewController ()
 
@@ -48,6 +49,16 @@
     }
     
     return 1;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ElegirBebidaPedidoCollectionViewController *vistaElegirPlatoPedidoCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idElegirBebidaPedidoCVC"];
+    
+    vistaElegirPlatoPedidoCVC.categoriaBebida = (int)indexPath.row+1;
+    
+    [self showViewController:vistaElegirPlatoPedidoCVC sender: nil];
+    
 }
 
 /*

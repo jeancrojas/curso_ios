@@ -1,30 +1,27 @@
 //
-//  ElegirPlatoPedidoCollectionViewController.m
+//  ElegirBebidaPedidoCollectionViewController.m
 //  ProjectRestaurante
 //
-//  Created by cice on 31/3/17.
+//  Created by cice on 3/4/17.
 //  Copyright © 2017 scriptingsystems. All rights reserved.
 //
 
-#import "ElegirPlatoPedidoCollectionViewController.h"
-#import "PlatoDAO.h"
-#import "Plato.h"
-#import "OrdenarPlatoViewController.h"
+#import "ElegirBebidaPedidoCollectionViewController.h"
+#import "BebidaDAO.h"
+#import "Bebida.h"
+#import "OrdenarBebidaViewController.h"
 
-@interface ElegirPlatoPedidoCollectionViewController ()
+@interface ElegirBebidaPedidoCollectionViewController ()
 
 @end
 
-@implementation ElegirPlatoPedidoCollectionViewController
+@implementation ElegirBebidaPedidoCollectionViewController
 
-static NSString * const reuseIdentifier = @"listaElegirPlato";
-@synthesize categoriaPlato;
-
-PlatoDAO *platoDAO;
-//Lista total de platos
-NSMutableArray *listaPlato;
-//Lista platos del tipo seleccionado
-NSMutableArray *listaPlatoElegido;
+@synthesize categoriaBebida;
+static NSString * const reuseIdentifier = @"listaElegirBebida";
+BebidaDAO *bebidaDAO;
+NSMutableArray *listaBebida;
+NSMutableArray *listaBebidaElegida;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,25 +31,27 @@ NSMutableArray *listaPlatoElegido;
     
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    listaPlatoElegido = [[NSMutableArray alloc]init];
     
     // Do any additional setup after loading the view.
+    
+    listaBebidaElegida = [[NSMutableArray alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(void) viewWillAppear:(BOOL)animated {
-    platoDAO = [[PlatoDAO alloc]init];
-    listaPlato = [[NSMutableArray alloc]init];
-    listaPlato = [platoDAO obtenerPlatos];
+    bebidaDAO = [[BebidaDAO alloc]init];
+    listaBebida = [[NSMutableArray alloc]init];
+    listaBebida = [bebidaDAO obtenerBebidas];
     
     //Se almacena en un array unicamente los platos de la categoria seleccionada
-    for (int i=0; i < [listaPlato count]; i++) {
-        Plato *plato = [listaPlato objectAtIndex:i];
-        if (plato.idTipoPlato == categoriaPlato) {
-            [listaPlatoElegido addObject:plato];
+    for (int i=0; i < [listaBebida count]; i++) {
+        Bebida *bebida = [listaBebida objectAtIndex:i];
+        if (bebida.idTipoBebida == categoriaBebida) {
+            [listaBebidaElegida addObject:bebida];
         }
     }
     
@@ -76,33 +75,41 @@ NSMutableArray *listaPlatoElegido;
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [listaPlatoElegido count];
+    return [listaBebidaElegida count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    UILabel *labelTituloElegirPlatoPedidoCVC = (UILabel *)[cell viewWithTag:2001];
-    UILabel *labelPrecioElegirPlatoPedidoCVC = (UILabel *)[cell viewWithTag:2002];
     
+    Bebida *bebida = [listaBebidaElegida objectAtIndex:indexPath.row];
     
-    Plato *platoMostrar = [listaPlatoElegido objectAtIndex:indexPath.row];
-    NSLog(@"plato a Mostrar: %@",platoMostrar.nombre );
-    labelTituloElegirPlatoPedidoCVC.text = platoMostrar.nombre;
-    labelPrecioElegirPlatoPedidoCVC.text= [NSString stringWithFormat:@"%.2f€", platoMostrar.precio];
+    UILabel *labelTituloElegirBebidaPedidoCVC = (UILabel *) [cell viewWithTag:3001];
+    UILabel *labelPrecioElegirBebidaPedidoCVC = (UILabel *) [cell viewWithTag:3002];
+    
+    labelTituloElegirBebidaPedidoCVC.text = bebida.nombre;
+    labelPrecioElegirBebidaPedidoCVC.text = [NSString stringWithFormat:@"%.2f€",bebida.precio];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    //OrdenarPlatoViewController.h
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    //idOrdenarPlatoVC
+    OrdenarBebidaViewController *vistaOrdenarBebidaVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idOrdenarBebidaVC"];
+    Bebida *bebida = [listaBebidaElegida objectAtIndex:indexPath.row];
 
+    vistaOrdenarBebidaVC.nombreOrdenarBebidaVC = bebida.nombre;
+    vistaOrdenarBebidaVC.precioOrdenarBebidaVC = bebida.precio;
+    vistaOrdenarBebidaVC.descripcionOrdenarBebidaVC = bebida.descripcion;
+    
+    
+    [self showViewController:vistaOrdenarBebidaVC sender: nil];
+    
 }
+
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

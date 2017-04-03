@@ -11,9 +11,7 @@
 
 @implementation BebidaDAO
 
-
-
--(NSMutableArray *) obtenerContactos{
+-(NSMutableArray *) obtenerBebidas{
     NSMutableArray *listaBebidas = [[NSMutableArray alloc]init];
     NSString *ubicacionDB = [self obtenerRutaDB];
     NSLog(@"Ubicación de la BBDD: %@",ubicacionDB);
@@ -22,7 +20,7 @@
         NSLog(@"No se puede conectar con la BD");
     }
     
-    const char *sentenciasSQL = "SELECT * FROM Plato";
+    const char *sentenciasSQL = "SELECT * FROM Bebida";
     sqlite3_stmt *sqlStatement;
     
     if (!(sqlite3_prepare_v2(bbddUsuarioDAO, sentenciasSQL, -1, &sqlStatement, NULL) == SQLITE_OK)) {

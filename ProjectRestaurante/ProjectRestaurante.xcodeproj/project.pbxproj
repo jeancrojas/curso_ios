@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091EF8BD1E922E46007E9241 /* RestaurantesBBDD.db in Resources */ = {isa = PBXBuildFile; fileRef = 091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */; };
 		092F0AB61E8E49F70042B44E /* ic_local_bar_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */; };
 		092F0AB81E8E4B820042B44E /* ic_local_drink_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */; };
 		092F0ABA1E8E4C240042B44E /* ic_restaurant_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */; };
@@ -17,6 +18,11 @@
 		092F0AC71E8E54BE0042B44E /* PostrePedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC61E8E54BE0042B44E /* PostrePedidoTableViewController.m */; };
 		092F0ACA1E8E555D0042B44E /* PlatoPedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */; };
 		094EB1CA1E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */; };
+		0968B2B11E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */; };
+		0968B2BA1E924CB400E48A4E /* OrdenarBebidaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */; };
+		0968B2BD1E924CC200E48A4E /* OrdenarPlatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */; };
+		0968B2C01E926DEC00E48A4E /* siluetaBebida.png in Resources */ = {isa = PBXBuildFile; fileRef = 0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */; };
+		0968B2C11E926DEC00E48A4E /* siluetaPlato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */; };
 		096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */; };
 		099345AD1E81528400EBF043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AC1E81528400EBF043 /* main.m */; };
 		099345B01E81528400EBF043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AF1E81528400EBF043 /* AppDelegate.m */; };
@@ -45,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = RestaurantesBBDD.db; sourceTree = "<group>"; };
 		092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_local_bar_48pt.png; sourceTree = "<group>"; };
 		092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_local_drink_48pt.png; sourceTree = "<group>"; };
 		092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_restaurant_48pt.png; sourceTree = "<group>"; };
@@ -60,7 +67,14 @@
 		092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatoPedidoTableViewController.m; sourceTree = "<group>"; };
 		094EB1C81E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ElegirPlatoPedidoCollectionViewController.h; path = ../ElegirPlatoPedidoCollectionViewController.h; sourceTree = "<group>"; };
 		094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElegirPlatoPedidoCollectionViewController.m; path = ../ElegirPlatoPedidoCollectionViewController.m; sourceTree = "<group>"; };
-		094EB1CC1E8E73F7004F23DC /* RestaurantesBBDD.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = RestaurantesBBDD.db; sourceTree = "<group>"; };
+		0968B2AF1E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElegirBebidaPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElegirBebidaPedidoCollectionViewController.m; sourceTree = "<group>"; };
+		0968B2B81E924CB400E48A4E /* OrdenarBebidaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdenarBebidaViewController.h; path = ../OrdenarBebidaViewController.h; sourceTree = "<group>"; };
+		0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdenarBebidaViewController.m; path = ../OrdenarBebidaViewController.m; sourceTree = "<group>"; };
+		0968B2BB1E924CC200E48A4E /* OrdenarPlatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdenarPlatoViewController.h; path = ../OrdenarPlatoViewController.h; sourceTree = "<group>"; };
+		0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdenarPlatoViewController.m; path = ../OrdenarPlatoViewController.m; sourceTree = "<group>"; };
+		0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siluetaBebida.png; sourceTree = "<group>"; };
+		0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siluetaPlato.png; sourceTree = "<group>"; };
 		096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuAjustarTableViewController.h; path = ../MenuAjustarTableViewController.h; sourceTree = "<group>"; };
 		096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuAjustarTableViewController.m; path = ../MenuAjustarTableViewController.m; sourceTree = "<group>"; };
 		099345A81E81528400EBF043 /* ProjectRestaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRestaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +132,7 @@
 		094EB1CB1E8E73DC004F23DC /* bbdd */ = {
 			isa = PBXGroup;
 			children = (
-				094EB1CC1E8E73F7004F23DC /* RestaurantesBBDD.db */,
+				091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */,
 			);
 			name = bbdd;
 			sourceTree = "<group>";
@@ -147,19 +161,25 @@
 				099345AE1E81528400EBF043 /* AppDelegate.h */,
 				099345AF1E81528400EBF043 /* AppDelegate.m */,
 				09B7C5D61E8D1D7E00C43DDA /* Plato.h */,
+				09B7C5D71E8D1D7E00C43DDA /* Plato.m */,
+				09B7C5D91E8D1D8A00C43DDA /* Bebida.h */,
+				09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */,
 				09B7C5DC1E8D221D00C43DDA /* PlatoDAO.h */,
 				09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */,
 				09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */,
+				09B7C5E01E8D222900C43DDA /* BebidaDAO.m */,
+				0968B2B81E924CB400E48A4E /* OrdenarBebidaViewController.h */,
+				0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */,
+				0968B2BB1E924CC200E48A4E /* OrdenarPlatoViewController.h */,
+				0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */,
 				094EB1C81E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.h */,
 				094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */,
+				0968B2AF1E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.h */,
+				0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */,
 				092F0ABF1E8E52DC0042B44E /* ElegirSectionTabBarController.h */,
 				092F0AC01E8E52DC0042B44E /* ElegirSectionTabBarController.m */,
 				096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */,
 				096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */,
-				09B7C5E01E8D222900C43DDA /* BebidaDAO.m */,
-				09B7C5D71E8D1D7E00C43DDA /* Plato.m */,
-				09B7C5D91E8D1D8A00C43DDA /* Bebida.h */,
-				09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */,
 				099345B11E81528400EBF043 /* ViewController.h */,
 				099345B21E81528400EBF043 /* ViewController.m */,
 				099345B41E81528400EBF043 /* Main.storyboard */,
@@ -211,6 +231,8 @@
 				092F0ABB1E8E4DF10042B44E /* ic_room_service_48pt.png */,
 				092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */,
 				092F0ABD1E8E50410042B44E /* postre_48pt.jpg */,
+				0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */,
+				0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */,
 				092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */,
 				092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */,
 				09C0205B1E85500400C7D99F /* ic_save_48pt.png */,
@@ -293,12 +315,15 @@
 			files = (
 				099345C81E81545A00EBF043 /* table_icon_150x150.png in Resources */,
 				099345BE1E81528400EBF043 /* LaunchScreen.storyboard in Resources */,
+				0968B2C01E926DEC00E48A4E /* siluetaBebida.png in Resources */,
 				09C020531E85419D00C7D99F /* AjustesRestaurante.jpeg in Resources */,
 				09C0205C1E85500400C7D99F /* ic_save_48pt.png in Resources */,
 				092F0ABA1E8E4C240042B44E /* ic_restaurant_48pt.png in Resources */,
+				091EF8BD1E922E46007E9241 /* RestaurantesBBDD.db in Resources */,
 				09C020581E854E1700C7D99F /* ic_add_48pt.png in Resources */,
 				092F0ABC1E8E4DF10042B44E /* ic_room_service_48pt.png in Resources */,
 				092F0AB61E8E49F70042B44E /* ic_local_bar_48pt.png in Resources */,
+				0968B2C11E926DEC00E48A4E /* siluetaPlato.png in Resources */,
 				099345BB1E81528400EBF043 /* Assets.xcassets in Resources */,
 				09C0205A1E854E8300C7D99F /* ic_remove_48pt.png in Resources */,
 				092F0ABE1E8E50410042B44E /* postre_48pt.jpg in Resources */,
@@ -325,11 +350,14 @@
 				092F0ACA1E8E555D0042B44E /* PlatoPedidoTableViewController.m in Sources */,
 				099345CE1E8155E300EBF043 /* Mesa.m in Sources */,
 				09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */,
+				0968B2B11E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m in Sources */,
 				09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */,
+				0968B2BA1E924CB400E48A4E /* OrdenarBebidaViewController.m in Sources */,
 				092F0AC41E8E54B20042B44E /* BebidaPedidoTableViewController.m in Sources */,
 				099345B01E81528400EBF043 /* AppDelegate.m in Sources */,
 				09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */,
 				09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */,
+				0968B2BD1E924CC200E48A4E /* OrdenarPlatoViewController.m in Sources */,
 				09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */,
 				096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */,
 				092F0AC71E8E54BE0042B44E /* PostrePedidoTableViewController.m in Sources */,

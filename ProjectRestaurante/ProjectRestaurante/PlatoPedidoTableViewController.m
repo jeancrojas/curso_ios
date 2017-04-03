@@ -55,7 +55,7 @@
 
     ElegirPlatoPedidoCollectionViewController *vistaElegirPlatoPedidoCVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idElegirPlatoPedidoCVC"];
     
-    vistaElegirPlatoPedidoCVC.categoriaPlato = (int)indexPath.row;
+    vistaElegirPlatoPedidoCVC.categoriaPlato = (int)indexPath.row+1;
     
     [self showViewController:vistaElegirPlatoPedidoCVC sender: nil];
 

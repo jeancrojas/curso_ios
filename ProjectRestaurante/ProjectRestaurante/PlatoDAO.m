@@ -44,9 +44,9 @@
 -(NSString *) obtenerRutaDB{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    //NSString *dbPath = [documentsDir stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+    NSString *dbPath = [documentsDir stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
     //NSString *dbPath = [[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
-    NSString *dbPath = [[[NSBundle mainBundle] resourcePath]stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
+    //NSString *dbPath = [[[NSBundle mainBundle] resourcePath]stringByAppendingPathComponent:@"RestaurantesBBDD.db"];
 
     return dbPath;
 }

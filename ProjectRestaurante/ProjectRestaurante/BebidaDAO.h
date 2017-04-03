@@ -13,7 +13,7 @@
     sqlite3 *bbddUsuarioDAO;
 }
 
--(NSMutableArray *) obtenerContactos;
+-(NSMutableArray *) obtenerBebidas;
 -(NSString *) obtenerRutaDB;
 
 
