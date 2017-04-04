@@ -925,4 +925,4 @@ itunesconnect >>
 
 Testflight >> Hacer una test de tu aplicacion
 
-
+Publicar: Xcode >> Product >> Archive

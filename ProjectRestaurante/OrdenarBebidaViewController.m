@@ -21,6 +21,7 @@
 @synthesize buttonMenosOrdenarBebidaVC;
 @synthesize buttonMasOrdenarBebidaVC;
 @synthesize labelNumeroOrdenarBebidaVC;
+@synthesize buttonAceptarOrdenarBebidaVC;
 int numOrdenarBebidaVC = 0;
 
 //Se asigna el valor desde la otra clase ElegirBebidaPedidoCollectionViewController
@@ -41,7 +42,7 @@ int numOrdenarBebidaVC = 0;
     labelTituloOrdenarBebidaVC.text = nombreOrdenarBebidaVC;
     labelPrecioOrdenarBebidaVC.text = [NSString stringWithFormat: @"%.2f€", precioOrdenarBebidaVC];
     textViewDescripcionOrdenarBebidaVC.text = descripcionTxtRelleno;
-    
+    [buttonAceptarOrdenarBebidaVC setTitle:@"Aceptar" forState: UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +72,10 @@ int numOrdenarBebidaVC = 0;
         numOrdenarBebidaVC++;
         labelNumeroOrdenarBebidaVC.text = [@(numOrdenarBebidaVC) stringValue];
     }
+    
+}
+- (IBAction)buttonAceptarOrdenarBebidaVC:(id)sender {
+    
     
 }
 @end

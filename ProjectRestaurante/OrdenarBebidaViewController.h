@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelNumeroOrdenarBebidaVC;
 - (IBAction)buttonMenosOrdenarBebidaVC:(id)sender;
 - (IBAction)buttonMasOrdenarBebidaVC:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAceptarOrdenarBebidaVC;
+- (IBAction)buttonAceptarOrdenarBebidaVC:(id)sender;
 
 //Se asigna el valor desde la otra clase ElegirBebidaPedidoCollectionViewController
 @property (nonatomic, retain) NSString *nombreOrdenarBebidaVC;

@@ -48,4 +48,46 @@
     
     return dbPath;
 }
+
+-(BOOL) anyadirBebida:(int)idPedido cantidad idBebida  {
+    
+}
+
+/*
+ 
+ -(BOOL) anyadirViaje:(NSString *)lugarI Descripcion:(NSString *)descripcionI Plazas:(int)plazasI Precio:(double)precioI NombreImagen:(NSString *)nombreImagen {
+ 
+ 
+ const char *sentenciaSQL = [[NSString stringWithFormat: @"INSERT INTO viaje (lugar,descripcion,plazas,precio,nombreImagen) VALUES ('%@', '%@', '%d', '%f','%@' )", lugarI, descripcionI, plazasI,precioI,nombreImagen] UTF8String];
+ NSString *ubicacionDB = [self obtenerRutaDB];
+ 
+ if (!(sqlite3_open([ubicacionDB UTF8String], &bbddUsuarioDAO) == SQLITE_OK)) {
+ NSLog(@"No se puede conectar con la BD");
+ return false;
+ }
+ 
+ sqlite3_stmt *sqlStatement;
+ 
+ 
+ 
+ if (!(sqlite3_prepare_v2(bbddUsuarioDAO, sentenciaSQL, -1, &sqlStatement, NULL) == SQLITE_OK)) {
+ NSLog(@"Problema al preparar el statement");
+ return false;
+ }
+ 
+ if (SQLITE_DONE != sqlite3_step(sqlStatement)) {
+ 
+ }
+ 
+ sqlite3_reset(sqlStatement);
+ sqlite3_finalize(sqlStatement);
+ sqlite3_close(bbddUsuarioDAO);
+ 
+ 
+ return true;
+ }
+ */
+
+
+
 @end

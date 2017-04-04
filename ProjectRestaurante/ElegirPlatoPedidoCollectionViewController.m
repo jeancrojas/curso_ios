@@ -98,9 +98,16 @@ NSMutableArray *listaPlatoElegido;
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    //OrdenarPlatoViewController.h
+    OrdenarPlatoViewController *vistaOrdenarPlatoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idOrdenarPlatoVC"];
     
-    //idOrdenarPlatoVC
+    Plato *plato = [listaPlatoElegido objectAtIndex:indexPath.row];
+    
+    
+    vistaOrdenarPlatoVC.nombreOrdenarPlatoVC = plato.nombre;
+    vistaOrdenarPlatoVC.precioOrdenarPlatoVC = plato.precio;
+    vistaOrdenarPlatoVC.descripcionOrdenarPlatoVC = plato.descripcion;
+    
+    [self showViewController:vistaOrdenarPlatoVC sender:nil];
 
 }
 
