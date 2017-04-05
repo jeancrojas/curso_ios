@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091EF8BD1E922E46007E9241 /* RestaurantesBBDD.db in Resources */ = {isa = PBXBuildFile; fileRef = 091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */; };
+		092F0AB61E8E49F70042B44E /* ic_local_bar_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */; };
+		092F0AB81E8E4B820042B44E /* ic_local_drink_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */; };
+		092F0ABA1E8E4C240042B44E /* ic_restaurant_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */; };
+		092F0ABC1E8E4DF10042B44E /* ic_room_service_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 092F0ABB1E8E4DF10042B44E /* ic_room_service_48pt.png */; };
+		092F0ABE1E8E50410042B44E /* postre_48pt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 092F0ABD1E8E50410042B44E /* postre_48pt.jpg */; };
+		092F0AC11E8E52DC0042B44E /* ElegirSectionTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC01E8E52DC0042B44E /* ElegirSectionTabBarController.m */; };
+		092F0AC41E8E54B20042B44E /* BebidaPedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC31E8E54B20042B44E /* BebidaPedidoTableViewController.m */; };
+		092F0AC71E8E54BE0042B44E /* PostrePedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC61E8E54BE0042B44E /* PostrePedidoTableViewController.m */; };
+		092F0ACA1E8E555D0042B44E /* PlatoPedidoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */; };
+		094EB1CA1E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */; };
+		0968B2B11E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */; };
+		0968B2BA1E924CB400E48A4E /* OrdenarBebidaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */; };
+		0968B2BD1E924CC200E48A4E /* OrdenarPlatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */; };
+		0968B2C01E926DEC00E48A4E /* siluetaBebida.png in Resources */ = {isa = PBXBuildFile; fileRef = 0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */; };
+		0968B2C11E926DEC00E48A4E /* siluetaPlato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */; };
+		096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */; };
+		099345AD1E81528400EBF043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AC1E81528400EBF043 /* main.m */; };
+		099345B01E81528400EBF043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345AF1E81528400EBF043 /* AppDelegate.m */; };
+		099345B31E81528400EBF043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345B21E81528400EBF043 /* ViewController.m */; };
+		099345B61E81528400EBF043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099345B41E81528400EBF043 /* Main.storyboard */; };
+		099345B91E81528400EBF043 /* ProjectRestaurante.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 099345B71E81528400EBF043 /* ProjectRestaurante.xcdatamodeld */; };
+		099345BB1E81528400EBF043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099345BA1E81528400EBF043 /* Assets.xcassets */; };
+		099345BE1E81528400EBF043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099345BC1E81528400EBF043 /* LaunchScreen.storyboard */; };
+		099345C81E81545A00EBF043 /* table_icon_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 099345C71E81545A00EBF043 /* table_icon_150x150.png */; };
+		099345CB1E81550800EBF043 /* MesaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345CA1E81550800EBF043 /* MesaCollectionViewController.m */; };
+		099345CE1E8155E300EBF043 /* Mesa.m in Sources */ = {isa = PBXBuildFile; fileRef = 099345CD1E8155E300EBF043 /* Mesa.m */; };
+		09B7C5D81E8D1D7E00C43DDA /* Plato.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5D71E8D1D7E00C43DDA /* Plato.m */; };
+		09B7C5DB1E8D1D8A00C43DDA /* Bebida.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */; };
+		09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */; };
+		09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5E01E8D222900C43DDA /* BebidaDAO.m */; };
+		09B7C5E51E8D228000C43DDA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */; };
+		09B7C5E61E8D228000C43DDA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */; };
+		09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */; };
+		09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C020501E853F5C00C7D99F /* AjustarTableViewController.m */; };
+		09C020531E85419D00C7D99F /* AjustesRestaurante.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 09C020521E85419D00C7D99F /* AjustesRestaurante.jpeg */; };
+		09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C020551E85493C00C7D99F /* MesaAjustarTableViewController.m */; };
+		09C020581E854E1700C7D99F /* ic_add_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C020571E854E1700C7D99F /* ic_add_48pt.png */; };
+		09C0205A1E854E8300C7D99F /* ic_remove_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C020591E854E8300C7D99F /* ic_remove_48pt.png */; };
+		09C0205C1E85500400C7D99F /* ic_save_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C0205B1E85500400C7D99F /* ic_save_48pt.png */; };
+		09C411131E82ACCC00831D28 /* ic_settings_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C411121E82ACCC00831D28 /* ic_settings_48pt.png */; };
+		09CE23471E94DA0700CF9D54 /* tabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE23461E94DA0700CF9D54 /* tabBarViewController.m */; };
+		09CE234A1E94EA7A00CF9D54 /* MostrarImporteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */; };
+		09CE234D1E9502FF00CF9D54 /* Pedido.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE234C1E9502FF00CF9D54 /* Pedido.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = RestaurantesBBDD.db; sourceTree = "<group>"; };
+		092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_local_bar_48pt.png; sourceTree = "<group>"; };
+		092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_local_drink_48pt.png; sourceTree = "<group>"; };
+		092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_restaurant_48pt.png; sourceTree = "<group>"; };
+		092F0ABB1E8E4DF10042B44E /* ic_room_service_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_room_service_48pt.png; sourceTree = "<group>"; };
+		092F0ABD1E8E50410042B44E /* postre_48pt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = postre_48pt.jpg; sourceTree = "<group>"; };
+		092F0ABF1E8E52DC0042B44E /* ElegirSectionTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ElegirSectionTabBarController.h; path = ../ElegirSectionTabBarController.h; sourceTree = "<group>"; };
+		092F0AC01E8E52DC0042B44E /* ElegirSectionTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElegirSectionTabBarController.m; path = ../ElegirSectionTabBarController.m; sourceTree = "<group>"; };
+		092F0AC21E8E54B20042B44E /* BebidaPedidoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BebidaPedidoTableViewController.h; sourceTree = "<group>"; };
+		092F0AC31E8E54B20042B44E /* BebidaPedidoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BebidaPedidoTableViewController.m; sourceTree = "<group>"; };
+		092F0AC51E8E54BE0042B44E /* PostrePedidoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostrePedidoTableViewController.h; sourceTree = "<group>"; };
+		092F0AC61E8E54BE0042B44E /* PostrePedidoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostrePedidoTableViewController.m; sourceTree = "<group>"; };
+		092F0AC81E8E555D0042B44E /* PlatoPedidoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatoPedidoTableViewController.h; sourceTree = "<group>"; };
+		092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatoPedidoTableViewController.m; sourceTree = "<group>"; };
+		094EB1C81E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ElegirPlatoPedidoCollectionViewController.h; path = ../ElegirPlatoPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElegirPlatoPedidoCollectionViewController.m; path = ../ElegirPlatoPedidoCollectionViewController.m; sourceTree = "<group>"; };
+		0968B2AF1E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElegirBebidaPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElegirBebidaPedidoCollectionViewController.m; sourceTree = "<group>"; };
+		0968B2B81E924CB400E48A4E /* OrdenarBebidaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdenarBebidaViewController.h; path = ../OrdenarBebidaViewController.h; sourceTree = "<group>"; };
+		0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdenarBebidaViewController.m; path = ../OrdenarBebidaViewController.m; sourceTree = "<group>"; };
+		0968B2BB1E924CC200E48A4E /* OrdenarPlatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdenarPlatoViewController.h; path = ../OrdenarPlatoViewController.h; sourceTree = "<group>"; };
+		0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdenarPlatoViewController.m; path = ../OrdenarPlatoViewController.m; sourceTree = "<group>"; };
+		0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siluetaBebida.png; sourceTree = "<group>"; };
+		0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siluetaPlato.png; sourceTree = "<group>"; };
+		096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuAjustarTableViewController.h; path = ../MenuAjustarTableViewController.h; sourceTree = "<group>"; };
+		096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuAjustarTableViewController.m; path = ../MenuAjustarTableViewController.m; sourceTree = "<group>"; };
+		099345A81E81528400EBF043 /* ProjectRestaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRestaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		099345AC1E81528400EBF043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		099345AE1E81528400EBF043 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		099345AF1E81528400EBF043 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		099345B11E81528400EBF043 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		099345B21E81528400EBF043 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		099345B51E81528400EBF043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		099345B81E81528400EBF043 /* ProjectRestaurante.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectRestaurante.xcdatamodel; sourceTree = "<group>"; };
+		099345BA1E81528400EBF043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		099345BD1E81528400EBF043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		099345BF1E81528400EBF043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099345C71E81545A00EBF043 /* table_icon_150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table_icon_150x150.png; sourceTree = "<group>"; };
+		099345C91E81550800EBF043 /* MesaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesaCollectionViewController.h; sourceTree = "<group>"; };
+		099345CA1E81550800EBF043 /* MesaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesaCollectionViewController.m; sourceTree = "<group>"; };
+		099345CC1E8155E300EBF043 /* Mesa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesa.h; sourceTree = "<group>"; };
+		099345CD1E8155E300EBF043 /* Mesa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mesa.m; sourceTree = "<group>"; };
+		09B7C5D61E8D1D7E00C43DDA /* Plato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plato.h; sourceTree = "<group>"; };
+		09B7C5D71E8D1D7E00C43DDA /* Plato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plato.m; sourceTree = "<group>"; };
+		09B7C5D91E8D1D8A00C43DDA /* Bebida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bebida.h; sourceTree = "<group>"; };
+		09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bebida.m; sourceTree = "<group>"; };
+		09B7C5DC1E8D221D00C43DDA /* PlatoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatoDAO.h; sourceTree = "<group>"; };
+		09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatoDAO.m; sourceTree = "<group>"; };
+		09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BebidaDAO.h; sourceTree = "<group>"; };
+		09B7C5E01E8D222900C43DDA /* BebidaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BebidaDAO.m; sourceTree = "<group>"; };
+		09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		09B7C5E71E8D267700C43DDA /* BebidaPedidoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BebidaPedidoCollectionViewController.h; sourceTree = "<group>"; };
+		09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BebidaPedidoCollectionViewController.m; sourceTree = "<group>"; };
+		09C0204F1E853F5C00C7D99F /* AjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjustarTableViewController.h; sourceTree = "<group>"; };
+		09C020501E853F5C00C7D99F /* AjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjustarTableViewController.m; sourceTree = "<group>"; };
+		09C020521E85419D00C7D99F /* AjustesRestaurante.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AjustesRestaurante.jpeg; sourceTree = "<group>"; };
+		09C020541E85493C00C7D99F /* MesaAjustarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesaAjustarTableViewController.h; sourceTree = "<group>"; };
+		09C020551E85493C00C7D99F /* MesaAjustarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesaAjustarTableViewController.m; sourceTree = "<group>"; };
+		09C020571E854E1700C7D99F /* ic_add_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_add_48pt.png; sourceTree = "<group>"; };
+		09C020591E854E8300C7D99F /* ic_remove_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_remove_48pt.png; sourceTree = "<group>"; };
+		09C0205B1E85500400C7D99F /* ic_save_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_save_48pt.png; sourceTree = "<group>"; };
+		09C411121E82ACCC00831D28 /* ic_settings_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_settings_48pt.png; sourceTree = "<group>"; };
+		09CE23451E94DA0700CF9D54 /* tabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabBarViewController.h; sourceTree = "<group>"; };
+		09CE23461E94DA0700CF9D54 /* tabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabBarViewController.m; sourceTree = "<group>"; };
+		09CE23481E94EA7A00CF9D54 /* MostrarImporteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MostrarImporteViewController.h; sourceTree = "<group>"; };
+		09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MostrarImporteViewController.m; sourceTree = "<group>"; };
+		09CE234B1E9502FF00CF9D54 /* Pedido.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pedido.h; sourceTree = "<group>"; };
+		09CE234C1E9502FF00CF9D54 /* Pedido.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pedido.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		099345A51E81528400EBF043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B7C5E51E8D228000C43DDA /* libsqlite3.0.tbd in Frameworks */,
+				09B7C5E61E8D228000C43DDA /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094EB1CB1E8E73DC004F23DC /* bbdd */ = {
+			isa = PBXGroup;
+			children = (
+				091EF8BC1E922E46007E9241 /* RestaurantesBBDD.db */,
+			);
+			name = bbdd;
+			sourceTree = "<group>";
+		};
+		0993459F1E81528400EBF043 = {
+			isa = PBXGroup;
+			children = (
+				099345AA1E81528400EBF043 /* ProjectRestaurante */,
+				099345A91E81528400EBF043 /* Products */,
+				09B7C5E21E8D228000C43DDA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		099345A91E81528400EBF043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				099345A81E81528400EBF043 /* ProjectRestaurante.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		099345AA1E81528400EBF043 /* ProjectRestaurante */ = {
+			isa = PBXGroup;
+			children = (
+				099345C51E8152FF00EBF043 /* Resources */,
+				099345AE1E81528400EBF043 /* AppDelegate.h */,
+				099345AF1E81528400EBF043 /* AppDelegate.m */,
+				09B7C5D61E8D1D7E00C43DDA /* Plato.h */,
+				09B7C5D71E8D1D7E00C43DDA /* Plato.m */,
+				09B7C5D91E8D1D8A00C43DDA /* Bebida.h */,
+				09B7C5DA1E8D1D8A00C43DDA /* Bebida.m */,
+				09B7C5DC1E8D221D00C43DDA /* PlatoDAO.h */,
+				09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */,
+				09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */,
+				09B7C5E01E8D222900C43DDA /* BebidaDAO.m */,
+				09CE234B1E9502FF00CF9D54 /* Pedido.h */,
+				09CE234C1E9502FF00CF9D54 /* Pedido.m */,
+				0968B2B81E924CB400E48A4E /* OrdenarBebidaViewController.h */,
+				0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */,
+				0968B2BB1E924CC200E48A4E /* OrdenarPlatoViewController.h */,
+				0968B2BC1E924CC200E48A4E /* OrdenarPlatoViewController.m */,
+				094EB1C81E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.h */,
+				094EB1C91E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m */,
+				0968B2AF1E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.h */,
+				0968B2B01E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m */,
+				092F0ABF1E8E52DC0042B44E /* ElegirSectionTabBarController.h */,
+				092F0AC01E8E52DC0042B44E /* ElegirSectionTabBarController.m */,
+				096D29C71E8931D900FD0C88 /* MenuAjustarTableViewController.h */,
+				096D29C81E8931D900FD0C88 /* MenuAjustarTableViewController.m */,
+				099345B11E81528400EBF043 /* ViewController.h */,
+				099345B21E81528400EBF043 /* ViewController.m */,
+				099345B41E81528400EBF043 /* Main.storyboard */,
+				09CE23481E94EA7A00CF9D54 /* MostrarImporteViewController.h */,
+				09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */,
+				09CE23451E94DA0700CF9D54 /* tabBarViewController.h */,
+				09CE23461E94DA0700CF9D54 /* tabBarViewController.m */,
+				092F0AC81E8E555D0042B44E /* PlatoPedidoTableViewController.h */,
+				092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */,
+				092F0AC21E8E54B20042B44E /* BebidaPedidoTableViewController.h */,
+				092F0AC31E8E54B20042B44E /* BebidaPedidoTableViewController.m */,
+				092F0AC51E8E54BE0042B44E /* PostrePedidoTableViewController.h */,
+				092F0AC61E8E54BE0042B44E /* PostrePedidoTableViewController.m */,
+				09B7C5E71E8D267700C43DDA /* BebidaPedidoCollectionViewController.h */,
+				09B7C5E81E8D267700C43DDA /* BebidaPedidoCollectionViewController.m */,
+				09C020541E85493C00C7D99F /* MesaAjustarTableViewController.h */,
+				09C020551E85493C00C7D99F /* MesaAjustarTableViewController.m */,
+				09C0204F1E853F5C00C7D99F /* AjustarTableViewController.h */,
+				09C020501E853F5C00C7D99F /* AjustarTableViewController.m */,
+				099345CC1E8155E300EBF043 /* Mesa.h */,
+				099345CD1E8155E300EBF043 /* Mesa.m */,
+				099345C91E81550800EBF043 /* MesaCollectionViewController.h */,
+				099345CA1E81550800EBF043 /* MesaCollectionViewController.m */,
+				099345BA1E81528400EBF043 /* Assets.xcassets */,
+				099345BC1E81528400EBF043 /* LaunchScreen.storyboard */,
+				099345BF1E81528400EBF043 /* Info.plist */,
+				099345B71E81528400EBF043 /* ProjectRestaurante.xcdatamodeld */,
+				099345AB1E81528400EBF043 /* Supporting Files */,
+			);
+			path = ProjectRestaurante;
+			sourceTree = "<group>";
+		};
+		099345AB1E81528400EBF043 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				099345AC1E81528400EBF043 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		099345C51E8152FF00EBF043 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094EB1CB1E8E73DC004F23DC /* bbdd */,
+				099345C61E81530E00EBF043 /* Image */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		099345C61E81530E00EBF043 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				092F0ABB1E8E4DF10042B44E /* ic_room_service_48pt.png */,
+				092F0AB51E8E49F70042B44E /* ic_local_bar_48pt.png */,
+				092F0ABD1E8E50410042B44E /* postre_48pt.jpg */,
+				0968B2BE1E926DEC00E48A4E /* siluetaBebida.png */,
+				0968B2BF1E926DEC00E48A4E /* siluetaPlato.png */,
+				092F0AB91E8E4C240042B44E /* ic_restaurant_48pt.png */,
+				092F0AB71E8E4B820042B44E /* ic_local_drink_48pt.png */,
+				09C0205B1E85500400C7D99F /* ic_save_48pt.png */,
+				09C020591E854E8300C7D99F /* ic_remove_48pt.png */,
+				09C020571E854E1700C7D99F /* ic_add_48pt.png */,
+				09C020521E85419D00C7D99F /* AjustesRestaurante.jpeg */,
+				09C411121E82ACCC00831D28 /* ic_settings_48pt.png */,
+				099345C71E81545A00EBF043 /* table_icon_150x150.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		09B7C5E21E8D228000C43DDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B7C5E31E8D228000C43DDA /* libsqlite3.0.tbd */,
+				09B7C5E41E8D228000C43DDA /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		099345A71E81528400EBF043 /* ProjectRestaurante */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099345C21E81528400EBF043 /* Build configuration list for PBXNativeTarget "ProjectRestaurante" */;
+			buildPhases = (
+				099345A41E81528400EBF043 /* Sources */,
+				099345A51E81528400EBF043 /* Frameworks */,
+				099345A61E81528400EBF043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectRestaurante;
+			productName = ProjectRestaurante;
+			productReference = 099345A81E81528400EBF043 /* ProjectRestaurante.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		099345A01E81528400EBF043 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = scriptingsystems;
+				TargetAttributes = {
+					099345A71E81528400EBF043 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = EF239SD587;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 099345A31E81528400EBF043 /* Build configuration list for PBXProject "ProjectRestaurante" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0993459F1E81528400EBF043;
+			productRefGroup = 099345A91E81528400EBF043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				099345A71E81528400EBF043 /* ProjectRestaurante */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		099345A61E81528400EBF043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099345C81E81545A00EBF043 /* table_icon_150x150.png in Resources */,
+				099345BE1E81528400EBF043 /* LaunchScreen.storyboard in Resources */,
+				0968B2C01E926DEC00E48A4E /* siluetaBebida.png in Resources */,
+				09C020531E85419D00C7D99F /* AjustesRestaurante.jpeg in Resources */,
+				09C0205C1E85500400C7D99F /* ic_save_48pt.png in Resources */,
+				092F0ABA1E8E4C240042B44E /* ic_restaurant_48pt.png in Resources */,
+				091EF8BD1E922E46007E9241 /* RestaurantesBBDD.db in Resources */,
+				09C020581E854E1700C7D99F /* ic_add_48pt.png in Resources */,
+				092F0ABC1E8E4DF10042B44E /* ic_room_service_48pt.png in Resources */,
+				092F0AB61E8E49F70042B44E /* ic_local_bar_48pt.png in Resources */,
+				0968B2C11E926DEC00E48A4E /* siluetaPlato.png in Resources */,
+				099345BB1E81528400EBF043 /* Assets.xcassets in Resources */,
+				09C0205A1E854E8300C7D99F /* ic_remove_48pt.png in Resources */,
+				092F0ABE1E8E50410042B44E /* postre_48pt.jpg in Resources */,
+				09C411131E82ACCC00831D28 /* ic_settings_48pt.png in Resources */,
+				099345B61E81528400EBF043 /* Main.storyboard in Resources */,
+				092F0AB81E8E4B820042B44E /* ic_local_drink_48pt.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		099345A41E81528400EBF043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CE234A1E94EA7A00CF9D54 /* MostrarImporteViewController.m in Sources */,
+				099345B91E81528400EBF043 /* ProjectRestaurante.xcdatamodeld in Sources */,
+				09B7C5D81E8D1D7E00C43DDA /* Plato.m in Sources */,
+				094EB1CA1E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m in Sources */,
+				09B7C5DB1E8D1D8A00C43DDA /* Bebida.m in Sources */,
+				099345CB1E81550800EBF043 /* MesaCollectionViewController.m in Sources */,
+				099345B31E81528400EBF043 /* ViewController.m in Sources */,
+				092F0AC11E8E52DC0042B44E /* ElegirSectionTabBarController.m in Sources */,
+				092F0ACA1E8E555D0042B44E /* PlatoPedidoTableViewController.m in Sources */,
+				099345CE1E8155E300EBF043 /* Mesa.m in Sources */,
+				09C020561E85493C00C7D99F /* MesaAjustarTableViewController.m in Sources */,
+				0968B2B11E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m in Sources */,
+				09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */,
+				0968B2BA1E924CB400E48A4E /* OrdenarBebidaViewController.m in Sources */,
+				09CE234D1E9502FF00CF9D54 /* Pedido.m in Sources */,
+				092F0AC41E8E54B20042B44E /* BebidaPedidoTableViewController.m in Sources */,
+				099345B01E81528400EBF043 /* AppDelegate.m in Sources */,
+				09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */,
+				09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */,
+				09CE23471E94DA0700CF9D54 /* tabBarViewController.m in Sources */,
+				0968B2BD1E924CC200E48A4E /* OrdenarPlatoViewController.m in Sources */,
+				09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */,
+				096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */,
+				092F0AC71E8E54BE0042B44E /* PostrePedidoTableViewController.m in Sources */,
+				099345AD1E81528400EBF043 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		099345B41E81528400EBF043 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				099345B51E81528400EBF043 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		099345BC1E81528400EBF043 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				099345BD1E81528400EBF043 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		099345C01E81528400EBF043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		099345C11E81528400EBF043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		099345C31E81528400EBF043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EF239SD587;
+				INFOPLIST_FILE = ProjectRestaurante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.ProjectRestaurante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		099345C41E81528400EBF043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EF239SD587;
+				INFOPLIST_FILE = ProjectRestaurante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingsystems.ProjectRestaurante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		099345A31E81528400EBF043 /* Build configuration list for PBXProject "ProjectRestaurante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099345C01E81528400EBF043 /* Debug */,
+				099345C11E81528400EBF043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		099345C21E81528400EBF043 /* Build configuration list for PBXNativeTarget "ProjectRestaurante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099345C31E81528400EBF043 /* Debug */,
+				099345C41E81528400EBF043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		099345B71E81528400EBF043 /* ProjectRestaurante.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				099345B81E81528400EBF043 /* ProjectRestaurante.xcdatamodel */,
+			);
+			currentVersion = 099345B81E81528400EBF043 /* ProjectRestaurante.xcdatamodel */;
+			path = ProjectRestaurante.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 099345A01E81528400EBF043 /* Project object */;
+}

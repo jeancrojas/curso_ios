@@ -953,3 +953,13 @@ Publicar: Xcode >> Product >> Archive
 @property (weak, nonatomic) IBOutlet UIButton *buttonCalcularTotalConsumido;
 - (IBAction)buttonCalcularTotalConsumido:(id)sender;
 }
+
+
+
+scraping
+Llevar el control medico de tus familia
+
+
+---
+estadistica de ventas
+BBDD internet para que se puedan consultar los pedidos desde otro dispositivo(Cocina y caja)
