@@ -16,15 +16,23 @@
 @implementation AppDelegate
 @synthesize listaMesa;
 @synthesize numMesasTemporal;
+@synthesize mesaSeleccionada;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    Mesa *m1 = [[Mesa alloc]initWithId:1 NumeroComensales:0];
-    Mesa *m2 = [[Mesa alloc]initWithId:2 NumeroComensales:0];
-    Mesa *m3 = [[Mesa alloc]initWithId:3 NumeroComensales:0];
+    Mesa *m1 = [[Mesa alloc]initWithId:1 precio:0];
+    Mesa *m2 = [[Mesa alloc]initWithId:2 precio:0];
+    Mesa *m3 = [[Mesa alloc]initWithId:3 precio:0];
+    Mesa *m4 = [[Mesa alloc]initWithId:4 precio:0];
+    Mesa *m5 = [[Mesa alloc]initWithId:5 precio:0];
+    Mesa *m6 = [[Mesa alloc]initWithId:6 precio:0];
+    Mesa *m7 = [[Mesa alloc]initWithId:7 precio:0];
+    Mesa *m8 = [[Mesa alloc]initWithId:8 precio:0];
+    Mesa *m9 = [[Mesa alloc]initWithId:9 precio:0];
+    Mesa *m10 = [[Mesa alloc]initWithId:10 precio:0];
     
-    listaMesa = [[NSMutableArray alloc]initWithObjects:m1, m2, m3, nil];
+    listaMesa = [[NSMutableArray alloc]initWithObjects: m1, m2, m3, m4, m5,m6,m7,m8,m9,m10, nil];
     numMesasTemporal = [listaMesa count];
     
     return YES;

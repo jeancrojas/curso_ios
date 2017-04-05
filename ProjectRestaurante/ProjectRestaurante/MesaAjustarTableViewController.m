@@ -124,7 +124,7 @@ NSMutableArray *listaMesaAjustarTVC;
     
     if (numMesasTemporalMesaAjustarTVC < 20) {
         numMesasTemporalMesaAjustarTVC++;
-        Mesa *mesaAux = [[Mesa alloc]initWithId:(int)numMesasTemporalMesaAjustarTVC NumeroComensales:0];
+        Mesa *mesaAux = [[Mesa alloc]initWithId:(int)numMesasTemporalMesaAjustarTVC precio:0];
         [listaMesaAjustarTVC addObject:mesaAux];
     }
     [self.tableViewMesaAjustarTVC reloadData];

@@ -926,3 +926,30 @@ itunesconnect >>
 Testflight >> Hacer una test de tu aplicacion
 
 Publicar: Xcode >> Product >> Archive
+
+05 de Abril de 2017
+*******************
+
+* Mostrar un boton en el Navigator Controller
+
+.m
+- (void)viewDidLoad {
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(buttonCalcularTotalConsumido:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+
+}
+
+- (IBAction)buttonCalcularTotalConsumido:(id)sender {
+    NSLog(@"Has pulsado el botón");
+    MostrarImporteViewController *vistaMostrarImporteVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idMostrarImporteVC" ];
+    [self showViewController:vistaMostrarImporteVC sender: nil];
+}
+
+
+.h
+
+{
+@property (weak, nonatomic) IBOutlet UIButton *buttonCalcularTotalConsumido;
+- (IBAction)buttonCalcularTotalConsumido:(id)sender;
+}

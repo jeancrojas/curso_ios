@@ -19,6 +19,7 @@
 
 static NSString * const reuseIdentifier = @"numeroMesaCVC";
 NSMutableArray *numMesa;
+AppDelegate *appDelegateMesaCVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,12 +29,11 @@ NSMutableArray *numMesa;
     
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+        
     // Do any additional setup after loading the view.
-    AppDelegate *appDelegateMesaCVC = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegateMesaCVC = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     numMesa = [[NSMutableArray alloc]init];
     numMesa = appDelegateMesaCVC.listaMesa;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,12 +108,13 @@ NSMutableArray *numMesa;
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    /*
     UITableViewController *vistaPedidoTVC = [self.storyboard instantiateViewControllerWithIdentifier: @"idSeleccionarPedidoTBC"];
     //vistaPedidoTVC.numMesa = (int)indexPath.row;
     
     [self showViewController:vistaPedidoTVC sender: nil];
-    
+    */
+    appDelegateMesaCVC.mesaSeleccionada = (int)indexPath.row + 1;
 }
 
 - (IBAction)barButtonItemAjustarMesaCVC:(id)sender {

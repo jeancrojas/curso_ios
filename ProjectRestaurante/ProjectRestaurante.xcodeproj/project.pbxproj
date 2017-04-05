@@ -48,6 +48,9 @@
 		09C0205A1E854E8300C7D99F /* ic_remove_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C020591E854E8300C7D99F /* ic_remove_48pt.png */; };
 		09C0205C1E85500400C7D99F /* ic_save_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C0205B1E85500400C7D99F /* ic_save_48pt.png */; };
 		09C411131E82ACCC00831D28 /* ic_settings_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C411121E82ACCC00831D28 /* ic_settings_48pt.png */; };
+		09CE23471E94DA0700CF9D54 /* tabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE23461E94DA0700CF9D54 /* tabBarViewController.m */; };
+		09CE234A1E94EA7A00CF9D54 /* MostrarImporteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */; };
+		09CE234D1E9502FF00CF9D54 /* Pedido.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE234C1E9502FF00CF9D54 /* Pedido.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,12 @@
 		09C020591E854E8300C7D99F /* ic_remove_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_remove_48pt.png; sourceTree = "<group>"; };
 		09C0205B1E85500400C7D99F /* ic_save_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_save_48pt.png; sourceTree = "<group>"; };
 		09C411121E82ACCC00831D28 /* ic_settings_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_settings_48pt.png; sourceTree = "<group>"; };
+		09CE23451E94DA0700CF9D54 /* tabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabBarViewController.h; sourceTree = "<group>"; };
+		09CE23461E94DA0700CF9D54 /* tabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabBarViewController.m; sourceTree = "<group>"; };
+		09CE23481E94EA7A00CF9D54 /* MostrarImporteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MostrarImporteViewController.h; sourceTree = "<group>"; };
+		09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MostrarImporteViewController.m; sourceTree = "<group>"; };
+		09CE234B1E9502FF00CF9D54 /* Pedido.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pedido.h; sourceTree = "<group>"; };
+		09CE234C1E9502FF00CF9D54 /* Pedido.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pedido.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +177,8 @@
 				09B7C5DD1E8D221D00C43DDA /* PlatoDAO.m */,
 				09B7C5DF1E8D222900C43DDA /* BebidaDAO.h */,
 				09B7C5E01E8D222900C43DDA /* BebidaDAO.m */,
+				09CE234B1E9502FF00CF9D54 /* Pedido.h */,
+				09CE234C1E9502FF00CF9D54 /* Pedido.m */,
 				0968B2B81E924CB400E48A4E /* OrdenarBebidaViewController.h */,
 				0968B2B91E924CB400E48A4E /* OrdenarBebidaViewController.m */,
 				0968B2BB1E924CC200E48A4E /* OrdenarPlatoViewController.h */,
@@ -183,6 +194,10 @@
 				099345B11E81528400EBF043 /* ViewController.h */,
 				099345B21E81528400EBF043 /* ViewController.m */,
 				099345B41E81528400EBF043 /* Main.storyboard */,
+				09CE23481E94EA7A00CF9D54 /* MostrarImporteViewController.h */,
+				09CE23491E94EA7A00CF9D54 /* MostrarImporteViewController.m */,
+				09CE23451E94DA0700CF9D54 /* tabBarViewController.h */,
+				09CE23461E94DA0700CF9D54 /* tabBarViewController.m */,
 				092F0AC81E8E555D0042B44E /* PlatoPedidoTableViewController.h */,
 				092F0AC91E8E555D0042B44E /* PlatoPedidoTableViewController.m */,
 				092F0AC21E8E54B20042B44E /* BebidaPedidoTableViewController.h */,
@@ -340,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CE234A1E94EA7A00CF9D54 /* MostrarImporteViewController.m in Sources */,
 				099345B91E81528400EBF043 /* ProjectRestaurante.xcdatamodeld in Sources */,
 				09B7C5D81E8D1D7E00C43DDA /* Plato.m in Sources */,
 				094EB1CA1E8E6979004F23DC /* ElegirPlatoPedidoCollectionViewController.m in Sources */,
@@ -353,10 +369,12 @@
 				0968B2B11E92457C00E48A4E /* ElegirBebidaPedidoCollectionViewController.m in Sources */,
 				09C020511E853F5C00C7D99F /* AjustarTableViewController.m in Sources */,
 				0968B2BA1E924CB400E48A4E /* OrdenarBebidaViewController.m in Sources */,
+				09CE234D1E9502FF00CF9D54 /* Pedido.m in Sources */,
 				092F0AC41E8E54B20042B44E /* BebidaPedidoTableViewController.m in Sources */,
 				099345B01E81528400EBF043 /* AppDelegate.m in Sources */,
 				09B7C5DE1E8D221D00C43DDA /* PlatoDAO.m in Sources */,
 				09B7C5E91E8D267700C43DDA /* BebidaPedidoCollectionViewController.m in Sources */,
+				09CE23471E94DA0700CF9D54 /* tabBarViewController.m in Sources */,
 				0968B2BD1E924CC200E48A4E /* OrdenarPlatoViewController.m in Sources */,
 				09B7C5E11E8D222A00C43DDA /* BebidaDAO.m in Sources */,
 				096D29C91E8931D900FD0C88 /* MenuAjustarTableViewController.m in Sources */,

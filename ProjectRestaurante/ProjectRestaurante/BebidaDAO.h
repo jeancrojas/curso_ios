@@ -15,7 +15,7 @@
 
 -(NSMutableArray *) obtenerBebidas;
 -(NSString *) obtenerRutaDB;
-
+-(BOOL) anyadirBebida:(int)idPedido idBebida:(int)idBebida cantidad:(int)cantidad;
 
 
 @end

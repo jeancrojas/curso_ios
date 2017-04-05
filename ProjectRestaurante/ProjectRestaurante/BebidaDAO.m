@@ -49,12 +49,13 @@
     return dbPath;
 }
 
--(BOOL) anyadirBebida:(int)idPedido cantidad idBebida  {
-    
+
+-(BOOL) anyadirBebida:(int)idPedido idBebida:(int)idBebida cantidad:(int)cantidad {
+    return true;
 }
 
-/*
- 
+
+ /*
  -(BOOL) anyadirViaje:(NSString *)lugarI Descripcion:(NSString *)descripcionI Plazas:(int)plazasI Precio:(double)precioI NombreImagen:(NSString *)nombreImagen {
  
  
@@ -86,8 +87,8 @@
  
  return true;
  }
- */
 
+*/
 
 
 @end

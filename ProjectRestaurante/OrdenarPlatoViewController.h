@@ -22,5 +22,7 @@
 @property (nonatomic,retain) NSString *nombreOrdenarPlatoVC;
 @property (nonatomic,assign) double precioOrdenarPlatoVC;
 @property (nonatomic,retain) NSString *descripcionOrdenarPlatoVC;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAceptarOrdenarPlatoVC;
+- (IBAction)buttonAceptarOrdenarPlatoVC:(id)sender;
 
 @end

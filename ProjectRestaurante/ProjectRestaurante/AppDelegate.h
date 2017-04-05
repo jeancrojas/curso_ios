@@ -17,6 +17,8 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 @property (nonatomic, retain) NSMutableArray *listaMesa;
 @property (nonatomic, assign) NSInteger numMesasTemporal;
+//Numero de mesa que se tiene seleccionada
+@property (nonatomic, assign) int mesaSeleccionada;
 
 - (void)saveContext;
 

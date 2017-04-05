@@ -10,13 +10,15 @@
 
 @interface Mesa : NSObject {
     int idMesa;
-    int numeroComensales;
+    //int numeroComensales;
+    double precio;
 }
 
 @property (nonatomic, assign) int idMesa;
-@property (nonatomic, assign) int numeroComensales;
+//@property (nonatomic, assign) int numeroComensales;
+@property (nonatomic, assign) double precio;
 
--(id)initWithId:(int)idMensaIntroducida NumeroComensales:(int)numeroComensalesIntroducido;
+-(id)initWithId:(int)idMensaIntroducida precio:(double)precioIntroducido;
 
 
 @end

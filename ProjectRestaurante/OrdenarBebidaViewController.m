@@ -7,6 +7,8 @@
 //
 
 #import "OrdenarBebidaViewController.h"
+#import "AppDelegate.h"
+#import "Mesa.h"
 
 @interface OrdenarBebidaViewController ()
 
@@ -29,10 +31,15 @@ int numOrdenarBebidaVC = 0;
 @synthesize precioOrdenarBebidaVC;
 @synthesize descripcionOrdenarBebidaVC;
 
+AppDelegate *appDelegateOrdenarBebidaVC;
+NSMutableArray *listaMesaOrdenarBebidaVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    appDelegateOrdenarBebidaVC = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    listaMesaOrdenarBebidaVC = appDelegateOrdenarBebidaVC.listaMesa;
     
     //Descripcion con texto de relleno
     NSString *descripcionTxtRelleno = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis purus nec elementum congue. Nunc suscipit massa non est posuere, quis ultricies turpis volutpat. Sed libero ante, vehicula eget enim rutrum, pretium sodales tellus. Donec blandit mollis est, vitae vestibulum nisl lobortis sit amet. Duis euismod congue sollicitudin. Nullam imperdiet nibh in risus ultrices aliquet sed a odio. Ut id arcu ac felis porttitor lacinia at at dui. Integer fermentum cursus interdum.";
@@ -43,6 +50,8 @@ int numOrdenarBebidaVC = 0;
     labelPrecioOrdenarBebidaVC.text = [NSString stringWithFormat: @"%.2f€", precioOrdenarBebidaVC];
     textViewDescripcionOrdenarBebidaVC.text = descripcionTxtRelleno;
     [buttonAceptarOrdenarBebidaVC setTitle:@"Aceptar" forState: UIControlStateNormal];
+    
+    NSLog(@"La mesa que se esta tratando es la %d", appDelegateOrdenarBebidaVC.mesaSeleccionada);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,7 +84,18 @@ int numOrdenarBebidaVC = 0;
     
 }
 - (IBAction)buttonAceptarOrdenarBebidaVC:(id)sender {
+    /*
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //[self.tabBarController popView]
+    UITabBarController *vistaTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"idSeleccionarPedidoTBC"];
+    [self showViewController:vistaTVC sender:nil];
+    //idSeleccionarPedidoTBC
+     */
+    double importe = precioOrdenarBebidaVC * numOrdenarBebidaVC;
+    Mesa *mesa = [listaMesaOrdenarBebidaVC objectAtIndex: appDelegateOrdenarBebidaVC.mesaSeleccionada-1];
     
+    mesa.precio += importe;
+    numOrdenarBebidaVC = 0;
     
 }
 @end

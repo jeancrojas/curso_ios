@@ -88,7 +88,6 @@ NSMutableArray *listaPlatoElegido;
     
     
     Plato *platoMostrar = [listaPlatoElegido objectAtIndex:indexPath.row];
-    NSLog(@"plato a Mostrar: %@",platoMostrar.nombre );
     labelTituloElegirPlatoPedidoCVC.text = platoMostrar.nombre;
     labelPrecioElegirPlatoPedidoCVC.text= [NSString stringWithFormat:@"%.2f€", platoMostrar.precio];
     

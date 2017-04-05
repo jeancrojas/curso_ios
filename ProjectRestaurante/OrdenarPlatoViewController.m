@@ -7,6 +7,8 @@
 //
 
 #import "OrdenarPlatoViewController.h"
+#import "Mesa.h"
+#import "AppDelegate.h"
 
 @interface OrdenarPlatoViewController ()
 
@@ -20,11 +22,15 @@
 @synthesize buttonMenosOrdenarPlatoVC;
 @synthesize buttonMasOrdenarPlatoVC;
 @synthesize labelNumeroOrdenarPlatoVC;
+@synthesize buttonAceptarOrdenarPlatoVC;
 
 //Se asigna el valor desde la otra clase ElegirPlatoPedidoCollectionViewController
 @synthesize nombreOrdenarPlatoVC;
 @synthesize precioOrdenarPlatoVC;
 @synthesize descripcionOrdenarPlatoVC;
+
+AppDelegate *appDelegateOrdenarPlatoVC;
+NSMutableArray *listaMesaOrdenarPlatoVC;
 
 int numOrdenarPlatoVC = 0;
 
@@ -33,12 +39,15 @@ int numOrdenarPlatoVC = 0;
     // Do any additional setup after loading the view.
     NSString *descripcionTxtRelleno = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis purus nec elementum congue. Nunc suscipit massa non est posuere, quis ultricies turpis volutpat. Sed libero ante, vehicula eget enim rutrum, pretium sodales tellus. Donec blandit mollis est, vitae vestibulum nisl lobortis sit amet. Duis euismod congue sollicitudin. Nullam imperdiet nibh in risus ultrices aliquet sed a odio. Ut id arcu ac felis porttitor lacinia at at dui. Integer fermentum cursus interdum.";
      
-     
-     //Mostrando la informacion por pantalla
-     labelNumeroOrdenarPlatoVC.text = [@(numOrdenarPlatoVC) stringValue] ;
-     labelTituloOrdenarPlatoVC.text = nombreOrdenarPlatoVC;
-     labelPrecioOrdenarPlatoVC.text = [NSString stringWithFormat: @"%.2f€", precioOrdenarPlatoVC];
-     textViewDescripcionOrdenarPlatoVC.text = descripcionTxtRelleno;
+    appDelegateOrdenarPlatoVC= (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    listaMesaOrdenarPlatoVC = appDelegateOrdenarPlatoVC.listaMesa;
+    
+    //Mostrando la informacion por pantalla
+    labelNumeroOrdenarPlatoVC.text = [@(numOrdenarPlatoVC) stringValue] ;
+    labelTituloOrdenarPlatoVC.text = nombreOrdenarPlatoVC;
+    labelPrecioOrdenarPlatoVC.text = [NSString stringWithFormat: @"%.2f€", precioOrdenarPlatoVC];
+    textViewDescripcionOrdenarPlatoVC.text = descripcionTxtRelleno;
+    [buttonAceptarOrdenarPlatoVC setTitle:@"Aceptar" forState: UIControlStateNormal];
     
 }
 
@@ -72,4 +81,14 @@ int numOrdenarPlatoVC = 0;
 }
 
 
+- (IBAction)buttonAceptarOrdenarPlatoVC:(id)sender {
+    
+     double importe = precioOrdenarPlatoVC * numOrdenarPlatoVC;
+     Mesa *mesa = [listaMesaOrdenarPlatoVC objectAtIndex: appDelegateOrdenarPlatoVC.mesaSeleccionada-1];
+     
+     mesa.precio += importe;
+     numOrdenarPlatoVC = 0;
+    
+    
+}
 @end
